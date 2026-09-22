@@ -442,6 +442,7 @@ function initMobileDrawer() {
   const hamburger = document.querySelector(".hamburger");
   const drawer = document.querySelector(".mobile-drawer");
   const overlay = document.querySelector(".mobile-drawer-overlay");
+  const closeBtn = document.querySelector(".mobile-drawer-close");
 
   if (!hamburger || !drawer) return;
 
@@ -452,17 +453,26 @@ function initMobileDrawer() {
     document.body.style.overflow = isOpen ? "hidden" : "";
   };
 
+  const closeMenu = () => {
+    drawer.classList.remove("is-open");
+    hamburger.classList.remove("is-active");
+    if (overlay) overlay.classList.remove("is-active");
+    document.body.style.overflow = "";
+  };
+
   hamburger.addEventListener("click", toggleMenu);
-  if (overlay) overlay.addEventListener("click", toggleMenu);
+  if (overlay) overlay.addEventListener("click", closeMenu);
+  if (closeBtn) closeBtn.addEventListener("click", closeMenu);
 
   // Close menu when clicking on internal links
   drawer.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      if (drawer.classList.contains("is-open")) {
-        toggleMenu();
-      }
-    });
+    link.addEventListener("click", closeMenu);
   });
+
+  // Support automated testing with ?drawer_open=1
+  if (new URLSearchParams(window.location.search).has("drawer_open")) {
+    toggleMenu();
+  }
 }
 
 /**
