@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Package Details — Bali Elopement Service</title>
+  <meta name="description" content="Explore our curated intimate wedding and pre-wedding packages in Bali. Comprehensive inclusions, transparent pricing, and instant booking reservation.">
+  
+  <link rel="icon" type="image/png" href="assets/logo-btw.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* Package Switcher Tabs */
+    .package-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .pkg-tab-btn {
+      padding: 10px 22px;
+      border-radius: 40px;
+      border: 1px solid var(--border-strong);
+      background-color: var(--white);
+      color: var(--dark);
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: var(--transition);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .pkg-tab-btn:hover, .pkg-tab-btn.active {
+      background-color: var(--coastal);
+      color: var(--ivory);
+      border-color: var(--coastal);
+    }
+
+    #pkg-hero {
+      min-height: 500px;
+      height: 52vh;
+      padding: 0;
+      background-position: center 38%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    @media (max-width: 768px) {
+      #pkg-hero {
+        min-height: 320px;
+        height: 40vh;
+      }
+    }
+    
+    .breadcrumb-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      color: var(--muted);
+    }
+    .breadcrumb-nav a {
+      color: var(--accent-dark);
+    }
+    .breadcrumb-nav a:hover {
+      color: var(--dark);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Component Container -->
+  <div id="site-header"></div>
+
+  <!-- ── 3. INNER HERO HEADER (Photo Only) ── -->
+  <header class="hero-inner" id="pkg-hero" style="background-image: url('assets/images/hero/hero-elopement.webp');"></header>
+
+  <!-- ── 4. STRUCTURED CONTAINER WRAPPER ── -->
+  <main class="section" style="padding-top: 40px;" id="package-detail-container">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="services.html">Services</a>
+        <span>/</span>
+        <span id="breadcrumb-current" style="color: var(--dark); font-weight: 500;">Intimate Elopement Wedding</span>
+      </nav>
+
+      <!-- Package Switcher Tabs -->
+      <div class="package-tabs" aria-label="Switch Package">
+        <a href="package-detail.html?pkg=elopement" class="pkg-tab-btn" id="tab-elopement">1. Intimate Elopement</a>
+        <a href="package-detail.html?pkg=pre-wedding" class="pkg-tab-btn" id="tab-pre-wedding">2. Pre-Wedding Adventure</a>
+        <a href="package-detail.html?pkg=private-villa" class="pkg-tab-btn" id="tab-private-villa">3. Private Villa Wedding</a>
+      </div>
+
+      <!-- Hero Foto Paket: Dynamic Brick / Masonry Grid (5-7 Curated Photos) -->
+      <section aria-label="Curated Package Gallery">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+          <span class="section-label">Curated Visual Showcase</span>
+          <span style="font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;">Click any photo to enlarge</span>
+        </div>
+        
+        <div class="brick-gallery" id="pkg-brick-gallery">
+          <!-- Populated dynamically by script.js using PACKAGES_DATA -->
+        </div>
+      </section>
+
+      <!-- Structured Card / Box Wrapper -->
+      <div class="package-wrapper">
+        
+        <!-- Header Bar: Title, Category & Price Tag -->
+        <div class="package-header-bar">
+          <div class="package-header-left">
+            <span class="section-label">Package Overview</span>
+            <h2 style="font-style: italic; margin-bottom: 12px;">Inclusions &amp; Experience Overview</h2>
+            <p id="pkg-description" style="font-size: 16px; line-height: 1.7; margin-bottom: 0;">
+              Our signature Intimate Elopement is crafted specifically for couples seeking a profound, soulful ceremony without the stress, pressure, and high expenses of a massive traditional wedding.
+            </p>
+          </div>
+          
+          <div class="package-header-right">
+            <span class="pricing-label">Official Rate</span>
+            <div class="package-price-tag" id="pkg-price-idr">IDR 32,000,000 net</div>
+            <div class="package-price-sub" id="pkg-price-foreign">~ €1,950 / $2,100 USD</div>
+            <div style="margin-top: 14px;">
+              <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #2E7D32; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+                ✓ No Hidden Service Charges
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two Column Content Grid -->
+        <div class="package-content-grid">
+          
+          <!-- Column 1: Detailed Inclusions -->
+          <div class="package-details-col">
+            <h3 style="margin-bottom: 16px;">What's In The Package</h3>
+            <p style="font-size: 14.5px; margin-bottom: 20px;">
+              Every detail is pre-arranged and personally overseen by Bali Top Wedding’s senior coordinator so you can focus entirely on each other.
+            </p>
+
+            <ul class="inclusions-list" id="pkg-inclusions">
+              <!-- Populated by script.js -->
+            </ul>
+          </div>
+
+          <!-- Column 2: Integrated Reservation / Inquiry Form -->
+          <div class="package-form-col">
+            <div class="inquiry-card">
+              <div class="inquiry-card-header">
+                <span class="section-label" style="margin-bottom: 4px;">Direct Booking Desk</span>
+                <h3 class="inquiry-card-title">Reserve or Inquire</h3>
+                <p class="inquiry-card-sub">
+                  Lock your preferred date or request a tailored PDF proposal sent to your email.
+                </p>
+              </div>
+
+              <form class="inquiry-form" onsubmit="return false;">
+                
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-name">Your Full Name *</label>
+                  <input type="text" id="inquiry-name" name="name" class="form-control" placeholder="e.g., Sarah &amp; David" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-email">Email Address *</label>
+                  <input type="email" id="inquiry-email" name="email" class="form-control" placeholder="e.g., name@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-target-month">Target Month / Date *</label>
+                  <input type="text" id="inquiry-target-month" name="target_month" class="form-control" placeholder="e.g., October 2026 or Spring 2027" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-package">Selected Package</label>
+                  <select id="inquiry-package" name="package" class="form-control">
+                    <option value="Intimate Elopement Wedding">Intimate Elopement Wedding (IDR 32M)</option>
+                    <option value="Pre-Wedding Adventure Experience">Pre-Wedding Adventure Experience (IDR 16.5M)</option>
+                    <option value="Private Villa Intimate Wedding">Private Villa Intimate Wedding (IDR 78M)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-message">Special Request / Message</label>
+                  <textarea id="inquiry-message" name="message" class="form-control" placeholder="Share your love story, preferred vibe, guest count, or any questions for our planner..."></textarea>
+                </div>
+
+                <!-- Dual Action Submission for European & Global Audiences -->
+                <div class="form-dual-actions">
+                  <button type="button" class="btn btn-email-contrast btn-submit-email">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    Send Inquiry via Email
+                  </button>
+                  <button type="button" class="btn btn-whatsapp btn-submit-wa">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    Submit via WhatsApp
+                  </button>
+                </div>
+
+                <p class="form-note">
+                  🔒 No obligation. We will respond within 24 hours with complete availability, vendor options, and contract details.
+                </p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Component Container -->
+  <div id="site-footer"></div>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Highlight active tab based on query param
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const pkgKey = urlParams.get("pkg") || "elopement";
+      const activeTab = document.getElementById(`tab-${pkgKey}`);
+      if (activeTab) activeTab.classList.add("active");
+    });
+  </script>
+</body>
+</html>
+

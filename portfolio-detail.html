@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Love Story — Bali Elopement</title>
+  <meta name="description" content="Discover real intimate wedding and elopement celebrations in Bali with curated photography and client reflections.">
+  
+  <link rel="icon" type="image/png" href="assets/logo-btw.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header Component Container -->
+  <div id="site-header"></div>
+
+  <!-- ── 1. INNER HERO BANNER (PURE PHOTOGRAPHIC HERO) ── -->
+  <header class="inner-hero" id="story-hero"></header>
+
+  <!-- ── 2. LUXURY DECORATIVE SEPARATOR ── -->
+  <div class="luxury-separator">
+    <svg width="240" height="24" viewBox="0 0 240 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 12H90M150 12H240" stroke="#C4B09A" stroke-width="0.75" />
+      <path d="M120 4L128 12L120 20L112 12L120 4Z" fill="#C4B09A" />
+      <circle cx="106" cy="12" r="2.5" fill="#C4B09A" />
+      <circle cx="134" cy="12" r="2.5" fill="#C4B09A" />
+      <circle cx="98" cy="12" r="1.5" fill="#C4B09A" />
+      <circle cx="142" cy="12" r="1.5" fill="#C4B09A" />
+    </svg>
+  </div>
+
+  <!-- ── 3. CLIENT DETAIL & PHOTO GALLERY ── -->
+  <section class="section" style="padding-top: 10px; padding-bottom: 70px;" id="portfolio-detail-container">
+    <div class="container" style="max-width: 1200px;">
+      
+      <!-- Back to Portfolio Link -->
+      <a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+
+      <!-- Minimal Client Header -->
+      <div class="client-detail-header">
+        <h1 id="client-name">Michel &amp; Angela</h1>
+        <span class="portfolio-meta" id="client-meta">Uluwatu Cliffs • Sunset Ceremony</span>
+        <p id="client-description" class="client-description">
+          An ethereal, distraction-free vows exchange perched 150 meters above the Indian Ocean. Surrounded only by the ocean breeze and breaking surf, celebrated in complete couple intimacy.
+        </p>
+      </div>
+
+      <!-- Two-Column Masonry Photo Gallery -->
+      <div class="gallery-masonry" id="galleryContainer">
+        <!-- Injected dynamically via JS: 2 columns on desktop, 1 on mobile -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 4. CLIENT REVIEW / TESTIMONY SECTION ── -->
+  <section class="review-section" id="reviewSection">
+    <div class="container" style="max-width: 1040px; position: relative; z-index: 2;">
+      <div id="reviewContentContainer" class="review-content-container">
+        <div class="review-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          <span>Couple Reflections</span>
+        </div>
+        <div class="stars-container">★★★★★</div>
+        
+        <p class="review-quote-text" id="review-quote">
+          "I really wanna thank the Bali Top Wedding team for helping our wonderful wedding. Having a team that is really fast response, reliable, and thoughtful made our day completely magical!"
+        </p>
+        <div class="review-author" id="review-author">— Michel &amp; Angela • Switzerland</div>
+
+        <!-- Subtle Refined CTA -->
+        <div class="review-cta-group">
+          <a href="contact.html" id="review-inquire-btn" class="btn btn-primary" style="background-color: var(--ivory); color: var(--sage-dark); border-color: var(--ivory);">Plan a Celebration Like This</a>
+          <a href="#" id="review-wa-btn" class="btn btn-whatsapp" target="_blank" rel="noopener">Chat with Planner on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. RELATED CELEBRATIONS SECTION ── -->
+  <section class="related-stories-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 10px;">
+        <span class="section-label">More Inspiration</span>
+        <h2 style="font-size: 32px; font-style: italic;">Explore More Celebrations</h2>
+      </div>
+
+      <div class="related-stories-grid" id="related-stories-container">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. INTERACTIVE LIGHTBOX MODAL ── -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <div class="lightbox-content-wrapper">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous Photo">&#8249;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Full view wedding photo">
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next Photo">&#8250;</button>
+    </div>
+  </div>
+
+  <!-- Footer Component Container -->
+  <div id="site-footer"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Portfolio — Bali Elopement Service</title>
+  <meta name="description" content="Explore our curated love stories. Intimate elopement ceremonies, cinematic pre-wedding sessions, and luxury private villa weddings in Bali.">
+  
+  <link rel="icon" type="image/png" href="assets/logo-btw.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .portfolio-filters {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .portfolio-filter-btn {
+      background: transparent;
+      border: 1px solid var(--border-strong);
+      padding: 9px 24px;
+      border-radius: 40px;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+      color: var(--dark);
+    }
+    .portfolio-filter-btn:hover, .portfolio-filter-btn.active {
+      background: var(--sage);
+      color: var(--ivory);
+      border-color: var(--sage);
+    }
+    
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+    }
+    .portfolio-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--sage);
+    }
+    .portfolio-thumb-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+    .portfolio-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .portfolio-card:hover .portfolio-thumb-wrap img {
+      transform: scale(1.04);
+    }
+    .portfolio-body {
+      padding: 28px 24px;
+    }
+    .portfolio-tag {
+      font-size: 10.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .portfolio-title {
+      font-size: 24px;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .portfolio-meta {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      display: flex;
+      gap: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Component Container -->
+  <div id="site-header"></div>
+
+  <!-- ── 3. HERO ── -->
+  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('assets/images/couples/weisma-fadhil.webp'); background-position: center 30%;">
+    <div class="hero-content">
+      <h1>Curated Love Stories</h1>
+      <p class="hero-subtitle">
+        Real intimate celebrations and cinematic portraits on the Island of the Gods.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── 4. CURATED STORIES GRID ── -->
+  <main class="section">
+    <div class="container">
+      
+      <!-- Category Filter Tabs -->
+      <!-- <div class="portfolio-filters" aria-label="Filter Stories">
+        <button class="portfolio-filter-btn active" data-filter="all">All Stories</button>
+        <button class="portfolio-filter-btn" data-filter="elopement">Intimate Elopements</button>
+        <button class="portfolio-filter-btn" data-filter="prewedding">Pre-Wedding Tours</button>
+        <button class="portfolio-filter-btn" data-filter="villa">Private Villa Weddings</button>
+      </div> -->
+
+      <!-- Curated Portfolio Stories -->
+      <div class="portfolio-grid">
+        
+        <!-- STORY 1: MICHEL & ANGELA (ELOPEMENT) -->
+        <a href="portfolio-detail.html?story=michel-angela" class="portfolio-card-link" data-category="elopement">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/couples/michel-angela.webp" alt="Michel and Angela Elopement in Uluwatu" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Intimate Elopement</span>
+              <h3 class="portfolio-title">Michel &amp; Angela — Uluwatu Sunset Vows</h3>
+              <div class="portfolio-meta">
+                <span>📍 Uluwatu Cliffs</span>
+                <span>•</span>
+                <span>2 Guests (Just Couple)</span>
+                <span>•</span>
+                <span>Sunset Ceremony</span>
+              </div>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                An ethereal, distraction-free vows exchange overlooking the vast Indian Ocean. The celebration concluded with private acoustic melodies and an oceanfront dinner under the stars.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- STORY 2: MARIA & ELLIAS (PRE-WEDDING) -->
+        <a href="portfolio-detail.html?story=maria-ellias" class="portfolio-card-link" data-category="prewedding">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/couples/maria-ellias.webp" alt="Maria and Ellias Pre-Wedding Adventure" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Pre-Wedding Tour</span>
+              <h3 class="portfolio-title">Maria &amp; Ellias — Cinematic Island Odyssey</h3>
+              <div class="portfolio-meta">
+                <span>📍 Kintamani &amp; Secret Beach</span>
+                <span>•</span>
+                <span>Full-Day Session</span>
+                <span>•</span>
+                <span>Editorial Styling</span>
+              </div>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                From mist-shrouded mountain pine forests at dawn to crashing ocean waves during golden hour, Maria and Ellias captured pure authentic connection across Bali’s most dramatic landscapes.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- STORY 3: CLAUDIA & DENNIS (PRIVATE VILLA) -->
+        <a href="portfolio-detail.html?story=claudia-dennis" class="portfolio-card-link" data-category="villa">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/couples/claudia-dennis.webp" alt="Claudia and Dennis Private Villa Wedding" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Private Villa Wedding</span>
+              <h3 class="portfolio-title">Claudia &amp; Dennis — Nusa Dua Estate Celebration</h3>
+              <div class="portfolio-meta">
+                <span>📍 Nusa Dua Luxury Villa</span>
+                <span>•</span>
+                <span>25 Guests</span>
+                <span>•</span>
+                <span>Floating Altar &amp; Dinner</span>
+              </div>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                A bespoke private estate wedding featuring an acrylic aisle hovering over an infinity pool, bespoke tropical floral arrangements, fine dining, and intimate speeches with loved ones.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- STORY 4: WEISMA & FADHIL (INTIMATE SANCTUARY) -->
+        <a href="portfolio-detail.html?story=weisma-fadhil" class="portfolio-card-link" data-category="elopement">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/couples/weisma-fadhil.webp" alt="Weisma and Fadhil Intimate Wedding" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <span class="portfolio-tag">Intimate Elopement</span>
+              <h3 class="portfolio-title">Weisma &amp; Fadhil — Slow Living Romance</h3>
+              <div class="portfolio-meta">
+                <span>📍 Coastal Cliffside</span>
+                <span>•</span>
+                <span>Intimate Gathering</span>
+                <span>•</span>
+                <span>Candlelight Banquet</span>
+              </div>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                A calm, stress-free celebration designed for lovers who prioritize genuine moments over hectic schedules. Every logistical detail was handled invisibly by Bali Top Wedding.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Component Container -->
+  <div id="site-footer"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
