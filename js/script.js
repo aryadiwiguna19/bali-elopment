@@ -34,39 +34,38 @@ const SITE_CONFIG = {
   officeHours: "09:00 - 18:00 WITA (GMT+8) • European consultation hours accommodated upon request"
 };
 
-// ── 2. PACKAGES DATABASE (3 SIGNATURE OFFERINGS) ──
+// ── 2. PACKAGES DATABASE (SIGNATURE OFFERINGS) ──
 const PACKAGES_DATA = {
-  "elopement": {
-    id: "elopement",
-    badge: "Most Cherished • Just the Two of Us",
-    title: "Intimate Elopement Wedding",
-    subtitle: "Just the two of you (or up to 6 beloved guests) exchanging eternal vows overlooking Bali's dramatic azure cliffs or secluded tropical shores.",
-    priceIDR: "IDR 32,000,000 net",
-    priceForeign: "~ €1,950 / $2,100 USD",
-    capacity: "Couple + Up to 6 Close Guests",
-    duration: "Full-Day Dedicated Experience",
+  "elopement-1": {
+    id: "elopement-1",
+    badge: "PACKAGE 1 · ROOFTOP KUTA",
+    title: "Intimate rooftop vows over Kuta Beach and golden sunset",
+    subtitle: "",
+    priceIDR: "IDR 23,000,000 net",
+    priceForeign: "",
+    capacity: "Just for Two",
+    duration: "Rooftop Vows Ceremony",
     heroImage: "assets/images/hero/hero-elopement.webp",
     heroPosition: "center 38%",
-    description: "Our signature Intimate Elopement is crafted specifically for couples seeking a profound, soulful ceremony without the stress, pressure, and high expenses of a massive traditional wedding. From legal or commitment celebrants to artistic floral installations and sunset photography, every moment is orchestrated with effortless grace.",
+    description: "Celebrate your love high above the vibrant heart of Kuta. Powered by Bali Top Wedding, this elopement package combines modern comfort with breathtaking tropical views. Say \"I Do\" on a stunning private rooftop venue featuring panoramic ocean vistas, famous Bali sunset backdrops, and an intimate setting designed just for two.\n\nLocated directly in the center of Kuta's bustling tourism hub, this package offers unmatched convenience with instant access to top beach resorts, dining, and nightlife. From rooftop floral styling and ceremony arrangements to legalities and photography, our fully registered local team ensures an effortless, unforgettable rooftop elopement.",
     inclusions: [
-      "Exclusive private cliffside or oceanfront ceremony venue (Uluwatu / Nusa Dua)",
-      "Romantic fresh flower arch, aisle petal pathway & bridal bouquet with matching boutonniere",
-      "English-speaking licensed celebrant with customized vows ceremony & commemorative certificate",
-      "Professional Hair & Makeup Artist for the Bride (including trial consultation & touch-ups)",
-      "6 Hours dedicated Master Photographer & Cinematographer (drone aerial coverage included)",
-      "Full digital album with 250+ edited high-res photos & 3-4 minute cinematic wedding film",
-      "Private 4-Course Candlelight Romantic Sunset Dinner with a bottle of sparkling wine",
-      "1-Night Luxury Suite / Villa Stay for the Wedding Couple",
-      "Dedicated Senior Wedding Planner & on-site coordinator from Bali Top Wedding"
+      "<strong>Planner & Coordination:</strong> Wedding planner and coordinator services",
+      "<strong>Venue:</strong> Hotel rooftop venue with panoramic beach and sunset views",
+      "<strong>Photography & Videography:</strong> Professional 1 photographer and 1 videographer (up to 2 hours of coverage)",
+      "<strong>Ceremony & Officiant:</strong> English-speaking wedding celebrant (symbolic / non-religious & non-legal)",
+      "<strong>Certificate:</strong> Commemorative wedding certificate",
+      "<strong>Decor & Styling:</strong> Elegant wedding arch & floral ceremony decor",
+      "<strong>Personal Flowers:</strong> Fresh hand bouquet for the bride & matching boutonniere for the groom",
+      "<strong>Toast:</strong> 1 Bottle of local sparkling wine for wedding toast",
+      "<strong>Dining:</strong> Romantic dinner for 2 guests",
+      "<strong>Accommodation:</strong> 1-night stay in a Superior Room (including breakfast)"
     ],
     timeline: [
-      { time: "13:30 - 15:30", title: "Bridal Suite Preparation & Make-up" },
-      { time: "16:00 - 16:30", title: "Arrival at Sacred Ceremony Venue & First Look" },
-      { time: "17:00 - 17:30", title: "Sunset Vows Exchange, Ring Ceremony & Toast" },
-      { time: "17:30 - 18:30", title: "Golden Hour Couple Portraiture by the Ocean" },
-      { time: "19:00 - 21:00", title: "Intimate 4-Course Candlelight Celebration Dinner" }
+      { time: "16:00 - 16:30", title: "Arrival at Rooftop Venue & Pre-Ceremony Preparation" },
+      { time: "16:45 - 17:30", title: "Sunset Vows Exchange, Ring Ceremony & Toast" },
+      { time: "17:30 - 18:30", title: "Golden Hour Ocean View Couple Portraiture" },
+      { time: "19:00 - 21:00", title: "Romantic Celebration Dinner for Two" }
     ],
-    // 7 Curated Photos with alternating orientations for seamless brick grid
     photos: [
       { src: "assets/images/elopement/elopement-01.webp", alt: "Intimate cliffside vows ceremony in Bali", spanClass: "brick-span-1" },
       { src: "assets/images/elopement/elopement-02.webp", alt: "Sunset couple portrait along Bali ocean", spanClass: "brick-span-2" },
@@ -75,6 +74,115 @@ const PACKAGES_DATA = {
       { src: "assets/images/elopement/elopement-05.webp", alt: "Emotional vows exchange moment", spanClass: "brick-span-5" },
       { src: "assets/images/elopement/elopement-06.webp", alt: "Couple walking hand in hand", spanClass: "brick-span-6" },
       { src: "assets/images/elopement/elopement-07.webp", alt: "Romantic sunset backdrop", spanClass: "brick-span-7" }
+    ]
+  },
+
+  "elopement-2": {
+    id: "elopement-2",
+    badge: "PACKAGE 2 · BALANGAN CLIFF",
+    title: "Dramatic cliffside vows with sweeping ocean and sunset views",
+    subtitle: "",
+    priceIDR: "IDR 21,000,000 net",
+    priceForeign: "",
+    capacity: "Just for Two",
+    duration: "Cliffside Vows Ceremony",
+    heroImage: "assets/images/hero/hero-elopement.webp",
+    heroPosition: "center 38%",
+    description: "Say \"I Do\" surrounded by nature with an unforgettable elopement on South Bali Cliff. Powered by Bali Top Wedding, this iconic outdoor location offers breathtaking panoramas of soaring ocean cliffs, golden beaches, and world-famous Bali sunsets—making it a favorite choice for all couples seeking a truly scenic vow exchange.\n\nWhether you dream of a simple exchange of vows or an all-inclusive setup, our legally registered local team manages every detail, including location permits, floral styling, officiating, and photography. Celebrate effortlessly on one of Bali's most celebrated landscapes.",
+    inclusions: [
+      "<strong>Planner & Coordination:</strong> Professional wedding planner and on-site coordinator services",
+      "<strong>Venue:</strong> Cliffside venue rental at Balangan Cliff",
+      "<strong>Photography & Videography:</strong> 1 Professional photographer and 1 videographer (up to 2 hours coverage)",
+      "<strong>Ceremony & Officiant:</strong> English-speaking wedding celebrant (symbolic / non-religious & non-legal)",
+      "<strong>Certificate:</strong> Commemorative wedding certificate",
+      "<strong>Decor & Styling:</strong> Elegant cliffside ceremony decor",
+      "<strong>Personal Flowers:</strong> Fresh hand bouquet for the bride & matching boutonniere for the groom",
+      "<strong>Transportation:</strong> Private car with driver for up to 8 hours",
+      "<strong>Toast:</strong> 1 Bottle of local wine for celebratory toast"
+    ],
+    timeline: [
+      { time: "14:00 - 15:30", title: "Private Chauffeured Transfer to Balangan Cliff" },
+      { time: "16:00 - 16:45", title: "Arrival, Scenic Exploration & Ceremony Setup" },
+      { time: "17:00 - 17:45", title: "Dramatic Cliffside Sunset Vows & Celebratory Toast" },
+      { time: "17:45 - 18:30", title: "Panoramic Golden Hour Couple Portraiture" }
+    ],
+    photos: [
+      { src: "assets/images/elopement/elopement-02.webp", alt: "Dramatic cliffside vows", spanClass: "brick-span-1" },
+      { src: "assets/images/elopement/elopement-04.webp", alt: "Sunset edge couple portrait", spanClass: "brick-span-2" },
+      { src: "assets/images/elopement/elopement-03.webp", alt: "Bespoke cliffside styling", spanClass: "brick-span-3" },
+      { src: "assets/images/elopement/elopement-07.webp", alt: "Ocean vistas from high cliffs", spanClass: "brick-span-4" },
+      { src: "assets/images/elopement/elopement-05.webp", alt: "Emotional vow moments", spanClass: "brick-span-5" },
+      { src: "assets/images/elopement/elopement-06.webp", alt: "Sunset beach walk", spanClass: "brick-span-6" },
+      { src: "assets/images/elopement/elopement-01.webp", alt: "Cliffside backdrop", spanClass: "brick-span-7" }
+    ]
+  },
+
+  "elopement-3": {
+    id: "elopement-3",
+    badge: "PACKAGE 3 · TANJUNG BENOA",
+    title: "Serene vows with a white sand beach and tropical garden backdrop",
+    subtitle: "",
+    priceIDR: "IDR 29,000,000 net",
+    priceForeign: "",
+    capacity: "Just for Two",
+    duration: "Beach / Garden Vows Ceremony",
+    heroImage: "assets/images/hero/hero-elopement.webp",
+    heroPosition: "center 38%",
+    description: "Exchange your vows where lush greenery meets the sparkling waters of Tanjung Benoa. Powered by Bali Top Wedding, this elopement package offers complete flexibility to choose an intimate ceremony directly on the white sand beach or in the seaside tropical garden with uninterrupted ocean views.\n\nFrom beach arches to garden styling, our legally registered local team manages every detail—including venue coordination, floral design, celebrant services, and professional photography. Enjoy an effortless, stress-free vow exchange tailored to your personal vision on Tanjung Benoa's stunning coastline.",
+    inclusions: [
+      "<strong>Planner & Coordination:</strong> Professional wedding planner and on-site coordinator services",
+      "<strong>Venue:</strong> Venue rental choice of White Sand Beach or Seaside Tropical Garden",
+      "<strong>Photography & Videography:</strong> 1 Professional photographer and 1 videographer (up to 2 hours coverage)",
+      "<strong>Ceremony & Officiant:</strong> English-speaking wedding celebrant (symbolic / non-religious & non-legal)",
+      "<strong>Certificate:</strong> Commemorative wedding certificate",
+      "<strong>Decor & Styling:</strong> Intimate, elegant floral setup",
+      "<strong>Personal Flowers:</strong> Fresh hand bouquet for the bride & matching boutonniere for the groom",
+      "<strong>Toast:</strong> 2 Glasses of celebratory mocktails or local wine",
+      "<strong>Accommodation:</strong> 1-Night stay at Signature Room (includes daily breakfast for 2)"
+    ],
+    timeline: [
+      { time: "15:00 - 16:00", title: "Signature Room Check-in & Ceremony Preparation" },
+      { time: "16:30 - 17:15", title: "White Sand Beach or Tropical Garden Vows Exchange" },
+      { time: "17:15 - 17:45", title: "Celebratory Toast & Seaside Couple Portraiture" },
+      { time: "18:00 - 18:45", title: "Sunset Shoreline Stroll & Fine Art Photography" }
+    ],
+    photos: [
+      { src: "assets/images/elopement/elopement-03.webp", alt: "Tropical seaside beach vows", spanClass: "brick-span-1" },
+      { src: "assets/images/elopement/elopement-02.webp", alt: "Golden sunset beach portrait", spanClass: "brick-span-2" },
+      { src: "assets/images/elopement/elopement-01.webp", alt: "Intimate floral arch setup", spanClass: "brick-span-3" },
+      { src: "assets/images/elopement/elopement-04.webp", alt: "Seaside celebration embrace", spanClass: "brick-span-4" },
+      { src: "assets/images/elopement/elopement-05.webp", alt: "Vow exchange ceremony", spanClass: "brick-span-5" },
+      { src: "assets/images/elopement/elopement-06.webp", alt: "Walking along shoreline", spanClass: "brick-span-6" },
+      { src: "assets/images/elopement/elopement-07.webp", alt: "Tropical garden backdrop", spanClass: "brick-span-7" }
+    ]
+  },
+
+  "elopement-4": {
+    id: "elopement-4",
+    badge: "PACKAGE 4 · UBUD RIVERSIDE",
+    title: "An intimate riverside elopement in peaceful Ubud",
+    subtitle: "",
+    priceIDR: "IDR 26,000,000 net",
+    priceForeign: "",
+    capacity: "Just for Two",
+    duration: "Riverside Garden Ceremony",
+    heroImage: "assets/images/hero/hero-elopement.webp",
+    heroPosition: "center 38%",
+    description: "Exchange your vows nestled in a lush riverside garden along the gentle Wos River. Powered by Bali Top Wedding, this elopement package offers a peaceful, luxury sanctuary where manicured lawns and vibrant tropical greenery meet natural river views.\n\nFrom elegant floral styling and celebrant coordination to legal requirements and professional photography, our legally registered local team handles every detail seamlessly. Enjoy 5-star hospitality and authentic Balinese warmth as you celebrate your special day in a serene garden setting.",
+    inclusions: [],
+    timeline: [
+      { time: "15:00 - 16:00", title: "Arrival at Riverside Garden & Private Prep" },
+      { time: "16:30 - 17:15", title: "Intimate Riverside Vows by the Wos River" },
+      { time: "17:15 - 18:15", title: "Tropical Greenery & Riverbank Couple Portraiture" }
+    ],
+    photos: [
+      { src: "assets/images/elopement/elopement-04.webp", alt: "Peaceful riverside garden venue", spanClass: "brick-span-1" },
+      { src: "assets/images/elopement/elopement-05.webp", alt: "Lush tropical greenery ceremony", spanClass: "brick-span-2" },
+      { src: "assets/images/elopement/elopement-03.webp", alt: "Riverside floral arch detail", spanClass: "brick-span-3" },
+      { src: "assets/images/elopement/elopement-06.webp", alt: "Couple reflection in nature", spanClass: "brick-span-4" },
+      { src: "assets/images/elopement/elopement-01.webp", alt: "Sacred vow exchange in Ubud", spanClass: "brick-span-5" },
+      { src: "assets/images/elopement/elopement-02.webp", alt: "Heartfelt romantic moments", spanClass: "brick-span-6" },
+      { src: "assets/images/elopement/elopement-07.webp", alt: "Evening garden atmosphere", spanClass: "brick-span-7" }
     ]
   },
 
@@ -159,6 +267,9 @@ const PACKAGES_DATA = {
     ]
   }
 };
+
+// Alias default 'elopement' to 'elopement-1' for legacy link preservation
+PACKAGES_DATA["elopement"] = PACKAGES_DATA["elopement-1"];
 
 // ── 2.5 PORTFOLIO STORIES DATABASE (GALLERY-FIRST REAL CELEBRATIONS) ──
 const PORTFOLIO_DATA = {
@@ -419,20 +530,383 @@ const PORTFOLIO_DATA = {
       "assets/images/elopement/elopement-06.webp",
       "assets/images/elopement/elopement-07.webp"
     ]
-  }
+  },
+  "art-centre": {
+      "id": "art-centre",
+      "name": "Art Centre Denpasar",
+      "meta": "Denpasar Cultural Heritage • Balinese Traditional Architecture",
+      "description": "An enchanting cultural pre-wedding session set amidst the majestic carved stone gates, traditional Balinese pavilions, and lush banyan trees of Taman Werdhi Budaya Art Centre Denpasar.",
+      "heroImage": "assets/images/portfolio/art-centre/1.webp",
+      "reviewBg": "assets/images/portfolio/art-centre/3.webp",
+      "packageId": "pre-wedding",
+      "packageTitle": "Pre-Wedding Adventure Experience",
+      "quote": "Capturing our prewedding portraits at the Art Centre gave our love story such an authentic, timeless Balinese cultural soul. The architectural framing was breathtaking.",
+      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
+      "count": 8,
+      "photos": [
+          "assets/images/portfolio/art-centre/1.webp",
+          "assets/images/portfolio/art-centre/2.webp",
+          "assets/images/portfolio/art-centre/3.webp",
+          "assets/images/portfolio/art-centre/4.webp",
+          "assets/images/portfolio/art-centre/5.webp",
+          "assets/images/portfolio/art-centre/6.webp",
+          "assets/images/portfolio/art-centre/7.webp",
+          "assets/images/portfolio/art-centre/8.webp"
+      ]
+  },
+
+  "balangan-cliff": {
+      "id": "balangan-cliff",
+      "name": "Balangan Beach & Cliff",
+      "meta": "Bukit Peninsula Coast • Dramatic Sunset Cliffs",
+      "description": "Perched upon the iconic golden limestone cliffs of Balangan overlooking turquoise breaks and sea caves, followed by a barefoot sunset shoreline stroll.",
+      "heroImage": "assets/images/portfolio/balangan-cliff/1.webp",
+      "reviewBg": "assets/images/portfolio/balangan-cliff/5.webp",
+      "packageId": "pre-wedding",
+      "packageTitle": "Pre-Wedding Adventure Experience",
+      "quote": "Standing on the edge of Balangan cliff at golden hour with the ocean wind was pure poetry. The photographer captured every candid look and laugh effortlessly.",
+      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
+      "count": 11,
+      "photos": [
+          "assets/images/portfolio/balangan-cliff/1.webp",
+          "assets/images/portfolio/balangan-cliff/2.webp",
+          "assets/images/portfolio/balangan-cliff/3.webp",
+          "assets/images/portfolio/balangan-cliff/4.webp",
+          "assets/images/portfolio/balangan-cliff/5.webp",
+          "assets/images/portfolio/balangan-cliff/6.webp",
+          "assets/images/portfolio/balangan-cliff/7.webp",
+          "assets/images/portfolio/balangan-cliff/8.webp",
+          "assets/images/portfolio/balangan-cliff/9.webp",
+          "assets/images/portfolio/balangan-cliff/10.webp",
+          "assets/images/portfolio/balangan-cliff/11.webp"
+      ]
+  },
+
+  "black-lava-kintamani": {
+      "id": "black-lava-kintamani",
+      "name": "Black Lava Kintamani",
+      "meta": "Mount Batur Caldera • Volcanic Heritage & Jeep Adventure",
+      "description": "An edgy, editorial pre-wedding session set against the surreal monochrome expanse of Mount Batur’s ancient volcanic black lava fields and alpine pine foothills.",
+      "heroImage": "assets/images/portfolio/black-lava-kintamani/1.webp",
+      "reviewBg": "assets/images/portfolio/black-lava-kintamani/10.webp",
+      "packageId": "pre-wedding",
+      "packageTitle": "Pre-Wedding Adventure Experience",
+      "quote": "The black lava fields created such a high-fashion, dramatic contrast with our formal attire. Easily the most unforgettable photoshoot we have ever experienced.",
+      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
+      "count": 17,
+      "photos": [
+          "assets/images/portfolio/black-lava-kintamani/1.webp",
+          "assets/images/portfolio/black-lava-kintamani/2.webp",
+          "assets/images/portfolio/black-lava-kintamani/3.webp",
+          "assets/images/portfolio/black-lava-kintamani/4.webp",
+          "assets/images/portfolio/black-lava-kintamani/5.webp",
+          "assets/images/portfolio/black-lava-kintamani/6.webp",
+          "assets/images/portfolio/black-lava-kintamani/7.webp",
+          "assets/images/portfolio/black-lava-kintamani/8.webp",
+          "assets/images/portfolio/black-lava-kintamani/9.webp",
+          "assets/images/portfolio/black-lava-kintamani/10.webp",
+          "assets/images/portfolio/black-lava-kintamani/11.webp",
+          "assets/images/portfolio/black-lava-kintamani/12.webp",
+          "assets/images/portfolio/black-lava-kintamani/13.webp",
+          "assets/images/portfolio/black-lava-kintamani/14.webp",
+          "assets/images/portfolio/black-lava-kintamani/15.webp",
+          "assets/images/portfolio/black-lava-kintamani/16.webp",
+          "assets/images/portfolio/black-lava-kintamani/17.webp"
+      ]
+  },
+
+  "blangsinga-waterfall": {
+      "id": "blangsinga-waterfall",
+      "name": "Blangsinga Waterfall",
+      "meta": "Gianyar Rainforest • Majestic Canyon Cascade",
+      "description": "An intimate tropical romance framed by the rushing cascades, river stones, and mist-drenched emerald jungle canyon of Blangsinga Waterfall.",
+      "heroImage": "assets/images/portfolio/blangsinga-waterfall/1.webp",
+      "reviewBg": "assets/images/portfolio/blangsinga-waterfall/3.webp",
+      "packageId": "pre-wedding",
+      "packageTitle": "Pre-Wedding Adventure Experience",
+      "quote": "Surrounded by cascading waterfalls and emerald moss in Gianyar, the atmosphere felt like a hidden paradise. The mist added pure magic to every frame.",
+      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
+      "count": 5,
+      "photos": [
+          "assets/images/portfolio/blangsinga-waterfall/1.webp",
+          "assets/images/portfolio/blangsinga-waterfall/2.webp",
+          "assets/images/portfolio/blangsinga-waterfall/3.webp",
+          "assets/images/portfolio/blangsinga-waterfall/4.webp",
+          "assets/images/portfolio/blangsinga-waterfall/5.webp"
+      ]
+  },
+
+  "kebun-raya-bedugul": {
+      "id": "kebun-raya-bedugul",
+      "name": "Kebun Raya Bedugul",
+      "meta": "Bedugul Highland Forest • Misty Giant Banyan & Pine Trails",
+      "description": "A serene, ethereal pre-wedding journey through the towering banyans, ancient rainforest fern canopies, and cool highland breezes of Bali Botanic Garden Bedugul.",
+      "heroImage": "assets/images/portfolio/kebun-raya-bedugul/1.webp",
+      "reviewBg": "assets/images/portfolio/kebun-raya-bedugul/5.webp",
+      "packageId": "pre-wedding",
+      "packageTitle": "Pre-Wedding Adventure Experience",
+      "quote": "The cool mountain air, morning fog rolling between the giant trees, and the peaceful forest trails made us feel like we stepped into a fairytale.",
+      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
+      "count": 17,
+      "photos": [
+          "assets/images/portfolio/kebun-raya-bedugul/1.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/2.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/3.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/4.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/5.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/6.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/7.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/8.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/9.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/10.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/11.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/12.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/13.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/14.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/15.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/16.webp",
+          "assets/images/portfolio/kebun-raya-bedugul/17.webp"
+      ]
+  },
+
+  "melasti-beach": {
+      "id": "melasti-beach",
+      "name": "Melasti Beach & Cliff",
+      "meta": "Ungasan Coastline • Winding Limestone Corridors & Azure Shore",
+      "description": "From the monumental carved white limestone ravines to the tranquil turquoise shallows and coral reefs of Melasti Beach during the golden twilight hour.",
+      "heroImage": "assets/images/portfolio/melasti-beach/1.webp",
+      "reviewBg": "assets/images/portfolio/melasti-beach/7.webp",
+      "packageId": "pre-wedding",
+      "packageTitle": "Pre-Wedding Adventure Experience",
+      "quote": "The soaring cliff walls and crystal waters of Melasti offered the most versatile and grand scenery. Every single shot looks straight out of a luxury magazine.",
+      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
+      "count": 19,
+      "photos": [
+          "assets/images/portfolio/melasti-beach/1.webp",
+          "assets/images/portfolio/melasti-beach/2.webp",
+          "assets/images/portfolio/melasti-beach/3.webp",
+          "assets/images/portfolio/melasti-beach/4.webp",
+          "assets/images/portfolio/melasti-beach/5.webp",
+          "assets/images/portfolio/melasti-beach/6.webp",
+          "assets/images/portfolio/melasti-beach/7.webp",
+          "assets/images/portfolio/melasti-beach/8.webp",
+          "assets/images/portfolio/melasti-beach/9.webp",
+          "assets/images/portfolio/melasti-beach/10.webp",
+          "assets/images/portfolio/melasti-beach/11.webp",
+          "assets/images/portfolio/melasti-beach/12.webp",
+          "assets/images/portfolio/melasti-beach/13.webp",
+          "assets/images/portfolio/melasti-beach/14.webp",
+          "assets/images/portfolio/melasti-beach/15.webp",
+          "assets/images/portfolio/melasti-beach/16.webp",
+          "assets/images/portfolio/melasti-beach/17.webp",
+          "assets/images/portfolio/melasti-beach/18.webp",
+          "assets/images/portfolio/melasti-beach/19.webp"
+      ]
+  },
+
+  "oculus-kintamani": {
+      "id": "oculus-kintamani",
+      "name": "Oculus Kintamani",
+      "meta": "Batur Caldera Vista • Modern Architecture & Mountain Panorama",
+      "description": "A sophisticated blend of contemporary alpine architecture and sweeping panoramic vistas overlooking Mount Batur, the caldera ridges, and serene Lake Batur.",
+      "heroImage": "assets/images/portfolio/oculus-kintamani/1.webp",
+      "reviewBg": "assets/images/portfolio/oculus-kintamani/4.webp",
+      "packageId": "pre-wedding",
+      "packageTitle": "Pre-Wedding Adventure Experience",
+      "quote": "Blending modern geometric architecture with Bali’s dramatic volcanic horizon was the perfect visual concept. The team guided our poses with such ease.",
+      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
+      "count": 12,
+      "photos": [
+          "assets/images/portfolio/oculus-kintamani/1.webp",
+          "assets/images/portfolio/oculus-kintamani/2.webp",
+          "assets/images/portfolio/oculus-kintamani/3.webp",
+          "assets/images/portfolio/oculus-kintamani/4.webp",
+          "assets/images/portfolio/oculus-kintamani/5.webp",
+          "assets/images/portfolio/oculus-kintamani/6.webp",
+          "assets/images/portfolio/oculus-kintamani/7.webp",
+          "assets/images/portfolio/oculus-kintamani/8.webp",
+          "assets/images/portfolio/oculus-kintamani/9.webp",
+          "assets/images/portfolio/oculus-kintamani/10.webp",
+          "assets/images/portfolio/oculus-kintamani/11.webp",
+          "assets/images/portfolio/oculus-kintamani/12.webp"
+      ]
+  },
+
+  "pantai-nyanyi": {
+      "id": "pantai-nyanyi",
+      "name": "Pantai Nyanyi",
+      "meta": "Tabanan Coast • Glistening Black Sand Sunset & Tidal Mirror",
+      "description": "Dramatic coastal romance on the glistening black sands and surging surf of Pantai Nyanyi, capturing ethereal sunset silhouettes and mirrored tidal reflections.",
+      "heroImage": "assets/images/portfolio/pantai-nyanyi/1.webp",
+      "reviewBg": "assets/images/portfolio/pantai-nyanyi/6.webp",
+      "packageId": "pre-wedding",
+      "packageTitle": "Pre-Wedding Adventure Experience",
+      "quote": "The glistening wet black sand reflecting the fiery sunset sky was sheer poetry. Walking hand in hand along the shoreline felt like time stood completely still.",
+      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
+      "count": 25,
+      "photos": [
+          "assets/images/portfolio/pantai-nyanyi/1.webp",
+          "assets/images/portfolio/pantai-nyanyi/2.webp",
+          "assets/images/portfolio/pantai-nyanyi/3.webp",
+          "assets/images/portfolio/pantai-nyanyi/4.webp",
+          "assets/images/portfolio/pantai-nyanyi/5.webp",
+          "assets/images/portfolio/pantai-nyanyi/6.webp",
+          "assets/images/portfolio/pantai-nyanyi/7.webp",
+          "assets/images/portfolio/pantai-nyanyi/8.webp",
+          "assets/images/portfolio/pantai-nyanyi/9.webp",
+          "assets/images/portfolio/pantai-nyanyi/10.webp",
+          "assets/images/portfolio/pantai-nyanyi/11.webp",
+          "assets/images/portfolio/pantai-nyanyi/12.webp",
+          "assets/images/portfolio/pantai-nyanyi/13.webp",
+          "assets/images/portfolio/pantai-nyanyi/14.webp",
+          "assets/images/portfolio/pantai-nyanyi/15.webp",
+          "assets/images/portfolio/pantai-nyanyi/16.webp",
+          "assets/images/portfolio/pantai-nyanyi/17.webp",
+          "assets/images/portfolio/pantai-nyanyi/18.webp",
+          "assets/images/portfolio/pantai-nyanyi/19.webp",
+          "assets/images/portfolio/pantai-nyanyi/20.webp",
+          "assets/images/portfolio/pantai-nyanyi/21.webp",
+          "assets/images/portfolio/pantai-nyanyi/22.webp",
+          "assets/images/portfolio/pantai-nyanyi/23.webp",
+          "assets/images/portfolio/pantai-nyanyi/24.webp",
+          "assets/images/portfolio/pantai-nyanyi/25.webp"
+      ]
+  },
+
+  "goto-gathering": {
+      "id": "goto-gathering",
+      "name": "GoTo Group Gathering",
+      "meta": "Bali Luxury Resort • Annual Corporate Celebration",
+      "description": "A grand corporate celebration and executive gathering in Bali, featuring bespoke stage production, cultural Balinese welcome performances, dynamic networking lounges, and an exquisite gala banquet under the tropical sky.",
+      "heroImage": "assets/images/portfolio/goto-gathering/1.webp",
+      "reviewBg": "assets/images/portfolio/goto-gathering/7.webp",
+      "packageId": "event",
+      "packageTitle": "Corporate Gathering & Private Event",
+      "hasVideo": false,
+      "videoUrl": null,
+      "quote": "The coordination was world-class. From audiovisual production to the flow of our team members, Bali Top Wedding managed our corporate gathering with absolute precision.",
+      "quoteAuthor": "GoTo Group Organizing Committee",
+      "count": 19,
+      "photos": [
+          "assets/images/portfolio/goto-gathering/1.webp",
+          "assets/images/portfolio/goto-gathering/2.webp",
+          "assets/images/portfolio/goto-gathering/3.webp",
+          "assets/images/portfolio/goto-gathering/4.webp",
+          "assets/images/portfolio/goto-gathering/5.webp",
+          "assets/images/portfolio/goto-gathering/6.webp",
+          "assets/images/portfolio/goto-gathering/7.webp",
+          "assets/images/portfolio/goto-gathering/8.webp",
+          "assets/images/portfolio/goto-gathering/9.webp",
+          "assets/images/portfolio/goto-gathering/10.webp",
+          "assets/images/portfolio/goto-gathering/11.webp",
+          "assets/images/portfolio/goto-gathering/12.webp",
+          "assets/images/portfolio/goto-gathering/13.webp",
+          "assets/images/portfolio/goto-gathering/14.webp",
+          "assets/images/portfolio/goto-gathering/15.webp",
+          "assets/images/portfolio/goto-gathering/16.webp",
+          "assets/images/portfolio/goto-gathering/17.webp",
+          "assets/images/portfolio/goto-gathering/18.webp",
+          "assets/images/portfolio/goto-gathering/19.webp"
+      ]
+  },
+
+  "pertamina-gathering": {
+      "id": "pertamina-gathering",
+      "name": "Pertamina Corporate Gala",
+      "meta": "Bali Beachfront Lawn • Leadership Summit & Gala",
+      "description": "An inspiring corporate summit and appreciation banquet set across Bali’s premier seaside lawn, complete with theatrical lighting, traditional fanfare, live entertainment, and five-star culinary hospitality.",
+      "heroImage": "assets/images/portfolio/pertamina-gathering/1.webp",
+      "reviewBg": "assets/images/portfolio/pertamina-gathering/8.webp",
+      "packageId": "event",
+      "packageTitle": "Corporate Gathering & Private Event",
+      "hasVideo": false,
+      "videoUrl": null,
+      "quote": "A truly prestigious event executed flawlessly. The ambiance, stage coordination, and seamless hospitality made our leadership gala an unforgettable success.",
+      "quoteAuthor": "PT Pertamina Corporate Events",
+      "count": 23,
+      "photos": [
+          "assets/images/portfolio/pertamina-gathering/1.webp",
+          "assets/images/portfolio/pertamina-gathering/2.webp",
+          "assets/images/portfolio/pertamina-gathering/3.webp",
+          "assets/images/portfolio/pertamina-gathering/4.webp",
+          "assets/images/portfolio/pertamina-gathering/5.webp",
+          "assets/images/portfolio/pertamina-gathering/6.webp",
+          "assets/images/portfolio/pertamina-gathering/7.webp",
+          "assets/images/portfolio/pertamina-gathering/8.webp",
+          "assets/images/portfolio/pertamina-gathering/9.webp",
+          "assets/images/portfolio/pertamina-gathering/10.webp",
+          "assets/images/portfolio/pertamina-gathering/11.webp",
+          "assets/images/portfolio/pertamina-gathering/12.webp",
+          "assets/images/portfolio/pertamina-gathering/13.webp",
+          "assets/images/portfolio/pertamina-gathering/14.webp",
+          "assets/images/portfolio/pertamina-gathering/15.webp",
+          "assets/images/portfolio/pertamina-gathering/16.webp",
+          "assets/images/portfolio/pertamina-gathering/17.webp",
+          "assets/images/portfolio/pertamina-gathering/18.webp",
+          "assets/images/portfolio/pertamina-gathering/19.webp",
+          "assets/images/portfolio/pertamina-gathering/20.webp",
+          "assets/images/portfolio/pertamina-gathering/21.webp",
+          "assets/images/portfolio/pertamina-gathering/22.webp",
+          "assets/images/portfolio/pertamina-gathering/23.webp"
+      ]
+  },
+
+  "scarlett-gathering": {
+      "id": "scarlett-gathering",
+      "name": "Scarlett Whitening Gala",
+      "meta": "Luxury Coastal Venue • Glamour Brand Gathering & Sunset Party",
+      "description": "A high-energy, glamorous brand celebration featuring custom floral photo installations, branded interactive stages, celebrity performances, and a starlit coastal after-party.",
+      "heroImage": "assets/images/portfolio/scarlett-gathering/1.webp",
+      "reviewBg": "assets/images/portfolio/scarlett-gathering/6.webp",
+      "packageId": "event",
+      "packageTitle": "Corporate Gathering & Private Event",
+      "hasVideo": false,
+      "videoUrl": null,
+      "quote": "The aesthetic was totally on-brand, vibrant, and visually breathtaking. Every single corner was an Instagrammable moment and the energy throughout the night was extraordinary!",
+      "quoteAuthor": "Scarlett Brand Events Team",
+      "count": 25,
+      "photos": [
+          "assets/images/portfolio/scarlett-gathering/1.webp",
+          "assets/images/portfolio/scarlett-gathering/2.webp",
+          "assets/images/portfolio/scarlett-gathering/3.webp",
+          "assets/images/portfolio/scarlett-gathering/4.webp",
+          "assets/images/portfolio/scarlett-gathering/5.webp",
+          "assets/images/portfolio/scarlett-gathering/6.webp",
+          "assets/images/portfolio/scarlett-gathering/7.webp",
+          "assets/images/portfolio/scarlett-gathering/8.webp",
+          "assets/images/portfolio/scarlett-gathering/9.webp",
+          "assets/images/portfolio/scarlett-gathering/10.webp",
+          "assets/images/portfolio/scarlett-gathering/11.webp",
+          "assets/images/portfolio/scarlett-gathering/12.webp",
+          "assets/images/portfolio/scarlett-gathering/13.webp",
+          "assets/images/portfolio/scarlett-gathering/14.webp",
+          "assets/images/portfolio/scarlett-gathering/15.webp",
+          "assets/images/portfolio/scarlett-gathering/16.webp",
+          "assets/images/portfolio/scarlett-gathering/17.webp",
+          "assets/images/portfolio/scarlett-gathering/18.webp",
+          "assets/images/portfolio/scarlett-gathering/19.webp",
+          "assets/images/portfolio/scarlett-gathering/20.webp",
+          "assets/images/portfolio/scarlett-gathering/21.webp",
+          "assets/images/portfolio/scarlett-gathering/22.webp",
+          "assets/images/portfolio/scarlett-gathering/23.webp",
+          "assets/images/portfolio/scarlett-gathering/24.webp",
+          "assets/images/portfolio/scarlett-gathering/25.webp"
+      ]
+  },
+
 };
 
 // ── 3. DOM BINDING & SITE INITIALIZATION ──
-document.addEventListener("DOMContentLoaded", async () => {
-  // 1. First load modular components (header & footer)
-  await loadComponents();
-
-  // 2. Initialize page-specific interactions
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Initialize page-specific interactions immediately
   initPackageDetail();
   initPortfolioDetail();
   initInquiryForms();
   initLightbox();
   initPortfolioFilter();
+
+  // 2. Load modular components (header & footer)
+  loadComponents();
 });
 
 /**
@@ -513,7 +987,8 @@ function highlightActiveNav() {
   if (filename === "" || filename === "index.html") {
     activeTarget = "index.html";
   } else if (filename.includes("package-detail.html") && pkgParam) {
-    activeTarget = `package-detail.html?pkg=${pkgParam}`;
+    const normPkg = pkgParam.startsWith("elopement") ? "elopement" : pkgParam;
+    activeTarget = `package-detail.html?pkg=${normPkg}`;
   } else if (filename.includes("package-detail.html") || filename.includes("services.html")) {
     activeTarget = "package-detail.html?pkg=elopement";
   } else if (filename.includes("portfolio.html") || filename.includes("portfolio-detail.html")) {
@@ -662,47 +1137,147 @@ function initPackageDetail() {
   if (!detailContainer) return;
 
   const urlParams = new URLSearchParams(window.location.search);
-  const pkgKey = urlParams.get("pkg") || "elopement";
-  const pkgData = PACKAGES_DATA[pkgKey] || PACKAGES_DATA["elopement"];
+  const rawPkgKey = urlParams.get("pkg") || "elopement";
+  const pkgKey = rawPkgKey.toLowerCase().trim();
 
-  // 1. Update text fields
+  const summaryView = document.getElementById("elopement-summary-view");
+  const detailView = document.getElementById("package-detail-view");
+  const breadcrumbNav = document.getElementById("pkg-breadcrumb");
+  const heroEl = document.getElementById("pkg-hero");
+  const backLink = document.getElementById("pkg-back-link");
+
+  // Highlight tab 3 layanan utama (tanpa penomoran)
+  const mainTabKey = pkgKey.startsWith("elopement") ? "elopement" : pkgKey;
+  document.querySelectorAll(".pkg-tab-btn").forEach(btn => btn.classList.remove("active"));
+  const activeMainTab = document.getElementById(`tab-${mainTabKey}`);
+  if (activeMainTab) activeMainTab.classList.add("active");
+
+  if (pkgKey === "elopement") {
+    // ── 1. HALAMAN RINGKASAN ELOPEMENT ──
+    if (summaryView) summaryView.style.display = "block";
+    if (detailView) detailView.style.display = "none";
+
+    if (heroEl) {
+      heroEl.style.backgroundImage = "url('assets/images/hero/hero-elopement.webp')";
+      heroEl.style.backgroundPosition = "center 38%";
+    }
+
+    if (breadcrumbNav) {
+      breadcrumbNav.innerHTML = `
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="services.html">Services</a>
+        <span>/</span>
+        <span id="breadcrumb-current" style="color: var(--dark); font-weight: 500;">Bali Elopement Packages</span>
+      `;
+    }
+    return;
+  }
+
+  // ── 2. HALAMAN DETAIL (elopement-1..4, pre-wedding, private-villa) ──
+  if (summaryView) summaryView.style.display = "none";
+  if (detailView) detailView.style.display = "block";
+
+  const pkgData = PACKAGES_DATA[pkgKey] || PACKAGES_DATA["elopement-1"];
+
+  // Breadcrumb
+  if (breadcrumbNav) {
+    if (pkgKey.startsWith("elopement-")) {
+      const pkgNumMatch = pkgKey.match(/elopement-(\d+)/);
+      const pkgNum = pkgNumMatch ? pkgNumMatch[1] : "";
+      breadcrumbNav.innerHTML = `
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="services.html">Services</a>
+        <span>/</span>
+        <a href="package-detail.html?pkg=elopement">Bali Elopement Packages</a>
+        <span>/</span>
+        <span id="breadcrumb-current" style="color: var(--dark); font-weight: 500;">Bali Elopement Package ${pkgNum}</span>
+      `;
+    } else {
+      breadcrumbNav.innerHTML = `
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="services.html">Services</a>
+        <span>/</span>
+        <span id="breadcrumb-current" style="color: var(--dark); font-weight: 500;">${pkgData.title}</span>
+      `;
+    }
+  }
+
+  // Back link (← All elopement packages)
+  if (backLink) {
+    if (pkgKey.startsWith("elopement-")) {
+      backLink.style.display = "inline-flex";
+    } else {
+      backLink.style.display = "none";
+    }
+  }
+
+  // Update text fields
   const titleEl = document.getElementById("pkg-title");
   const subtitleEl = document.getElementById("pkg-subtitle");
   const badgeEl = document.getElementById("pkg-badge");
   const priceIdrEl = document.getElementById("pkg-price-idr");
   const priceForeignEl = document.getElementById("pkg-price-foreign");
   const descEl = document.getElementById("pkg-description");
-  const breadcrumbCurrent = document.getElementById("breadcrumb-current");
-  const heroEl = document.getElementById("pkg-hero");
 
   if (titleEl) titleEl.textContent = pkgData.title;
-  if (subtitleEl) subtitleEl.textContent = pkgData.subtitle;
+  if (subtitleEl) {
+    if (pkgData.subtitle) {
+      subtitleEl.textContent = pkgData.subtitle;
+      subtitleEl.style.display = "block";
+    } else {
+      subtitleEl.textContent = "";
+      subtitleEl.style.display = "none";
+    }
+  }
   if (badgeEl) badgeEl.textContent = pkgData.badge;
   if (priceIdrEl) priceIdrEl.textContent = pkgData.priceIDR;
-  if (priceForeignEl) priceForeignEl.textContent = pkgData.priceForeign;
-  if (descEl) descEl.textContent = pkgData.description;
-  if (breadcrumbCurrent) breadcrumbCurrent.textContent = pkgData.title;
+  if (priceForeignEl) {
+    if (pkgData.priceForeign) {
+      priceForeignEl.textContent = pkgData.priceForeign;
+      priceForeignEl.style.display = "block";
+    } else {
+      priceForeignEl.style.display = "none";
+    }
+  }
+  if (descEl) {
+    if (pkgData.description && pkgData.description.includes("\n\n")) {
+      descEl.innerHTML = pkgData.description.split("\n\n").map(p => `<p style="margin-bottom: 14px; font-size: 15.5px; line-height: 1.75; color: var(--dark);">${p}</p>`).join("");
+    } else {
+      descEl.textContent = pkgData.description;
+    }
+  }
   if (heroEl && pkgData.heroImage) {
     heroEl.style.backgroundImage = `url('${pkgData.heroImage}')`;
     heroEl.style.backgroundPosition = pkgData.heroPosition || 'center 15%';
   }
 
-  // 2. Render Inclusions
+  // Render Inclusions
   const inclusionsContainer = document.getElementById("pkg-inclusions");
+  const inclusionsCol = inclusionsContainer ? inclusionsContainer.closest(".package-details-col") : null;
   if (inclusionsContainer) {
-    inclusionsContainer.innerHTML = pkgData.inclusions.map(inc => `
-      <li class="inclusion-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-        <span>${inc}</span>
-      </li>
-    `).join("");
+    if (pkgData.inclusions && pkgData.inclusions.length > 0) {
+      if (inclusionsCol) inclusionsCol.style.display = "block";
+      inclusionsContainer.innerHTML = pkgData.inclusions.map(inc => `
+        <li class="inclusion-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>${inc}</span>
+        </li>
+      `).join("");
+    } else {
+      // Hide inclusions list for Package 4 (BELUM TERSEDIA)
+      inclusionsContainer.innerHTML = "";
+      if (inclusionsCol) inclusionsCol.style.display = "none";
+    }
   }
 
-  // 3. Render Timeline
+  // Render Timeline
   const timelineContainer = document.getElementById("pkg-timeline");
-  if (timelineContainer) {
+  if (timelineContainer && pkgData.timeline) {
     timelineContainer.innerHTML = pkgData.timeline.map(item => `
       <div class="timeline-node">
         <div class="timeline-time">${item.time}</div>
@@ -711,9 +1286,9 @@ function initPackageDetail() {
     `).join("");
   }
 
-  // 4. Render Brick / Masonry Gallery (5-7 photos)
+  // Render Brick / Masonry Gallery (5-7 photos)
   const brickContainer = document.getElementById("pkg-brick-gallery");
-  if (brickContainer) {
+  if (brickContainer && pkgData.photos) {
     brickContainer.innerHTML = pkgData.photos.map((p, idx) => `
       <div class="brick-item ${p.spanClass}" data-lightbox-src="${p.src}" title="Click to view full photo">
         <img src="${p.src}" alt="${p.alt}" loading="lazy">
@@ -724,10 +1299,19 @@ function initPackageDetail() {
     `).join("");
   }
 
-  // 5. Auto-select package in reservation form dropdown
+  // Auto-select package in reservation form dropdown
   const packageSelect = document.getElementById("inquiry-package");
   if (packageSelect) {
-    packageSelect.value = pkgData.id;
+    for (let i = 0; i < packageSelect.options.length; i++) {
+      const optVal = packageSelect.options[i].value.toLowerCase();
+      const pkgTitle = pkgData.title.toLowerCase();
+      const pkgNumMatch = pkgKey.match(/elopement-(\d+)/);
+      const isElopementMatch = pkgNumMatch && optVal.includes(`package ${pkgNumMatch[1]}`);
+      if (isElopementMatch || optVal.includes(pkgTitle) || pkgTitle.includes(optVal) || (pkgData.id && optVal.includes(pkgData.id))) {
+        packageSelect.selectedIndex = i;
+        break;
+      }
+    }
   }
 }
 
@@ -894,7 +1478,8 @@ function initPortfolioDetail() {
   // 6. Related Celebrations
   const relatedContainer = document.getElementById("related-stories-container");
   if (relatedContainer) {
-    const otherKeys = Object.keys(PORTFOLIO_DATA).filter(k => k !== data.id);
+    const samePackageKeys = Object.keys(PORTFOLIO_DATA).filter(k => k !== data.id && PORTFOLIO_DATA[k].packageId === data.packageId);
+    const otherKeys = samePackageKeys.length >= 3 ? samePackageKeys : Object.keys(PORTFOLIO_DATA).filter(k => k !== data.id);
     relatedContainer.innerHTML = otherKeys.slice(0, 3).map(k => {
       const s = PORTFOLIO_DATA[k];
       return `
@@ -1115,25 +1700,50 @@ function closeLightbox() {
 function initPortfolioFilter() {
   const filterBtns = document.querySelectorAll(".portfolio-filter-btn");
   const items = document.querySelectorAll(".portfolio-card-link, .portfolio-card:not(.portfolio-card-link .portfolio-card)");
+  const emptyState = document.querySelector(".portfolio-empty-state");
 
   if (!filterBtns.length) return;
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
+  function applyFilter(btn) {
+    filterBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
 
-      const category = btn.getAttribute("data-filter");
-      items.forEach(item => {
-        const itemCat = item.getAttribute("data-category") || item.querySelector(".portfolio-card")?.getAttribute("data-category") || "";
-        const catList = itemCat.toLowerCase().split(/\s+/);
-        if (category === "all" || catList.includes(category.toLowerCase())) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      });
+    const category = btn.getAttribute("data-filter");
+    let visibleCount = 0;
+    items.forEach(item => {
+      const itemCat = item.getAttribute("data-category") || item.querySelector(".portfolio-card")?.getAttribute("data-category") || "";
+      const catList = itemCat.toLowerCase().split(/\s+/);
+      if (category === "all" || catList.includes(category.toLowerCase())) {
+        item.style.display = "block";
+        visibleCount++;
+      } else {
+        item.style.display = "none";
+      }
     });
+
+    if (emptyState) {
+      emptyState.style.display = visibleCount === 0 ? "block" : "none";
+      const emptyTitle = emptyState.querySelector(".empty-title");
+      if (emptyTitle) {
+        const catName = btn.textContent.trim();
+        emptyTitle.textContent = `${catName} Gallery Coming Soon`;
+      }
+    }
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => applyFilter(btn));
   });
+
+  // Check URL query param or hash, e.g. portfolio.html?filter=prewedding
+  const urlFilter = new URLSearchParams(window.location.search).get("filter") || window.location.hash.replace("#", "");
+  let initialBtn = null;
+  if (urlFilter) {
+    initialBtn = Array.from(filterBtns).find(b => b.getAttribute("data-filter") === urlFilter.toLowerCase());
+  }
+  if (!initialBtn) {
+    initialBtn = document.querySelector(".portfolio-filter-btn.active") || filterBtns[0];
+  }
+  if (initialBtn) applyFilter(initialBtn);
 }
 

@@ -1237,6 +1237,120 @@ p {
 }
 
 /* ==========================================================================
+   ELOPEMENT SUMMARY GRID (OVERVIEW PAGE)
+   ========================================================================== */
+.elopement-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.elopement-summary-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.elopement-summary-card .service-card-body {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.elopement-card-tagline {
+  font-family: var(--font-serif);
+  font-size: 16.5px;
+  line-height: 1.45;
+  color: var(--dark);
+  font-style: normal;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  min-height: auto;
+}
+
+.elopement-card-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.elopement-card-price {
+  font-family: var(--font-serif);
+  font-size: 17.5px;
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+
+.elopement-card-link {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--coastal);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.elopement-summary-card:hover .elopement-card-link {
+  color: var(--coastal-dark);
+  transform: translateX(3px);
+}
+
+.elopement-summary-cta {
+  margin-top: 48px;
+  text-align: center;
+  padding: 36px 24px;
+  background-color: var(--nude);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+}
+
+.pkg-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--coastal);
+  text-decoration: none;
+  transition: var(--transition);
+  margin-bottom: 14px;
+}
+
+.pkg-back-link:hover {
+  color: var(--coastal-dark);
+  transform: translateX(-3px);
+}
+
+@media (max-width: 1024px) {
+  .elopement-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .elopement-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ==========================================================================
    PACKAGE DETAIL: STRUCTURED WRAPPER & INQUIRY FORM
    ========================================================================== */
 .package-wrapper {
@@ -1245,7 +1359,7 @@ p {
   border-radius: 8px;
   padding: clamp(30px, 5vw, 60px);
   box-shadow: var(--shadow-card);
-  margin-top: -50px;
+  margin-top: 10px;
   position: relative;
   z-index: 10;
 }
@@ -2209,7 +2323,7 @@ textarea.form-control {
   
   .package-wrapper {
     padding: 24px 18px;
-    margin-top: -30px;
+    margin-top: 10px;
   }
   
   .package-header-bar {

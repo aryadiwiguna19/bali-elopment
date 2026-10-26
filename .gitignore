@@ -14,4 +14,6 @@ test_*.html
 
 # Raw Source Client Folder (Assets are served cleanly from assets/images/portfolio/)
 ELOPEMENT/
+PREWEDDING/
+EVENT/
 

@@ -71,26 +71,10 @@
     .portfolio-body {
       padding: 28px 24px;
     }
-    .portfolio-tag {
-      font-size: 10.5px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--sage-dark);
-      font-weight: 600;
-      display: block;
-      margin-bottom: 6px;
-    }
     .portfolio-title {
       font-size: 24px;
       font-style: italic;
-      margin-bottom: 10px;
-    }
-    .portfolio-meta {
-      font-size: 12.5px;
-      color: var(--muted);
-      margin-bottom: 14px;
-      display: flex;
-      gap: 14px;
+      margin-bottom: 12px;
     }
 
     @media (max-width: 768px) {
@@ -121,15 +105,22 @@
       
       <!-- Category Filter Tabs -->
       <div class="portfolio-filters" aria-label="Filter Stories">
-        <button class="portfolio-filter-btn active" data-filter="all">All Celebrations</button>
-        <button class="portfolio-filter-btn" data-filter="elopement">Intimate Elopements</button>
-        <button class="portfolio-filter-btn" data-filter="beach">Beachfront</button>
-        <button class="portfolio-filter-btn" data-filter="cliffside">Cliffside</button>
-        <button class="portfolio-filter-btn" data-filter="villa">Villa &amp; Forest</button>
+        <button class="portfolio-filter-btn active" data-filter="elopement">Elopement</button>
+        <button class="portfolio-filter-btn" data-filter="prewedding">Prewedding</button>
+        <button class="portfolio-filter-btn" data-filter="event">Event</button>
       </div>
 
       <!-- Curated Portfolio Stories -->
       <div class="portfolio-grid">
+        
+        <!-- Empty State (When no stories in category yet) -->
+        <div class="portfolio-empty-state" style="display: none; grid-column: 1 / -1; text-align: center; padding: 70px 20px; background: var(--card-bg); border-radius: 8px; border: 1px dashed var(--border-strong);">
+          <h3 class="empty-title" style="font-family: var(--font-serif); font-size: 26px; font-style: italic; color: var(--charcoal); margin-bottom: 12px;">Gallery Coming Soon</h3>
+          <p style="font-size: 14px; color: var(--muted); max-width: 520px; margin: 0 auto 24px;">
+            We are curating stunning visual celebrations for this category. Stay tuned or inquire directly with our team to view private portfolio previews.
+          </p>
+          <a href="contact.html" class="btn btn-primary" style="display: inline-block;">Inquire With Our Team</a>
+        </div>
         
         <!-- STORY 1: ANDI & EVA (PRIVATE VILLA ELOPEMENT) -->
         <a href="portfolio-detail.html?story=andi-eva" class="portfolio-card-link" data-category="elopement villa">
@@ -139,13 +130,6 @@
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Andi &amp; Eva</h3>
-              <div class="portfolio-meta">
-                <span>📍 Seminyak Private Villa</span>
-                <span>•</span>
-                <span>Couple Intimacy</span>
-                <span>•</span>
-                <span>Floral Arch Ceremony</span>
-              </div>
               <p style="font-size: 14px; margin-bottom: 0;">
                 Surrounded by fragrant frangipani trees and modern sanctuary architecture, Andi &amp; Eva exchanged rings under an elegant white floral arch before enjoying a private starlit dinner.
               </p>
@@ -162,13 +146,6 @@
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Budi &amp; Ella</h3>
-              <div class="portfolio-meta">
-                <span>📍 Sanur Beachfront</span>
-                <span>•</span>
-                <span>Pastoral Blessing</span>
-                <span>•</span>
-                <span>Golden Hour Waves</span>
-              </div>
               <p style="font-size: 14px; margin-bottom: 0;">
                 A soulful Christian blessing ceremony on the tranquil shores of Bali. With pastel blue hydrangeas, traditional white ceremony umbrellas, and breaking ocean waves, Budi &amp; Ella promised forever.
               </p>
@@ -185,13 +162,6 @@
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Erik &amp; Sekar</h3>
-              <div class="portfolio-meta">
-                <span>📍 Oceanfront Balcony</span>
-                <span>•</span>
-                <span>Circular Floral Arch</span>
-                <span>•</span>
-                <span>Candlelight Dinner</span>
-              </div>
               <p style="font-size: 14px; margin-bottom: 0;">
                 Perched high above the Indian Ocean, Erik &amp; Sekar celebrated their sacred union framed by a grand circular white floral installation, followed by a romantic private banquet for two under the stars.
               </p>
@@ -208,13 +178,6 @@
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Rubini &amp; Czarlie</h3>
-              <div class="portfolio-meta">
-                <span>📍 Secluded Tropical Beach</span>
-                <span>•</span>
-                <span>Coral Heart Arch</span>
-                <span>•</span>
-                <span>Ocean Breezes</span>
-              </div>
               <p style="font-size: 14px; margin-bottom: 0;">
                 A joyful, carefree celebration on a pristine white sand beach. Featuring a striking coral and pink heart floral arch against the sapphire sea, Rubini &amp; Czarlie celebrated in pure romance.
               </p>
@@ -231,13 +194,6 @@
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Sarah &amp; Miha</h3>
-              <div class="portfolio-meta">
-                <span>📍 Kamandalu Ubud</span>
-                <span>•</span>
-                <span>Valley Gazebo</span>
-                <span>•</span>
-                <span>Custom Written Vows</span>
-              </div>
               <p style="font-size: 14px; margin-bottom: 0;">
                 Nestled within the lush rainforest valley of Kamandalu Ubud, Sarah &amp; Miha exchanged custom handwritten vows in a soft pink draped floral gazebo, surrounded by ancient tropical greenery.
               </p>
@@ -247,22 +203,191 @@
         </a>
 
         <!-- STORY 6: VANY & SANTI (CLIFF & REEF WALK) -->
-        <a href="portfolio-detail.html?story=vany-santi" class="portfolio-card-link" data-category="elopement cliffside beach">
+        <a href="portfolio-detail.html?story=vany-santi" class="portfolio-card-link" data-category="elopement">
           <article class="portfolio-card">
             <div class="portfolio-thumb-wrap">
               <img src="assets/images/portfolio/vany-santi/10.webp" alt="Vany and Santi Ocean Elopement" loading="lazy">
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Vany &amp; Santi</h3>
-              <div class="portfolio-meta">
-                <span>📍 Southern Bali Cliff</span>
-                <span>•</span>
-                <span>Rainbow Floral Circle</span>
-                <span>•</span>
-                <span>Barefoot Sunset Reef</span>
-              </div>
               <p style="font-size: 14px; margin-bottom: 0;">
                 A modern celebration beginning with an ocean-view cliff blessing under a rainbow floral circle and concluding with a barefoot sunset stroll along the tidal coral reef in matching white linen.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- PREWEDDING 1: ART CENTRE DENPASAR -->
+        <a href="portfolio-detail.html?story=art-centre" class="portfolio-card-link" data-category="prewedding">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/art-centre/1.webp" alt="Art Centre Denpasar Prewedding" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Art Centre Denpasar</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                An enchanting cultural pre-wedding session set amidst the majestic carved stone gates, traditional Balinese pavilions, and lush banyan trees of Taman Werdhi Budaya.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- PREWEDDING 2: BALANGAN BEACH & CLIFF -->
+        <a href="portfolio-detail.html?story=balangan-cliff" class="portfolio-card-link" data-category="prewedding">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/balangan-cliff/1.webp" alt="Balangan Beach and Cliff Prewedding" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Balangan Beach &amp; Cliff</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                Perched high upon the iconic golden limestone cliffs of Balangan overlooking turquoise breaks and sea caves, followed by a barefoot sunset shoreline stroll.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- PREWEDDING 3: BLACK LAVA KINTAMANI -->
+        <a href="portfolio-detail.html?story=black-lava-kintamani" class="portfolio-card-link" data-category="prewedding">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/black-lava-kintamani/1.webp" alt="Black Lava Kintamani Prewedding" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Black Lava Kintamani</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                An edgy, editorial pre-wedding session set against the surreal monochrome expanse of Mount Batur’s ancient volcanic black lava fields and alpine pine foothills.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- PREWEDDING 4: BLANGSINGA WATERFALL -->
+        <a href="portfolio-detail.html?story=blangsinga-waterfall" class="portfolio-card-link" data-category="prewedding">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/blangsinga-waterfall/1.webp" alt="Blangsinga Waterfall Prewedding" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Blangsinga Waterfall</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                An intimate tropical romance framed by the rushing cascades, river stones, and mist-drenched emerald jungle canyon of Blangsinga Waterfall.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- PREWEDDING 5: KEBUN RAYA BEDUGUL -->
+        <a href="portfolio-detail.html?story=kebun-raya-bedugul" class="portfolio-card-link" data-category="prewedding">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/kebun-raya-bedugul/1.webp" alt="Kebun Raya Bedugul Prewedding" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Kebun Raya Bedugul</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                A serene, ethereal pre-wedding journey through the towering banyans, ancient rainforest fern canopies, and cool highland breezes of Bali Botanic Garden Bedugul.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- PREWEDDING 6: MELASTI BEACH & CLIFF -->
+        <a href="portfolio-detail.html?story=melasti-beach" class="portfolio-card-link" data-category="prewedding">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/melasti-beach/1.webp" alt="Melasti Beach and Cliff Prewedding" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Melasti Beach &amp; Cliff</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                From the monumental carved white limestone ravines to the tranquil turquoise shallows and coral reefs of Melasti Beach during the golden twilight hour.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- PREWEDDING 7: OCULUS KINTAMANI -->
+        <a href="portfolio-detail.html?story=oculus-kintamani" class="portfolio-card-link" data-category="prewedding">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/oculus-kintamani/1.webp" alt="Oculus Kintamani Prewedding" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Oculus Kintamani</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                A sophisticated blend of contemporary alpine architecture and sweeping panoramic vistas overlooking Mount Batur, the caldera ridges, and serene Lake Batur.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- PREWEDDING 8: PANTAI NYANYI -->
+        <a href="portfolio-detail.html?story=pantai-nyanyi" class="portfolio-card-link" data-category="prewedding">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/pantai-nyanyi/1.webp" alt="Pantai Nyanyi Prewedding" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Pantai Nyanyi</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                Dramatic coastal romance on the glistening black sands and surging surf of Pantai Nyanyi, capturing ethereal sunset silhouettes and mirrored tidal reflections.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- EVENT 1: GOTO GROUP GATHERING -->
+        <a href="portfolio-detail.html?story=goto-gathering" class="portfolio-card-link" data-category="event">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/goto-gathering/1.webp" alt="GoTo Group Gathering in Bali" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">GoTo Group Gathering</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                A grand corporate celebration and executive gathering in Bali, featuring bespoke stage production, cultural Balinese welcome performances, and an exquisite gala banquet.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- EVENT 2: PERTAMINA CORPORATE GALA -->
+        <a href="portfolio-detail.html?story=pertamina-gathering" class="portfolio-card-link" data-category="event">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/pertamina-gathering/1.webp" alt="Pertamina Corporate Gala Bali" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Pertamina Corporate Gala</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                An inspiring corporate summit and appreciation banquet set across Bali’s premier seaside lawn, complete with theatrical lighting, live entertainment, and five-star hospitality.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- EVENT 3: SCARLETT WHITENING GALA -->
+        <a href="portfolio-detail.html?story=scarlett-gathering" class="portfolio-card-link" data-category="event">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/scarlett-gathering/1.webp" alt="Scarlett Whitening Gala Bali" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Scarlett Whitening Gala</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                A high-energy, glamorous brand celebration featuring custom floral photo installations, branded interactive stages, celebrity performances, and a starlit coastal after-party.
               </p>
               <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
             </div>
