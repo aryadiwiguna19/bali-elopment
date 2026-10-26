@@ -12,3 +12,6 @@ portfolio_detail_*.png
 screen_debug_*.png
 test_*.html
 
+# Raw Source Client Folder (Assets are served cleanly from assets/images/portfolio/)
+ELOPEMENT/
+

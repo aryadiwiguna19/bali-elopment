@@ -162,6 +162,168 @@ const PACKAGES_DATA = {
 
 // ── 2.5 PORTFOLIO STORIES DATABASE (GALLERY-FIRST REAL CELEBRATIONS) ──
 const PORTFOLIO_DATA = {
+  "andi-eva": {
+    id: "andi-eva",
+    name: "Andi & Eva",
+    meta: "Seminyak Sanctuary • Private Villa Elopement",
+    description: "An effortless private villa elopement celebrated in complete couple intimacy. Surrounded by tropical frangipani trees and modern sanctuary architecture, Andi & Eva exchanged rings under a lush white floral arch before enjoying a private starlit dinner.",
+    heroImage: "assets/images/portfolio/andi-eva/7.webp",
+    reviewBg: "assets/images/portfolio/andi-eva/6.webp",
+    packageId: "elopement",
+    packageTitle: "Intimate Elopement Wedding",
+    hasVideo: false,
+    videoUrl: null,
+    quote: "Bali Top Wedding transformed our elopement into a truly serene, stress-free dream. Every floral detail and the pacing of our day was simply flawless.",
+    quoteAuthor: "Andi & Eva • Jakarta, Indonesia",
+    photos: [
+      "assets/images/portfolio/andi-eva/7.webp",
+      "assets/images/portfolio/andi-eva/1.webp",
+      "assets/images/portfolio/andi-eva/2.webp",
+      "assets/images/portfolio/andi-eva/5.webp",
+      "assets/images/portfolio/andi-eva/6.webp",
+      "assets/images/portfolio/andi-eva/4.webp",
+      "assets/images/portfolio/andi-eva/8.webp",
+      "assets/images/portfolio/andi-eva/3.webp",
+      "assets/images/portfolio/andi-eva/9.webp",
+      "assets/images/portfolio/andi-eva/10.webp"
+    ]
+  },
+
+  "budi-ella": {
+    id: "budi-ella",
+    name: "Budi & Ella",
+    meta: "Sanur Beachfront • Sunset Blessing Ceremony",
+    description: "A soulful Christian blessing ceremony on the tranquil shores of Bali. With pastel blue hydrangeas, white ceremony umbrellas (tedung), and the sound of gentle waves, Budi & Ella promised forever at golden hour.",
+    heroImage: "assets/images/portfolio/budi-ella/8.webp",
+    reviewBg: "assets/images/portfolio/budi-ella/7.webp",
+    packageId: "elopement",
+    packageTitle: "Intimate Elopement Wedding",
+    hasVideo: false,
+    videoUrl: null,
+    quote: "Standing together on the beach as the sun went down, listening to the pastor's blessing... it was the most emotional and meaningful moment of our lives.",
+    quoteAuthor: "Budi & Ella • Verified Couple",
+    photos: [
+      "assets/images/portfolio/budi-ella/8.webp",
+      "assets/images/portfolio/budi-ella/1.webp",
+      "assets/images/portfolio/budi-ella/7.webp",
+      "assets/images/portfolio/budi-ella/2.webp",
+      "assets/images/portfolio/budi-ella/3.webp",
+      "assets/images/portfolio/budi-ella/4.webp",
+      "assets/images/portfolio/budi-ella/5.webp",
+      "assets/images/portfolio/budi-ella/6.webp",
+      "assets/images/portfolio/budi-ella/9.webp",
+      "assets/images/portfolio/budi-ella/10.webp"
+    ]
+  },
+
+  "erik-sekar": {
+    id: "erik-sekar",
+    name: "Erik & Sekar",
+    meta: "Panoramic Clifftop Ocean View • Vows & Candlelight Banquet",
+    description: "Overlooking the endless expanse of the Indian Ocean, Erik & Sekar celebrated their sacred union framed by a grand circular white floral installation. The evening transitioned into a romantic private candlelit dinner under the twilight sky.",
+    heroImage: "assets/images/portfolio/erik-sekar/8.webp",
+    reviewBg: "assets/images/portfolio/erik-sekar/10.webp",
+    packageId: "elopement",
+    packageTitle: "Intimate Elopement Wedding",
+    hasVideo: false,
+    videoUrl: null,
+    quote: "From the dramatic clifftop views to the romantic dinner setup for just the two of us, Bali Top Wedding executed every detail with pure elegance.",
+    quoteAuthor: "Erik & Sekar • Surabaya, Indonesia",
+    photos: [
+      "assets/images/portfolio/erik-sekar/8.webp",
+      "assets/images/portfolio/erik-sekar/5.webp",
+      "assets/images/portfolio/erik-sekar/10.webp",
+      "assets/images/portfolio/erik-sekar/1.webp",
+      "assets/images/portfolio/erik-sekar/2.webp",
+      "assets/images/portfolio/erik-sekar/3.webp",
+      "assets/images/portfolio/erik-sekar/4.webp",
+      "assets/images/portfolio/erik-sekar/6.webp",
+      "assets/images/portfolio/erik-sekar/7.webp",
+      "assets/images/portfolio/erik-sekar/9.webp"
+    ]
+  },
+
+  "rubini-czarlie": {
+    id: "rubini-czarlie",
+    name: "Rubini & Czarlie",
+    meta: "Secluded Coastal Shore • Sunset Romance",
+    description: "A vibrant, joyful celebration on a secluded tropical beach. Featuring a striking coral and pink heart-shaped floral arch against the sapphire sea, Rubini & Czarlie held an intimate elopement filled with laughter and warm ocean breezes.",
+    heroImage: "assets/images/portfolio/rubini-czarlie/7.webp",
+    reviewBg: "assets/images/portfolio/rubini-czarlie/3.webp",
+    packageId: "elopement",
+    packageTitle: "Intimate Elopement Wedding",
+    hasVideo: false,
+    videoUrl: null,
+    quote: "We wanted a carefree, vibrant beach elopement with zero stress, and Bali Top Wedding delivered beyond our expectations. Truly unforgettable!",
+    quoteAuthor: "Rubini & Czarlie • Verified Couple",
+    photos: [
+      "assets/images/portfolio/rubini-czarlie/7.webp",
+      "assets/images/portfolio/rubini-czarlie/3.webp",
+      "assets/images/portfolio/rubini-czarlie/1.webp",
+      "assets/images/portfolio/rubini-czarlie/2.webp",
+      "assets/images/portfolio/rubini-czarlie/4.webp",
+      "assets/images/portfolio/rubini-czarlie/5.webp",
+      "assets/images/portfolio/rubini-czarlie/6.webp",
+      "assets/images/portfolio/rubini-czarlie/8.webp",
+      "assets/images/portfolio/rubini-czarlie/9.webp",
+      "assets/images/portfolio/rubini-czarlie/10.webp"
+    ]
+  },
+
+  "sarah-miha": {
+    id: "sarah-miha",
+    name: "Sarah & Miha",
+    meta: "Kamandalu Ubud • Lush Rainforest Valley Sanctuary",
+    description: "Nestled within the lush rainforest valley of Kamandalu Ubud, Sarah & Miha exchanged custom handwritten vows in a soft pink draped floral gazebo, surrounded by ancient tropical greenery and tranquil valley breezes.",
+    heroImage: "assets/images/portfolio/sarah-miha/6.webp",
+    reviewBg: "assets/images/portfolio/sarah-miha/1.webp",
+    packageId: "elopement",
+    packageTitle: "Intimate Elopement Wedding",
+    hasVideo: false,
+    videoUrl: null,
+    quote: "Kamandalu Ubud was the most magical backdrop for our vows. The team handled every legal and ceremonial nuance with absolute grace.",
+    quoteAuthor: "Sarah & Miha • Europe",
+    photos: [
+      "assets/images/portfolio/sarah-miha/6.webp",
+      "assets/images/portfolio/sarah-miha/1.webp",
+      "assets/images/portfolio/sarah-miha/2.webp",
+      "assets/images/portfolio/sarah-miha/3.webp",
+      "assets/images/portfolio/sarah-miha/4.webp",
+      "assets/images/portfolio/sarah-miha/5.webp",
+      "assets/images/portfolio/sarah-miha/7.webp",
+      "assets/images/portfolio/sarah-miha/8.webp",
+      "assets/images/portfolio/sarah-miha/9.webp",
+      "assets/images/portfolio/sarah-miha/10.webp"
+    ]
+  },
+
+  "vany-santi": {
+    id: "vany-santi",
+    name: "Vany & Santi",
+    meta: "Southern Bali Cliff & Tidal Reef • Coastal Sunset Blessing",
+    description: "A modern, carefree celebration beginning with an ocean-view cliff blessing under a rainbow floral arch and concluding with a barefoot sunset stroll along the tidal coral reef in matching white linen.",
+    heroImage: "assets/images/portfolio/vany-santi/10.webp",
+    reviewBg: "assets/images/portfolio/vany-santi/4.webp",
+    packageId: "elopement",
+    packageTitle: "Intimate Elopement Wedding",
+    hasVideo: false,
+    videoUrl: null,
+    quote: "Barefoot on the reef as the twilight settled over the water was pure magic. We couldn't have asked for a more authentic, soulful elopement experience.",
+    quoteAuthor: "Vany & Santi • Verified Couple",
+    photos: [
+      "assets/images/portfolio/vany-santi/10.webp",
+      "assets/images/portfolio/vany-santi/4.webp",
+      "assets/images/portfolio/vany-santi/1.webp",
+      "assets/images/portfolio/vany-santi/2.webp",
+      "assets/images/portfolio/vany-santi/3.webp",
+      "assets/images/portfolio/vany-santi/5.webp",
+      "assets/images/portfolio/vany-santi/6.webp",
+      "assets/images/portfolio/vany-santi/7.webp",
+      "assets/images/portfolio/vany-santi/8.webp",
+      "assets/images/portfolio/vany-santi/9.webp"
+    ]
+  },
+
   "michel-angela": {
     id: "michel-angela",
     name: "Michel & Angela",
@@ -963,8 +1125,9 @@ function initPortfolioFilter() {
 
       const category = btn.getAttribute("data-filter");
       items.forEach(item => {
-        const itemCat = item.getAttribute("data-category") || item.querySelector(".portfolio-card")?.getAttribute("data-category");
-        if (category === "all" || itemCat === category) {
+        const itemCat = item.getAttribute("data-category") || item.querySelector(".portfolio-card")?.getAttribute("data-category") || "";
+        const catList = itemCat.toLowerCase().split(/\s+/);
+        if (category === "all" || catList.includes(category.toLowerCase())) {
           item.style.display = "block";
         } else {
           item.style.display = "none";
