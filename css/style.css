@@ -775,15 +775,15 @@ p {
    ========================================================================== */
 .hero {
   position: relative;
-  min-height: 52vh;
+  min-height: 58vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background-color: var(--dark);
-  background-image: linear-gradient(180deg, rgba(34, 44, 48, 0.40) 0%, rgba(90, 122, 133, 0.62) 100%), url('../assets/images/hero/hero-main.webp');
+  background-image: linear-gradient(180deg, rgba(28, 42, 48, 0.4) 0%, rgba(90, 122, 133, 0.4) 50%, rgba(28, 42, 48, 0.6) 100%), url('../assets/images/hero/hero-vany-tall-2400x1200.webp');
   background-size: cover;
-  background-position: center 35%;
+  background-position: center bottom;
   color: var(--ivory);
   padding: 60px 24px;
 }
@@ -1857,6 +1857,99 @@ textarea.form-control {
 }
 
 /* ==========================================================================
+   WHY COUPLES CHOOSE US (TRUST PILLARS)
+   ========================================================================== */
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.why-us-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 38px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.why-us-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(90, 122, 133, 0.12);
+  border-color: var(--coastal);
+}
+
+.why-us-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(90, 122, 133, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  color: var(--coastal);
+  transition: var(--transition);
+}
+
+.why-us-card:hover .why-us-icon-box {
+  background: var(--coastal);
+  color: var(--white);
+}
+
+.why-us-badge {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.why-us-card h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-style: italic;
+  margin-bottom: 14px;
+  color: var(--dark);
+  line-height: 1.35;
+}
+
+.why-us-card p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.why-us-footer-tag {
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-light);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--coastal);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .why-us-card {
+    padding: 30px 24px;
+  }
+}
+
+/* ==========================================================================
    FOOTER SECTION
    ========================================================================== */
 .site-footer {
@@ -2370,6 +2463,7 @@ textarea.form-control {
     line-height: 1.5;
   }
 
+  .hero,
   .hero-inner {
     padding: 60px 18px 45px;
     min-height: 42vh;

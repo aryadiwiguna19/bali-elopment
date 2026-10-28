@@ -45,7 +45,7 @@ const PACKAGES_DATA = {
     priceForeign: "",
     capacity: "Just for Two",
     duration: "Rooftop Vows Ceremony",
-    heroImage: "assets/images/hero/hero-elopement.webp",
+    heroImage: "assets/images/elopement/elopement-01.webp",
     heroPosition: "center 38%",
     description: "Celebrate your love high above the vibrant heart of Kuta. Powered by Bali Top Wedding, this elopement package combines modern comfort with breathtaking tropical views. Say \"I Do\" on a stunning private rooftop venue featuring panoramic ocean vistas, famous Bali sunset backdrops, and an intimate setting designed just for two.\n\nLocated directly in the center of Kuta's bustling tourism hub, this package offers unmatched convenience with instant access to top beach resorts, dining, and nightlife. From rooftop floral styling and ceremony arrangements to legalities and photography, our fully registered local team ensures an effortless, unforgettable rooftop elopement.",
     inclusions: [
@@ -86,7 +86,7 @@ const PACKAGES_DATA = {
     priceForeign: "",
     capacity: "Just for Two",
     duration: "Cliffside Vows Ceremony",
-    heroImage: "assets/images/hero/hero-elopement.webp",
+    heroImage: "assets/images/elopement/elopement-02.webp",
     heroPosition: "center 38%",
     description: "Say \"I Do\" surrounded by nature with an unforgettable elopement on South Bali Cliff. Powered by Bali Top Wedding, this iconic outdoor location offers breathtaking panoramas of soaring ocean cliffs, golden beaches, and world-famous Bali sunsets—making it a favorite choice for all couples seeking a truly scenic vow exchange.\n\nWhether you dream of a simple exchange of vows or an all-inclusive setup, our legally registered local team manages every detail, including location permits, floral styling, officiating, and photography. Celebrate effortlessly on one of Bali's most celebrated landscapes.",
     inclusions: [
@@ -126,7 +126,7 @@ const PACKAGES_DATA = {
     priceForeign: "",
     capacity: "Just for Two",
     duration: "Beach / Garden Vows Ceremony",
-    heroImage: "assets/images/hero/hero-elopement.webp",
+    heroImage: "assets/images/elopement/elopement-03.webp",
     heroPosition: "center 38%",
     description: "Exchange your vows where lush greenery meets the sparkling waters of Tanjung Benoa. Powered by Bali Top Wedding, this elopement package offers complete flexibility to choose an intimate ceremony directly on the white sand beach or in the seaside tropical garden with uninterrupted ocean views.\n\nFrom beach arches to garden styling, our legally registered local team manages every detail—including venue coordination, floral design, celebrant services, and professional photography. Enjoy an effortless, stress-free vow exchange tailored to your personal vision on Tanjung Benoa's stunning coastline.",
     inclusions: [
@@ -166,7 +166,7 @@ const PACKAGES_DATA = {
     priceForeign: "",
     capacity: "Just for Two",
     duration: "Riverside Garden Ceremony",
-    heroImage: "assets/images/hero/hero-elopement.webp",
+    heroImage: "assets/images/elopement/elopement-04.webp",
     heroPosition: "center 38%",
     description: "Exchange your vows nestled in a lush riverside garden along the gentle Wos River. Powered by Bali Top Wedding, this elopement package offers a peaceful, luxury sanctuary where manicured lawns and vibrant tropical greenery meet natural river views.\n\nFrom elegant floral styling and celebrant coordination to legal requirements and professional photography, our legally registered local team handles every detail seamlessly. Enjoy 5-star hospitality and authentic Balinese warmth as you celebrate your special day in a serene garden setting.",
     inclusions: [],
@@ -195,8 +195,8 @@ const PACKAGES_DATA = {
     priceForeign: "~ €990 / $1,080 USD",
     capacity: "Couple + Styling Crew",
     duration: "Full-Day (Sunrise to Sunset)",
-    heroImage: "assets/images/prewedding/prewed-01.webp",
-    heroPosition: "center 22%",
+    heroImage: "assets/images/prewedding/prewed-04.webp",
+    heroPosition: "center 30%",
     description: "Designed for adventurous couples traveling to Bali who desire magazine-worthy pre-wedding portraiture before their big day. We curate private transport, wardrobe styling guidance, and secret off-the-beaten-path locations so you can be completely immersed in the magic of the island.",
     inclusions: [
       "Up to 3 distinct photoshoot destinations (e.g., Mount Batur sunrise, waterfall sanctuary, & Uluwatu cliff sunset)",
@@ -235,8 +235,8 @@ const PACKAGES_DATA = {
     priceForeign: "~ €4,680 / $5,100 USD",
     capacity: "10 to 30 Guests",
     duration: "Full Wedding Day + Villa Stay Options",
-    heroImage: "assets/images/hero/hero-villa.webp",
-    heroPosition: "center 20%",
+    heroImage: "assets/images/portfolio/goto-gathering/1.webp",
+    heroPosition: "center 45%",
     description: "Experience the pinnacle of Balinese hospitality with an intimate private villa wedding. Imagine walking down an infinity-pool aisle hovering above the Indian Ocean, followed by a gourmet banquet beneath a canopy of fairy lights and tropical flowers.",
     inclusions: [
       "Daytime & Evening event rental of luxury private cliffside or Canggu luxury estate villa",
@@ -270,6 +270,7 @@ const PACKAGES_DATA = {
 
 // Alias default 'elopement' to 'elopement-1' for legacy link preservation
 PACKAGES_DATA["elopement"] = PACKAGES_DATA["elopement-1"];
+PACKAGES_DATA["event"] = PACKAGES_DATA["private-villa"];
 
 // ── 2.5 PORTFOLIO STORIES DATABASE (GALLERY-FIRST REAL CELEBRATIONS) ──
 const PORTFOLIO_DATA = {
@@ -1138,7 +1139,8 @@ function initPackageDetail() {
 
   const urlParams = new URLSearchParams(window.location.search);
   const rawPkgKey = urlParams.get("pkg") || "elopement";
-  const pkgKey = rawPkgKey.toLowerCase().trim();
+  let pkgKey = rawPkgKey.toLowerCase().trim();
+  if (pkgKey === "event") pkgKey = "private-villa";
 
   const summaryView = document.getElementById("elopement-summary-view");
   const detailView = document.getElementById("package-detail-view");
@@ -1158,7 +1160,7 @@ function initPackageDetail() {
     if (detailView) detailView.style.display = "none";
 
     if (heroEl) {
-      heroEl.style.backgroundImage = "url('assets/images/hero/hero-elopement.webp')";
+      heroEl.style.backgroundImage = "url('assets/images/elopement/elopement-04.webp')";
       heroEl.style.backgroundPosition = "center 38%";
     }
 
