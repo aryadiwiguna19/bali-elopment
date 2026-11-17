@@ -16,4 +16,9 @@ test_*.html
 ELOPEMENT/
 PREWEDDING/
 EVENT/
+assets/images/PORTOFOLIO/
+assets/images/FOTO FOR ALL PAGES/
 
+
+# WordPress theme build output (python wordpress/build.py)
+wordpress/dist/

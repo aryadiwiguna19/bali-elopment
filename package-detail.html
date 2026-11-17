@@ -69,6 +69,50 @@
       .breadcrumb-nav a:hover {
         color: var(--dark);
       }
+
+      /* Hero slideshow */
+      .pkg-hero-slide {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 1.2s ease;
+      }
+      .pkg-hero-slide.is-active {
+        opacity: 1;
+      }
+      .pkg-hero-dots {
+        position: absolute;
+        bottom: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 2;
+      }
+      .pkg-hero-dot {
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border-radius: 50%;
+        border: 1px solid #FFFFFF;
+        background: rgba(255, 255, 255, 0.35);
+        cursor: pointer;
+      }
+      .pkg-hero-dot.is-active {
+        background: #FFFFFF;
+      }
+
+      /* Good to Know notes */
+      .pkg-notes {
+        margin: 0 0 12px 18px;
+        display: grid;
+        gap: 10px;
+        font-size: 14.5px;
+        line-height: 1.7;
+        color: var(--muted);
+      }
     </style>
   </head>
   <body>
@@ -77,7 +121,7 @@
     <div id="site-header"></div>
 
     <!-- ── 3. INNER HERO HEADER (Photo Only) ── -->
-    <header class="hero-inner" id="pkg-hero" style="background-image: url('assets/images/elopement/elopement-04.webp');"></header>
+    <header class="hero-inner" id="pkg-hero"></header>
 
     <!-- ── 4. STRUCTURED CONTAINER WRAPPER ── -->
     <main class="section" style="padding-top: 40px;" id="package-detail-container">
@@ -95,88 +139,23 @@
         <!-- Package Switcher Tabs -->
         <div class="package-tabs" aria-label="Switch Package">
           <a href="package-detail.html?pkg=elopement" class="pkg-tab-btn" id="tab-elopement">Bali Elopement Packages</a>
+          <a href="package-detail.html?pkg=private-villa" class="pkg-tab-btn" id="tab-private-villa">Villa Weddings</a>
           <a href="package-detail.html?pkg=pre-wedding" class="pkg-tab-btn" id="tab-pre-wedding">Pre Wedding Photography</a>
-          <a href="package-detail.html?pkg=private-villa" class="pkg-tab-btn" id="tab-private-villa">Private Villa Weddings</a>
         </div>
 
-        <!-- ── ELOPEMENT SUMMARY VIEW (Grid 4 Settings) ── -->
-        <div id="elopement-summary-view" style="display: none;">
+        <!-- ── SERVICE OVERVIEW (filled from PACKAGE_SERVICES in script.js) ── -->
+        <div id="package-summary-view" style="display: none;">
           <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-            <span class="section-label">Bali Elopement Packages</span>
-            <h2 style="font-family: var(--font-serif); font-size: clamp(26px, 3vw, 36px); margin-bottom: 12px; font-style: italic;">Choose your elopement setting</h2>
+            <h2 id="summary-title" style="font-family: var(--font-serif); font-size: clamp(26px, 3vw, 36px); margin-bottom: 12px; font-style: italic;"></h2>
             <div class="divider-gold" style="margin: 0 auto 16px;"></div>
-            <p style="font-size: 15.5px; color: var(--muted); max-width: 650px; margin: 0 auto;">
-              Discover our four signature Bali elopement settings, thoughtfully designed for an intimate, stress-free celebration just for two.
-            </p>
+            <p id="summary-intro" style="font-size: 15.5px; color: var(--muted); max-width: 720px; margin: 0 auto;"></p>
           </div>
 
-          <div class="elopement-summary-grid">
-            
-            <!-- Card 1 -->
-            <a href="package-detail.html?pkg=elopement-1" class="service-card elopement-summary-card">
-              <div class="service-card-image">
-                <img src="assets/images/elopement/elopement-01.webp" alt="Bali Elopement Package 1 - Rooftop Kuta" loading="lazy">
-              </div>
-              <div class="service-card-body">
-                <span class="service-card-category">Package 1 · Rooftop Kuta</span>
-                <p class="service-card-desc elopement-card-tagline">Intimate rooftop vows over Kuta Beach and golden sunset</p>
-                <div class="elopement-card-footer">
-                  <div class="elopement-card-price">IDR 23,000,000 net</div>
-                  <span class="elopement-card-link">View details &rarr;</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 2 -->
-            <a href="package-detail.html?pkg=elopement-2" class="service-card elopement-summary-card">
-              <div class="service-card-image">
-                <img src="assets/images/elopement/elopement-02.webp" alt="Bali Elopement Package 2 - Balangan Cliff" loading="lazy">
-              </div>
-              <div class="service-card-body">
-                <span class="service-card-category">Package 2 · Balangan Cliff</span>
-                <p class="service-card-desc elopement-card-tagline">Dramatic cliffside vows with sweeping ocean and sunset views</p>
-                <div class="elopement-card-footer">
-                  <div class="elopement-card-price">IDR 21,000,000 net</div>
-                  <span class="elopement-card-link">View details &rarr;</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 3 -->
-            <a href="package-detail.html?pkg=elopement-3" class="service-card elopement-summary-card">
-              <div class="service-card-image">
-                <img src="assets/images/elopement/elopement-03.webp" alt="Bali Elopement Package 3 - Tanjung Benoa" loading="lazy">
-              </div>
-              <div class="service-card-body">
-                <span class="service-card-category">Package 3 · Tanjung Benoa</span>
-                <p class="service-card-desc elopement-card-tagline">Serene vows with a white sand beach and tropical garden backdrop</p>
-                <div class="elopement-card-footer">
-                  <div class="elopement-card-price">IDR 29,000,000 net</div>
-                  <span class="elopement-card-link">View details &rarr;</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Card 4 -->
-            <a href="package-detail.html?pkg=elopement-4" class="service-card elopement-summary-card">
-              <div class="service-card-image">
-                <img src="assets/images/elopement/elopement-04.webp" alt="Bali Elopement Package 4 - Ubud Riverside" loading="lazy">
-              </div>
-              <div class="service-card-body">
-                <span class="service-card-category">Package 4 · Ubud Riverside</span>
-                <p class="service-card-desc elopement-card-tagline">An intimate riverside elopement in peaceful Ubud</p>
-                <div class="elopement-card-footer">
-                  <div class="elopement-card-price">IDR 26,000,000 net</div>
-                  <span class="elopement-card-link">View details &rarr;</span>
-                </div>
-              </div>
-            </a>
-
-          </div>
+          <div class="elopement-summary-grid" id="summary-grid"></div>
 
           <div class="elopement-summary-cta">
             <p style="font-family: var(--font-serif); font-size: 21px; color: var(--dark); margin-bottom: 16px; font-style: italic;">
-              Not sure which setting suits you? Ask our planner
+              Not sure which package suits you? Ask our planner
             </p>
             <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
               <a href="contact.html" class="btn btn-primary" style="padding: 10px 24px; font-size: 11px;">Send Inquiry</a>
@@ -190,6 +169,8 @@
 
         <!-- ── PACKAGE DETAIL VIEW (Specific Package) ── -->
         <div id="package-detail-view">
+
+          <a href="package-detail.html?pkg=elopement" class="pkg-back-link" id="pkg-back-link">&larr; All packages</a>
 
           <!-- Structured Card / Box Wrapper -->
           <div class="package-wrapper">
@@ -209,7 +190,7 @@
               <div class="package-price-tag" id="pkg-price-idr">IDR 23,000,000 net</div>
               <div class="package-price-sub" id="pkg-price-foreign"></div>
               <div style="margin-top: 14px;">
-                <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #2E7D32; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+                <span id="pkg-net-note" style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #2E7D32; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
                   ✓ No Hidden Service Charges
                 </span>
               </div>
@@ -229,6 +210,11 @@
               <ul class="inclusions-list" id="pkg-inclusions">
                 <!-- Populated by script.js -->
               </ul>
+
+              <div id="pkg-notes-block" style="display: none;">
+                <h3 style="margin-bottom: 16px;">Good to Know</h3>
+                <ul class="pkg-notes" id="pkg-notes"></ul>
+              </div>
             </div>
 
             <!-- Column 2: Integrated Reservation / Inquiry Form -->
@@ -262,12 +248,8 @@
                   <div class="form-group">
                     <label class="form-label" for="inquiry-package">Selected Package</label>
                     <select id="inquiry-package" name="package" class="form-control">
-                      <option value="Bali Elopement Package 1">Bali Elopement Package 1 (Rooftop Kuta - IDR 23,000,000 net)</option>
-                      <option value="Bali Elopement Package 2">Bali Elopement Package 2 (Balangan Cliff - IDR 21,000,000 net)</option>
-                      <option value="Bali Elopement Package 3">Bali Elopement Package 3 (Tanjung Benoa - IDR 29,000,000 net)</option>
-                      <option value="Bali Elopement Package 4">Bali Elopement Package 4 (Ubud Riverside - IDR 26,000,000 net)</option>
-                      <option value="Pre-Wedding Adventure Experience">Pre-Wedding Adventure Experience (IDR 16,500,000 net)</option>
-                      <option value="Private Villa Intimate Wedding">Private Villa Intimate Wedding (IDR 78,000,000 net)</option>
+                      <!-- Packages are filled in by populatePackageSelects() in script.js -->
+                      <option value="Custom / Undecided">Custom / Undecided (Need Recommendation)</option>
                     </select>
                   </div>
 
@@ -308,16 +290,6 @@
     <div id="site-footer"></div>
 
     <script src="js/script.js"></script>
-    <script>
-      // Highlight active tab based on query param
-      document.addEventListener("DOMContentLoaded", () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const pkgKey = urlParams.get("pkg") || "elopement";
-        const mainKey = pkgKey.startsWith("elopement") ? "elopement" : pkgKey;
-        const activeTab = document.getElementById(`tab-${mainKey}`);
-        if (activeTab) activeTab.classList.add("active");
-      });
-    </script>
   </body>
   </html>
 

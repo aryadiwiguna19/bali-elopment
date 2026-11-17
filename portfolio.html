@@ -77,6 +77,78 @@
       margin-bottom: 12px;
     }
 
+    .films-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+      gap: 36px;
+    }
+    .film-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+    }
+    .film-frame {
+      aspect-ratio: 16 / 9;
+      background-color: var(--dark);
+    }
+    .film-frame iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .film-player {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .film-player img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .film-player:hover img {
+      transform: scale(1.04);
+    }
+    .film-play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 68px;
+      height: 68px;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.92);
+      color: var(--sage-dark);
+      box-shadow: var(--shadow-card);
+    }
+    .film-play-icon svg {
+      width: 24px;
+      height: 24px;
+      margin-left: 3px;
+    }
+    .film-body {
+      padding: 22px 24px;
+    }
+    .film-body .section-label {
+      margin-bottom: 6px;
+    }
+    .film-body .portfolio-title {
+      margin-bottom: 0;
+    }
+
     @media (max-width: 768px) {
       .portfolio-grid {
         grid-template-columns: 1fr;
@@ -106,8 +178,8 @@
       <!-- Category Filter Tabs -->
       <div class="portfolio-filters" aria-label="Filter Stories">
         <button class="portfolio-filter-btn active" data-filter="elopement">Elopement</button>
-        <button class="portfolio-filter-btn" data-filter="prewedding">Prewedding</button>
-        <button class="portfolio-filter-btn" data-filter="event">Event</button>
+        <button class="portfolio-filter-btn" data-filter="villa">Villa Wedding</button>
+        <button class="portfolio-filter-btn" data-filter="prewedding">Pre-Wedding</button>
       </div>
 
       <!-- Curated Portfolio Stories -->
@@ -123,7 +195,7 @@
         </div>
         
         <!-- STORY 1: ANDI & EVA (PRIVATE VILLA ELOPEMENT) -->
-        <a href="portfolio-detail.html?story=andi-eva" class="portfolio-card-link" data-category="elopement villa">
+        <a href="portfolio-detail.html?story=andi-eva" class="portfolio-card-link" data-category="elopement">
           <article class="portfolio-card">
             <div class="portfolio-thumb-wrap">
               <img src="assets/images/portfolio/andi-eva/7.webp" alt="Andi and Eva Private Villa Elopement" loading="lazy">
@@ -174,7 +246,7 @@
         <a href="portfolio-detail.html?story=rubini-czarlie" class="portfolio-card-link" data-category="elopement beach">
           <article class="portfolio-card">
             <div class="portfolio-thumb-wrap">
-              <img src="assets/images/portfolio/rubini-czarlie/7.webp" alt="Rubini and Czarlie Beach Elopement" loading="lazy">
+              <img src="assets/images/portfolio/rubini-czarlie/1.webp" alt="Rubini and Czarlie Beach Elopement" loading="lazy">
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Rubini &amp; Czarlie</h3>
@@ -187,10 +259,10 @@
         </a>
 
         <!-- STORY 5: SARAH & MIHA (RAINFOREST SANCTUARY) -->
-        <a href="portfolio-detail.html?story=sarah-miha" class="portfolio-card-link" data-category="elopement villa">
+        <a href="portfolio-detail.html?story=sarah-miha" class="portfolio-card-link" data-category="elopement">
           <article class="portfolio-card">
             <div class="portfolio-thumb-wrap">
-              <img src="assets/images/portfolio/sarah-miha/6.webp" alt="Sarah and Miha Ubud Elopement" loading="lazy">
+              <img src="assets/images/portfolio/sarah-miha/1.webp" alt="Sarah and Miha Ubud Elopement" loading="lazy">
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Sarah &amp; Miha</h3>
@@ -206,12 +278,76 @@
         <a href="portfolio-detail.html?story=vany-santi" class="portfolio-card-link" data-category="elopement">
           <article class="portfolio-card">
             <div class="portfolio-thumb-wrap">
-              <img src="assets/images/portfolio/vany-santi/10.webp" alt="Vany and Santi Ocean Elopement" loading="lazy">
+              <img src="assets/images/portfolio/vany-santi/1.webp" alt="Vany and Santi Ocean Elopement" loading="lazy">
             </div>
             <div class="portfolio-body">
               <h3 class="portfolio-title">Vany &amp; Santi</h3>
               <p style="font-size: 14px; margin-bottom: 0;">
                 A modern celebration beginning with an ocean-view cliff blessing under a rainbow floral circle and concluding with a barefoot sunset stroll along the tidal coral reef in matching white linen.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- VILLA WEDDING 1: CLAUDIA & DENNIS -->
+        <a href="portfolio-detail.html?story=claudia-dennis" class="portfolio-card-link" data-category="villa">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/couples/claudia-dennis.webp" alt="Claudia and Dennis Villa Wedding in Nusa Dua" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Claudia &amp; Dennis</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                A bespoke celebration for 25 cherished family members and friends in an exclusive oceanfront cliffside villa, with a custom stage over the infinity pool and an al-fresco dinner under fairy lights.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- VILLA WEDDING 2: ASTRELLA & MIKHAEL (ULUWATU) -->
+        <a href="portfolio-detail.html?story=astrella-mikhael" class="portfolio-card-link" data-category="villa">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/astrella-mikhael/1.webp" alt="Astrella and Mikhael Clifftop Wedding in Uluwatu" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Astrella &amp; Mikhael</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                A grand clifftop celebration above the Uluwatu coastline, with a white aisle lined in deep red florals and an evening reception lit by sparklers and fireworks.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- VILLA WEDDING 3: JAY & LISA (SABA BEACH) -->
+        <a href="portfolio-detail.html?story=jay-lisa" class="portfolio-card-link" data-category="villa">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/jay-lisa/1.webp" alt="Jay and Lisa Beachfront Wedding at Saba Beach" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Jay &amp; Lisa</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                A beachfront garden wedding framed by palm trees and white orchids, followed by a candlelit dinner, fireworks, and a lively dance floor.
+              </p>
+              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
+            </div>
+          </article>
+        </a>
+
+        <!-- VILLA WEDDING 4: PUTRI & VICTOR (TANAH LOT) -->
+        <a href="portfolio-detail.html?story=putri-victor" class="portfolio-card-link" data-category="villa">
+          <article class="portfolio-card">
+            <div class="portfolio-thumb-wrap">
+              <img src="assets/images/portfolio/putri-victor/1.webp" alt="Putri and Victor Wedding near Tanah Lot" loading="lazy">
+            </div>
+            <div class="portfolio-body">
+              <h3 class="portfolio-title">Putri &amp; Victor</h3>
+              <p style="font-size: 14px; margin-bottom: 0;">
+                An ocean-view celebration near Tanah Lot blending Balinese heritage attire with soft pastel styling and an evening Balinese dance performance.
               </p>
               <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
             </div>
@@ -250,16 +386,16 @@
           </article>
         </a>
 
-        <!-- PREWEDDING 3: BLACK LAVA KINTAMANI -->
-        <a href="portfolio-detail.html?story=black-lava-kintamani" class="portfolio-card-link" data-category="prewedding">
+        <!-- PREWEDDING 3: RONNY & MELAN (KINTAMANI) -->
+        <a href="portfolio-detail.html?story=ronny-melan" class="portfolio-card-link" data-category="prewedding">
           <article class="portfolio-card">
             <div class="portfolio-thumb-wrap">
-              <img src="assets/images/portfolio/black-lava-kintamani/1.webp" alt="Black Lava Kintamani Prewedding" loading="lazy">
+              <img src="assets/images/portfolio/ronny-melan/1.webp" alt="Ronny and Melan Pre-Wedding in Kintamani" loading="lazy">
             </div>
             <div class="portfolio-body">
-              <h3 class="portfolio-title">Black Lava Kintamani</h3>
+              <h3 class="portfolio-title">Ronny &amp; Melan</h3>
               <p style="font-size: 14px; margin-bottom: 0;">
-                An edgy, editorial pre-wedding session set against the surreal monochrome expanse of Mount Batur’s ancient volcanic black lava fields and alpine pine foothills.
+                An editorial pre-wedding session in two looks: a flowing white gown across Mount Batur&rsquo;s black lava fields, then soft pink at Oculus Kintamani overlooking the caldera.
               </p>
               <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
             </div>
@@ -282,16 +418,16 @@
           </article>
         </a>
 
-        <!-- PREWEDDING 5: KEBUN RAYA BEDUGUL -->
-        <a href="portfolio-detail.html?story=kebun-raya-bedugul" class="portfolio-card-link" data-category="prewedding">
+        <!-- PREWEDDING 5: STEVEN & JESSICA (BEDUGUL) -->
+        <a href="portfolio-detail.html?story=steven-jessica" class="portfolio-card-link" data-category="prewedding">
           <article class="portfolio-card">
             <div class="portfolio-thumb-wrap">
-              <img src="assets/images/portfolio/kebun-raya-bedugul/1.webp" alt="Kebun Raya Bedugul Prewedding" loading="lazy">
+              <img src="assets/images/portfolio/steven-jessica/1.webp" alt="Steven and Jessica Pre-Wedding in Bedugul" loading="lazy">
             </div>
             <div class="portfolio-body">
-              <h3 class="portfolio-title">Kebun Raya Bedugul</h3>
+              <h3 class="portfolio-title">Steven &amp; Jessica</h3>
               <p style="font-size: 14px; margin-bottom: 0;">
-                A serene, ethereal pre-wedding journey through the towering banyans, ancient rainforest fern canopies, and cool highland breezes of Bali Botanic Garden Bedugul.
+                A serene pre-wedding journey through the towering trees, open lawns, and cool highland breezes of Bali Botanic Garden Bedugul.
               </p>
               <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
             </div>
@@ -314,22 +450,6 @@
           </article>
         </a>
 
-        <!-- PREWEDDING 7: OCULUS KINTAMANI -->
-        <a href="portfolio-detail.html?story=oculus-kintamani" class="portfolio-card-link" data-category="prewedding">
-          <article class="portfolio-card">
-            <div class="portfolio-thumb-wrap">
-              <img src="assets/images/portfolio/oculus-kintamani/1.webp" alt="Oculus Kintamani Prewedding" loading="lazy">
-            </div>
-            <div class="portfolio-body">
-              <h3 class="portfolio-title">Oculus Kintamani</h3>
-              <p style="font-size: 14px; margin-bottom: 0;">
-                A sophisticated blend of contemporary alpine architecture and sweeping panoramic vistas overlooking Mount Batur, the caldera ridges, and serene Lake Batur.
-              </p>
-              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
-            </div>
-          </article>
-        </a>
-
         <!-- PREWEDDING 8: PANTAI NYANYI -->
         <a href="portfolio-detail.html?story=pantai-nyanyi" class="portfolio-card-link" data-category="prewedding">
           <article class="portfolio-card">
@@ -346,59 +466,21 @@
           </article>
         </a>
 
-        <!-- EVENT 1: GOTO GROUP GATHERING -->
-        <a href="portfolio-detail.html?story=goto-gathering" class="portfolio-card-link" data-category="event">
-          <article class="portfolio-card">
-            <div class="portfolio-thumb-wrap">
-              <img src="assets/images/portfolio/goto-gathering/1.webp" alt="GoTo Group Gathering in Bali" loading="lazy">
-            </div>
-            <div class="portfolio-body">
-              <h3 class="portfolio-title">GoTo Group Gathering</h3>
-              <p style="font-size: 14px; margin-bottom: 0;">
-                A grand corporate celebration and executive gathering in Bali, featuring bespoke stage production, cultural Balinese welcome performances, and an exquisite gala banquet.
-              </p>
-              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
-            </div>
-          </article>
-        </a>
-
-        <!-- EVENT 2: PERTAMINA CORPORATE GALA -->
-        <a href="portfolio-detail.html?story=pertamina-gathering" class="portfolio-card-link" data-category="event">
-          <article class="portfolio-card">
-            <div class="portfolio-thumb-wrap">
-              <img src="assets/images/portfolio/pertamina-gathering/1.webp" alt="Pertamina Corporate Gala Bali" loading="lazy">
-            </div>
-            <div class="portfolio-body">
-              <h3 class="portfolio-title">Pertamina Corporate Gala</h3>
-              <p style="font-size: 14px; margin-bottom: 0;">
-                An inspiring corporate summit and appreciation banquet set across Bali’s premier seaside lawn, complete with theatrical lighting, live entertainment, and five-star hospitality.
-              </p>
-              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
-            </div>
-          </article>
-        </a>
-
-        <!-- EVENT 3: SCARLETT WHITENING GALA -->
-        <a href="portfolio-detail.html?story=scarlett-gathering" class="portfolio-card-link" data-category="event">
-          <article class="portfolio-card">
-            <div class="portfolio-thumb-wrap">
-              <img src="assets/images/portfolio/scarlett-gathering/1.webp" alt="Scarlett Whitening Gala Bali" loading="lazy">
-            </div>
-            <div class="portfolio-body">
-              <h3 class="portfolio-title">Scarlett Whitening Gala</h3>
-              <p style="font-size: 14px; margin-bottom: 0;">
-                A high-energy, glamorous brand celebration featuring custom floral photo installations, branded interactive stages, celebrity performances, and a starlit coastal after-party.
-              </p>
-              <span class="btn-story-link">Read Love Story &amp; View Gallery →</span>
-            </div>
-          </article>
-        </a>
-
-
       </div>
 
     </div>
   </main>
+
+  <!-- ── 5. WEDDING FILMS (Shown once PORTFOLIO_FILMS in script.js has entries) ── -->
+  <section class="section section-nude" id="portfolio-films" hidden>
+    <div class="container">
+      <div class="section-header">
+        <h2>Wedding Films</h2>
+        <div class="divider-gold"></div>
+      </div>
+      <div class="films-grid" id="films-grid"></div>
+    </div>
+  </section>
 
   <!-- Footer Component Container -->
   <div id="site-footer"></div>
