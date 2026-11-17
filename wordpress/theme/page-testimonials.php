@@ -1,0 +1,114 @@
+<?php
+/**
+ * Converted from testimonials.html
+ */
+get_header();
+?>
+  <!-- ── 3. HERO ── -->
+  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset('assets/images/couples/michel-angela.webp'); ?>'); background-position: center 35%;">
+    <div class="hero-content">
+      <h1>Couple Testimonials &amp; Love Letters</h1>
+      <p class="hero-subtitle">
+        Heartfelt reflections from overseas couples who celebrated their sacred day in Bali with our team.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── 4. TESTIMONIALS CARDS GRID ── -->
+  <main class="section">
+    <div class="container">
+      
+      <div class="testimonials-grid" style="grid-template-columns: repeat(2, 1fr); gap: 40px; margin-bottom: 60px;">
+        
+        <!-- CARD 1: MICHEL & ANGELA -->
+        <article class="testimonial-card">
+          <div class="testimonial-header" style="margin-bottom: 12px; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark); font-weight: 600;">
+            Bali Elopement - Uluwatu
+          </div>
+          <p class="testimonial-quote">
+            "I really wanna thank the Bali Top Wedding team for helping our wonderful wedding. It was a rush for us busy people, but having a team that is really helpful to break down the things that we need made all the difference. Such an amazing master of ceremony, and handling lots of last-minute decisions so smoothly! They helped us relax and enjoy our wedding so much more. We felt completely taken care of."
+          </p>
+          <div class="testimonial-couple" style="margin-top: 20px;">
+            <img src="<?php echo btw_asset('assets/images/couples/michel-angela.webp'); ?>" alt="Michel and Angela" class="couple-avatar" style="width: 80px; height: 80px;">
+            <div class="couple-info">
+              <h3 style="font-size: 24px; font-style: italic; margin-bottom: 2px;">
+                Michel &amp; Angela <span style="font-weight: 400; font-size: 14px; font-style: normal; color: var(--muted);">(Singapore &amp; Indonesia)</span>
+              </h3>
+              <div class="star-rating" style="margin: 4px 0;">★★★★★</div>
+              <div style="font-size: 12.5px; color: var(--dark); font-weight: 500;">Service: Bali Elopement Packages</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2: CLAUDIA & DENNIS -->
+        <article class="testimonial-card">
+          <div class="testimonial-header" style="margin-bottom: 12px; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark); font-weight: 600;">
+            Villa Wedding - Nusa Dua
+          </div>
+          <p class="testimonial-quote">
+            "Thank you so much to our planner who accompanied us for more than two years and patiently answered all of our countless questions! Everything was absolutely perfect. She always accommodated everything we asked for, even though we are quite perfectionist clients. From the decoration, music, to the entertainment and dinner, everything was amazing. Bali Top Wedding truly lives up to its name!"
+          </p>
+          <div class="testimonial-couple" style="margin-top: 20px;">
+            <img src="<?php echo btw_asset('assets/images/couples/claudia-dennis.webp'); ?>" alt="Claudia and Dennis" class="couple-avatar" style="width: 80px; height: 80px;">
+            <div class="couple-info">
+              <h3 style="font-size: 24px; font-style: italic; margin-bottom: 2px;">Claudia &amp; Dennis</h3>
+              <div class="star-rating" style="margin: 4px 0;">★★★★★</div>
+              <div style="font-size: 12.5px; color: var(--dark); font-weight: 500;">Service: Luxury Villa Weddings</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3: WEISMA & FADHIL -->
+        <article class="testimonial-card">
+          <div class="testimonial-header" style="margin-bottom: 12px; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark); font-weight: 600;">
+            Bali Elopement - Private Coastal Estate
+          </div>
+          <p class="testimonial-quote">
+            "Bali Top Wedding is truly the best. For couples who just want to live a slow, relaxed life and not worry about stress, they take care of everything. We were really able to slow down because the team handled all the busy parts behind the scenes. If you want a hassle-free, intimate, modern wedding in Bali, they are truly the top choice!"
+          </p>
+          <div class="testimonial-couple" style="margin-top: 20px;">
+            <img src="<?php echo btw_asset('assets/images/couples/weisma-fadhil.webp'); ?>" alt="Weisma and Fadhil" class="couple-avatar" style="width: 80px; height: 80px;">
+            <div class="couple-info">
+              <h3 style="font-size: 24px; font-style: italic; margin-bottom: 2px;">Weisma &amp; Fadhil</h3>
+              <div class="star-rating" style="margin: 4px 0;">★★★★★</div>
+              <div style="font-size: 12.5px; color: var(--dark); font-weight: 500;">Service: Bali Elopement Packages</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 4: MARIA & ELLIAS -->
+        <article class="testimonial-card">
+          <div class="testimonial-header" style="margin-bottom: 12px; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark); font-weight: 600;">
+            Pre Wedding Photography - Kintamani &amp; Cliffside
+          </div>
+          <p class="testimonial-quote">
+            "Flying to Bali for our pre-wedding photoshoot and private vows was the best decision we ever made. The team had our entire day planned to perfection: early morning coffee before the sunrise shoot, hair & makeup touchups on the go, and absolute privacy during our vows. The photos look like a high-fashion editorial magazine spread!"
+          </p>
+          <div class="testimonial-couple" style="margin-top: 20px;">
+            <img src="<?php echo btw_asset('assets/images/couples/maria-ellias.webp'); ?>" alt="Maria and Ellias" class="couple-avatar" style="width: 80px; height: 80px;">
+            <div class="couple-info">
+              <h3 style="font-size: 24px; font-style: italic; margin-bottom: 2px;">Maria &amp; Ellias</h3>
+              <div class="star-rating" style="margin: 4px 0;">★★★★★</div>
+              <div style="font-size: 12.5px; color: var(--dark); font-weight: 500;">Service: Romantic Pre Wedding Photography</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bottom Banner -->
+      <div style="background-color: var(--nude); border: 1px solid var(--border-strong); border-radius: 8px; padding: 48px; text-align: center;">
+        <h3 style="font-size: 28px; font-style: italic; margin-bottom: 12px;">Let Us Create Your Love Story Next</h3>
+        <p style="font-size: 15px; color: var(--muted); max-width: 580px; margin: 0 auto 28px;">
+          Reach out to our senior wedding planner today to discuss your vision, check date availability, and receive a transparent itemized quotation.
+        </p>
+        <div class="dual-action-row" style="justify-content: center;">
+          <a href="<?php echo btw_url('contact'); ?>" class="btn btn-primary">Start Your Inquiry</a>
+          <a href="#" data-wa class="btn btn-whatsapp">Chat on WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+<?php get_footer(); ?>

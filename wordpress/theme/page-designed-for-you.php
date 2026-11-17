@@ -1,0 +1,96 @@
+<?php
+/**
+ * Converted from services.html
+ */
+get_header();
+?>
+  <!-- ── 3. HERO ── -->
+  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset('assets/images/hero/hero-main.webp'); ?>'); background-position: center 32%;">
+    <div class="hero-content">
+      <h1>Designed For You</h1>
+      <p class="hero-subtitle">
+        Three bespoke ways to immerse yourselves in Bali's intimacy, beauty, and romance.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── 4. DETAILED SERVICES COMPARISON ── -->
+  <main class="section">
+    <div class="container">
+      
+      <!-- SERVICE 1 ROW -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 80px; padding-bottom: 80px; border-bottom: 1px solid var(--border-subtle);">
+        <div style="aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-strong);">
+          <img src="<?php echo btw_asset('assets/images/pages/002.webp'); ?>" alt="Bali Elopement Packages" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div>
+          <span class="section-label">Category 01</span>
+          <h2 style="font-style: italic; margin-bottom: 16px;">1. Bali Elopement Packages</h2>
+          <p style="font-size: 15.5px; line-height: 1.7;">
+            Choose your perfect Bali elopement setting. Discover our curated collection of intimate, stress-free elopement packages—thoughtfully designed just for two across Bali’s most breathtaking locations.
+          </p>
+          <div style="background-color: var(--nude); padding: 16px 20px; border-radius: 4px; margin-bottom: 24px;">
+            <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);">Package Investment</div>
+            <div style="font-family: var(--font-serif); font-size: 26px; font-weight: 600; color: var(--dark);">
+              From IDR 23,000,000 net <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 400; color: var(--accent-dark);">for 2 pax</span>
+            </div>
+          </div>
+          <div class="dual-action-row">
+            <a href="<?php echo btw_url('elopement'); ?>" class="btn btn-primary">View Package Details</a>
+            <a href="<?php echo btw_url('contact'); ?>" class="btn btn-ghost" style="color: var(--dark); border-color: var(--dark);">Book This Date</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICE 2 ROW -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 80px; padding-bottom: 80px; border-bottom: 1px solid var(--border-subtle);">
+        <div style="order: 2; aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-strong);">
+          <img src="<?php echo btw_asset('assets/images/pages/004.webp'); ?>" alt="Bali Villa Wedding Packages" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="order: 1;">
+          <span class="section-label">Category 02</span>
+          <h2 style="font-style: italic; margin-bottom: 16px;">2. Villa Weddings</h2>
+          <p style="font-size: 15.5px; line-height: 1.7;">
+            Explore our curated collection of intimate Bali villa wedding experiences—thoughtfully crafted for couples seeking total privacy, bespoke elegance, and a stress-free celebration. Surrounded by lush tropical gardens or dramatic ocean views, each estate provides a serene sanctuary to gather your loved ones for an unforgettable island celebration.
+          </p>
+          <div style="background-color: var(--nude); padding: 16px 20px; border-radius: 4px; margin-bottom: 24px;">
+            <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);">Package Investment</div>
+            <div style="font-family: var(--font-serif); font-size: 26px; font-weight: 600; color: var(--dark);">
+              From IDR 175,500,000 <span style="font-family: var(--font-sans); font-size: 14px; font-weight: 400; color: var(--accent-dark);">for 50 pax</span>
+            </div>
+          </div>
+          <div class="dual-action-row">
+            <a href="<?php echo btw_url('private-villa'); ?>" class="btn btn-primary">View Package Details</a>
+            <a href="<?php echo btw_url('contact'); ?>" class="btn btn-ghost" style="color: var(--dark); border-color: var(--dark);">Book This Date</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICE 3 ROW -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 40px;">
+        <div style="aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-strong);">
+          <img src="<?php echo btw_asset('assets/images/pages/003.webp'); ?>" alt="Bali Pre Wedding Photography" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div>
+          <span class="section-label">Category 03</span>
+          <h2 style="font-style: italic; margin-bottom: 16px;">3. Pre Wedding Photography</h2>
+          <p style="font-size: 15.5px; line-height: 1.7;">
+            Capture your love story in paradise. Discover our curated collection of intimate, stress-free Bali pre-wedding photography sessions—thoughtfully designed to showcase your authentic connection across the island’s most breathtaking landscapes.
+          </p>
+          <div style="background-color: var(--nude); padding: 16px 20px; border-radius: 4px; margin-bottom: 24px;">
+            <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);">Package Investment</div>
+            <div style="font-family: var(--font-serif); font-size: 26px; font-weight: 600; color: var(--dark);">
+              From IDR 7,000,000 net
+            </div>
+          </div>
+          <div class="dual-action-row">
+            <a href="<?php echo btw_url('pre-wedding'); ?>" class="btn btn-primary">View Package Details</a>
+            <a href="<?php echo btw_url('contact'); ?>" class="btn btn-ghost" style="color: var(--dark); border-color: var(--dark);">Book This Date</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+<?php get_footer(); ?>
