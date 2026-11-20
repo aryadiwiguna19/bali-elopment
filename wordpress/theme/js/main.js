@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactBindings();
   initMobileDrawer();
   initScrollEffects();
-  initPackageHero();
+  document.querySelectorAll(".pkg-slider").forEach(initPackageSlider);
   initPortfolioGallery();
   initInquiryForms();
   initLightbox();
@@ -104,30 +104,33 @@ function initScrollEffects() {
 }
 
 /**
- * Package hero: cross-fades the slides rendered by PHP, with clickable dots
+ * Package photo slider: swipe or scroll, arrows, dots; a click on a photo enlarges it (initLightbox)
  */
-function initPackageHero() {
-  const heroEl = document.getElementById("pkg-hero");
-  if (!heroEl) return;
-  const slides = heroEl.querySelectorAll(".pkg-hero-slide");
-  const dots = heroEl.querySelectorAll(".pkg-hero-dot");
-  if (slides.length < 2) return;
+function initPackageSlider(slider) {
+  const track = slider.querySelector(".pkg-slider-track");
+  const slides = slider.querySelectorAll(".pkg-slide");
+  const dots = slider.querySelectorAll(".pkg-slider-dot");
+  if (!track || slides.length < 2) return;
 
-  let current = 0;
-  let timer;
-  const show = index => {
-    slides[current].classList.remove("is-active");
-    dots[current].classList.remove("is-active");
-    current = index;
-    slides[current].classList.add("is-active");
-    dots[current].classList.add("is-active");
+  const current = () => Math.round(track.scrollLeft / track.clientWidth);
+  const go = index => {
+    const target = (index + slides.length) % slides.length;
+    track.scrollTo({ left: target * track.clientWidth });
   };
-  const start = () => {
-    clearInterval(timer);
-    timer = setInterval(() => show((current + 1) % slides.length), 5000);
-  };
-  dots.forEach((dot, i) => dot.addEventListener("click", () => { show(i); start(); }));
-  start();
+  slider.querySelector(".pkg-slider-prev").addEventListener("click", () => go(current() - 1));
+  slider.querySelector(".pkg-slider-next").addEventListener("click", () => go(current() + 1));
+  dots.forEach((dot, i) => dot.addEventListener("click", () => go(i)));
+
+  let ticking = false;
+  track.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const index = current();
+      dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+      ticking = false;
+    });
+  }, { passive: true });
 }
 
 /**
@@ -256,89 +259,239 @@ function stepPortfolioLightbox(step) {
 }
 
 /**
- * Inquiry & Booking Form Handler
- * Validates required inputs and opens either the email app or WhatsApp
+ * Inquiry & Booking Forms
+ * "Send via Email" posts the form to WordPress (inc/inquiry.php): it is saved under
+ * Inquiries in wp-admin and the planner is notified by email. "Send via WhatsApp"
+ * opens WhatsApp with the details filled in and also saves a copy in wp-admin.
  */
+const PAGE_LOADED_AT = Date.now();
+
 function initInquiryForms() {
   document.querySelectorAll(".inquiry-form").forEach(form => {
+    form.noValidate = true;
+    form.removeAttribute("onsubmit");
+
+    // Honeypot: hidden from people, bots fill it in.
+    const trap = document.createElement("div");
+    trap.className = "form-trap";
+    trap.setAttribute("aria-hidden", "true");
+    trap.innerHTML = '<label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>';
+    form.appendChild(trap);
+
     const btnEmail = form.querySelector(".btn-submit-email");
     const btnWa = form.querySelector(".btn-submit-wa");
 
-    const getFormData = () => {
-      const name = form.querySelector("[name='name']")?.value.trim() || "";
-      const email = form.querySelector("[name='email']")?.value.trim() || "";
-      const targetMonth = form.querySelector("[name='target_month']")?.value || "";
-      const selectedPkg = form.querySelector("[name='package']")?.value || "Intimate Elopement";
-      const message = form.querySelector("[name='message']")?.value.trim() || "";
-      if (!name || !email) {
-        alert("Please provide both your Name and Email address so we can reach you.");
-        return null;
-      }
-      return { name, email, targetMonth, selectedPkg, message };
-    };
+    form.addEventListener("input", e => clearFieldError(e.target));
+    form.addEventListener("change", e => clearFieldError(e.target));
+    // Enter in a field sends by email.
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      if (btnEmail) btnEmail.click();
+    });
 
     if (btnEmail) {
       btnEmail.addEventListener("click", e => {
         e.preventDefault();
-        const data = getFormData();
-        if (!data) return;
-        const subject = `${SITE_CONFIG.email.subjectPrefix} ${data.selectedPkg} - ${data.name}`;
-        const body = `Dear Bali Elopement Planner,\n\nI would like to inquire about planning an intimate celebration in Bali.\n\n` +
-          `• Client Name: ${data.name}\n` +
-          `• Email Address: ${data.email}\n` +
-          `• Target Month / Date: ${data.targetMonth}\n` +
-          `• Selected Package: ${data.selectedPkg}\n\n` +
-          `• Special Request / Story:\n${data.message || "(No additional requests)"}\n\n` +
-          `Warm regards,\n${data.name}`;
-        window.location.href = `mailto:${SITE_CONFIG.email.address}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        showSuccessModal("Your email client has been prepared with your inquiry details. If it did not open automatically, please write directly to " + SITE_CONFIG.email.address);
+        if (btnEmail.disabled) return;
+        const data = readInquiry(form);
+        if (!validateInquiry(form, data)) return;
+
+        setButtonBusy(btnEmail, true);
+        postInquiry(form, data, "email")
+          .then(res => {
+            if (res.success) {
+              form.reset();
+              showInquiryModal({
+                title: "Inquiry Received",
+                text: `Thank you, ${data.name}. Your inquiry has reached our planning team. A senior planner will reply to ${data.email} within 24 hours. Please check your spam folder if you do not see it.`
+              });
+            } else if (res.data && res.data.fields) {
+              showFieldErrors(form, res.data.fields);
+            } else {
+              showSendFailure(data, res.data && res.data.message);
+            }
+          })
+          .catch(() => showSendFailure(data))
+          .finally(() => setButtonBusy(btnEmail, false));
       });
     }
 
     if (btnWa) {
       btnWa.addEventListener("click", e => {
         e.preventDefault();
-        const data = getFormData();
-        if (!data) return;
-        const waText = `*New Inquiry - Bali Elopement*\n\n` +
-          `*Name:* ${data.name}\n` +
-          `*Email:* ${data.email}\n` +
-          `*Target Month:* ${data.targetMonth}\n` +
-          `*Package:* ${data.selectedPkg}\n` +
-          `*Notes:* ${data.message || "-"}\n\n` +
-          `_Sent from ${window.location.hostname}_`;
-        window.open(`https://wa.me/${SITE_CONFIG.whatsapp.number}?text=${encodeURIComponent(waText)}`, "_blank");
-        showSuccessModal("Thank you! WhatsApp has been opened with your inquiry details. Our wedding planner will respond promptly.");
+        const data = readInquiry(form);
+        if (!validateInquiry(form, data)) return;
+
+        const url = whatsappInquiryUrl(data);
+        // Open first, inside the click, so popup blockers allow it.
+        const win = window.open(url, "_blank");
+        postInquiry(form, data, "whatsapp", true).catch(() => {});
+        if (!win) {
+          window.location.href = url;
+          return;
+        }
+        win.opener = null;
+        showInquiryModal({
+          title: "WhatsApp Opened",
+          text: "Your details are ready in WhatsApp. Please press Send there to deliver the message to our planner."
+        });
       });
     }
   });
 }
 
+function readInquiry(form) {
+  const val = name => (form.querySelector(`[name='${name}']`)?.value || "").trim();
+  return {
+    name: val("name"),
+    email: val("email"),
+    target_month: val("target_month"),
+    package: val("package"),
+    message: val("message"),
+    website: val("website")
+  };
+}
+
+function validateInquiry(form, data) {
+  const errors = {};
+  if (!data.name) errors.name = "Please enter your name.";
+  if (!data.email) errors.email = "Please enter your email address.";
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email)) errors.email = "Please enter a valid email address.";
+  if (form.querySelector("[name='target_month']") && !data.target_month) errors.target_month = "Please tell us your preferred month or date.";
+  showFieldErrors(form, errors);
+  return Object.keys(errors).length === 0;
+}
+
+function showFieldErrors(form, errors) {
+  form.querySelectorAll(".field-error").forEach(el => el.remove());
+  form.querySelectorAll(".has-error").forEach(el => el.classList.remove("has-error"));
+  let first = null;
+  Object.entries(errors).forEach(([name, message]) => {
+    const input = form.querySelector(`[name='${name}']`);
+    if (!input) return;
+    const group = input.closest(".form-group") || input.parentElement;
+    group.classList.add("has-error");
+    input.setAttribute("aria-invalid", "true");
+    const msg = document.createElement("span");
+    msg.className = "field-error";
+    msg.textContent = message;
+    input.insertAdjacentElement("afterend", msg);
+    if (!first) first = input;
+  });
+  if (first) first.focus();
+}
+
+function clearFieldError(input) {
+  const group = input && input.closest ? input.closest(".form-group.has-error") : null;
+  if (!group) return;
+  group.classList.remove("has-error");
+  group.querySelectorAll(".field-error").forEach(el => el.remove());
+  input.removeAttribute("aria-invalid");
+}
+
+function postInquiry(form, data, channel, keepalive) {
+  const body = new URLSearchParams({
+    action: "btw_inquiry",
+    channel,
+    elapsed: String(Math.round((Date.now() - PAGE_LOADED_AT) / 1000)),
+    page_url: window.location.href,
+    ...data
+  });
+  return fetch(BTW.ajaxUrl || "/wp-admin/admin-ajax.php", {
+    method: "POST",
+    body,
+    credentials: "same-origin",
+    keepalive: !!keepalive
+  }).then(r => r.json());
+}
+
+function whatsappInquiryUrl(data) {
+  const text = `*New Inquiry - Bali Elopement*\n\n` +
+    `*Name:* ${data.name}\n` +
+    `*Email:* ${data.email}\n` +
+    `*Target Month:* ${data.target_month}\n` +
+    `*Package:* ${data.package || "-"}\n` +
+    `*Notes:* ${data.message || "-"}\n\n` +
+    `_Sent from ${window.location.hostname}_`;
+  return `https://wa.me/${SITE_CONFIG.whatsapp.number}?text=${encodeURIComponent(text)}`;
+}
+
+/** The server could not be reached: offer the visitor's own email app or WhatsApp instead. */
+function showSendFailure(data, message) {
+  const subject = `${SITE_CONFIG.email.subjectPrefix} ${data.package} - ${data.name}`;
+  const body = `Name: ${data.name}\nEmail: ${data.email}\nTarget Month / Date: ${data.target_month}\n` +
+    `Package: ${data.package}\n\n${data.message}`;
+  showInquiryModal({
+    title: "Not Sent Yet",
+    error: true,
+    text: (message || "We could not send your inquiry just now.") + " Please send it with one of the options below. Your details are already filled in.",
+    actions: [
+      { label: "Open my email app", href: `mailto:${SITE_CONFIG.email.address}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, className: "btn-primary" },
+      { label: "Send via WhatsApp", href: whatsappInquiryUrl(data), className: "btn-whatsapp", newTab: true }
+    ]
+  });
+}
+
+function setButtonBusy(btn, busy) {
+  btn.disabled = busy;
+  btn.classList.toggle("is-busy", busy);
+  if (busy) {
+    btn.dataset.label = btn.innerHTML;
+    btn.textContent = "Sending…";
+  } else if (btn.dataset.label) {
+    btn.innerHTML = btn.dataset.label;
+  }
+}
+
 /**
- * Success Confirmation Modal
+ * Inquiry result modal
  */
-function showSuccessModal(customText) {
+function showInquiryModal({ title, text, error = false, actions = [] }) {
   let modal = document.getElementById("inquiry-success-modal");
   if (!modal) {
     modal = document.createElement("div");
     modal.id = "inquiry-success-modal";
     modal.className = "modal-overlay";
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-modal", "true");
     modal.innerHTML = `
       <div class="modal-container">
-        <button class="modal-close" type="button">&times;</button>
-        <div style="width: 56px; height: 56px; border-radius: 50%; background: #FAF8F5; border: 1px solid #C4B09A; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8F775C" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        </div>
-        <h3 class="serif-title" style="font-size: 26px; margin-bottom: 12px;">Inquiry Received</h3>
-        <p id="modal-feedback-text" style="font-size: 15px; color: var(--muted); margin-bottom: 24px;"></p>
-        <button class="btn btn-primary modal-close-btn" type="button">Close</button>
+        <button class="modal-close" type="button" aria-label="Close">&times;</button>
+        <div class="inquiry-modal-icon"></div>
+        <h3 class="serif-title inquiry-modal-title" style="font-size: 26px; margin-bottom: 12px;"></h3>
+        <p class="inquiry-modal-text" style="font-size: 15px; color: var(--muted); margin-bottom: 24px;"></p>
+        <div class="inquiry-modal-actions"></div>
       </div>
     `;
-    modal.querySelectorAll(".modal-close, .modal-close-btn").forEach(btn => btn.addEventListener("click", closeSuccessModal));
+    modal.addEventListener("click", e => {
+      if (e.target === modal || e.target.closest(".modal-close, .modal-close-btn")) closeSuccessModal();
+    });
     document.body.appendChild(modal);
   }
-  document.getElementById("modal-feedback-text").textContent = customText;
+  modal.querySelector(".inquiry-modal-icon").innerHTML = error
+    ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8F775C" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>'
+    : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8F775C" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+  modal.querySelector(".inquiry-modal-title").textContent = title;
+  modal.querySelector(".inquiry-modal-text").textContent = text;
+
+  const box = modal.querySelector(".inquiry-modal-actions");
+  box.innerHTML = "";
+  actions.forEach(a => {
+    const link = document.createElement("a");
+    link.className = `btn ${a.className || "btn-primary"}`;
+    link.href = a.href;
+    link.textContent = a.label;
+    if (a.newTab) { link.target = "_blank"; link.rel = "noopener"; }
+    box.appendChild(link);
+  });
+  const close = document.createElement("button");
+  close.type = "button";
+  close.className = actions.length ? "inquiry-modal-dismiss modal-close-btn" : "btn btn-primary modal-close-btn";
+  close.textContent = "Close";
+  box.appendChild(close);
+
   modal.classList.add("is-active");
+  close.focus();
 }
 
 function closeSuccessModal() {

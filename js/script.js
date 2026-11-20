@@ -26,7 +26,6 @@ const SITE_CONFIG = {
   },
   socials: {
     instagram: "https://www.instagram.com/balitopwedding",
-    pinterest: "https://www.pinterest.com/balitopwedding",
     youtube: "https://www.youtube.com/@balitopwedding",
     tiktok: "https://www.tiktok.com/@balitopwedding"
   },
@@ -42,7 +41,7 @@ const PACKAGE_SERVICES = {
     title: "Bali Elopement Packages",
     intro: "Choose your perfect Bali elopement setting. Discover our curated collection of intimate, stress-free elopement packages—thoughtfully designed just for two across Bali’s most breathtaking locations.",
     heroImage: "assets/images/pages/013.webp", // photo 013
-    heroPosition: "center 55%",
+    heroPosition: "center 35%",
     backLabel: "All elopement packages",
     packages: ["elopement-1", "elopement-2", "elopement-3", "elopement-4", "elopement-5", "elopement-6", "elopement-7", "elopement-8", "elopement-9"]
   },
@@ -50,7 +49,7 @@ const PACKAGE_SERVICES = {
     title: "Bali Villa Wedding",
     intro: "Explore our curated collection of intimate Bali villa wedding experiences—thoughtfully crafted for couples seeking total privacy, bespoke elegance, and a stress-free celebration. Surrounded by lush tropical gardens or dramatic ocean views, each estate provides a serene sanctuary to gather your loved ones for an unforgettable island celebration.",
     heroImage: "assets/images/pages/044.webp", // photo 044
-    heroPosition: "center 45%",
+    heroPosition: "center 58%",
     backLabel: "All villa wedding packages",
     packages: ["private-villa-1", "private-villa-2", "private-villa-3", "private-villa-4", "private-villa-5", "private-villa-6"]
   },
@@ -58,7 +57,7 @@ const PACKAGE_SERVICES = {
     title: "Bali Pre-Wedding Photography",
     intro: "Capture your love story in paradise. Discover our curated collection of intimate, stress-free Bali pre-wedding photography sessions—thoughtfully designed to showcase your authentic connection across the island’s most breathtaking landscapes.",
     heroImage: "assets/images/pages/034.webp", // photo 034
-    heroPosition: "center 40%",
+    heroPosition: "center 50%",
     backLabel: "All pre-wedding packages",
     packages: ["pre-wedding-1", "pre-wedding-2", "pre-wedding-3"]
   }
@@ -111,6 +110,7 @@ const PACKAGES_DATA = {
     priceNote: "for 2 pax",
     inclusions: [ELOPEMENT_INCLUDES.planner, elopementVenue("Tibumana Waterfall"), ELOPEMENT_INCLUDES.photo, ELOPEMENT_INCLUDES.celebrant, ELOPEMENT_INCLUDES.certificate, ELOPEMENT_INCLUDES.decor, ELOPEMENT_INCLUDES.flowers, ELOPEMENT_INCLUDES.transport, ELOPEMENT_INCLUDES.toast],
     notes: [ELOPEMENT_NOTES.car, ELOPEMENT_NOTES.delivery, ELOPEMENT_NOTES.outdoorRain, ELOPEMENT_NOTES.publicVenue, timeNote("6:00 – 7:00 AM")],
+    heroPosition: "center 50%", // where the 40vh header crop sits
     photos: ["assets/images/pages/014.webp", "assets/images/pages/025.webp"] // photos 014, 025
   },
   "elopement-2": {
@@ -123,6 +123,7 @@ const PACKAGES_DATA = {
     priceNote: "for 2 pax",
     inclusions: [ELOPEMENT_INCLUDES.planner, elopementVenue("Hotel Mercure Sanur"), ELOPEMENT_INCLUDES.photo, ELOPEMENT_INCLUDES.celebrant, ELOPEMENT_INCLUDES.certificate, ELOPEMENT_INCLUDES.decor, ELOPEMENT_INCLUDES.flowers, ELOPEMENT_INCLUDES.transport, ELOPEMENT_INCLUDES.dinnerWine, ELOPEMENT_INCLUDES.dinner],
     notes: [ELOPEMENT_NOTES.car, ELOPEMENT_NOTES.delivery, ELOPEMENT_NOTES.hotelRain, timeNote("5:30 – 6:00 AM (sunrise) or 5:00 – 5:30 PM")],
+    heroPosition: "center 38%", // where the 40vh header crop sits
     photos: ["assets/images/pages/015.webp", "assets/images/pages/023.webp", "assets/images/pages/024.webp"] // photos 015, 023, 024
   },
   "elopement-3": {
@@ -140,6 +141,7 @@ const PACKAGES_DATA = {
       "Karang Boma Cliff is a public location and cannot be fully blocked for private use. While visitors may be present nearby during your elopement, they are naturally respectful of private moments and will not disturb your session.",
       "The cliff area is a natural habitat for local monkeys. While they generally do not disturb guests, we kindly advise everyone to remain cautious and keep personal belongings secure."
     ],
+    heroPosition: "center 45%", // where the 40vh header crop sits
     photos: ["assets/images/pages/026.webp"] // photo 026
   },
   "elopement-4": {
@@ -156,6 +158,7 @@ const PACKAGES_DATA = {
       "In case of rain, an indoor backup venue such as a restaurant will be provided. Please note that the specific backup area is subject to availability and the restaurant management's discretion at the time of the event.",
       timeNote("8:00 – 10:00 AM")
     ],
+    heroPosition: "center 50%", // where the 40vh header crop sits
     photos: ["assets/images/pages/017.webp"] // photo 017
   },
   "elopement-5": {
@@ -168,6 +171,7 @@ const PACKAGES_DATA = {
     priceNote: "for 2 pax",
     inclusions: [ELOPEMENT_INCLUDES.planner, elopementVenue("Merusaka Nusa Dua"), ELOPEMENT_INCLUDES.photo, ELOPEMENT_INCLUDES.celebrant, ELOPEMENT_INCLUDES.certificate, ELOPEMENT_INCLUDES.decor, ELOPEMENT_INCLUDES.flowers, ELOPEMENT_INCLUDES.transport, ELOPEMENT_INCLUDES.welcomeDrinks, ELOPEMENT_INCLUDES.dinner],
     notes: [ELOPEMENT_NOTES.car, ELOPEMENT_NOTES.delivery, ELOPEMENT_NOTES.hotelRain, timeNote("5:30 – 6:00 PM")],
+    heroPosition: "center 58%", // where the 40vh header crop sits
     photos: ["assets/images/pages/018.webp", "assets/images/pages/027.webp", "assets/images/pages/028.webp"] // photos 018, 027, 028
   },
   "elopement-6": {
@@ -180,6 +184,7 @@ const PACKAGES_DATA = {
     priceNote: "for 2 pax",
     inclusions: [ELOPEMENT_INCLUDES.planner, elopementVenue("Le Méridien Bali Jimbaran"), ELOPEMENT_INCLUDES.photo, ELOPEMENT_INCLUDES.celebrant, ELOPEMENT_INCLUDES.certificate, ELOPEMENT_INCLUDES.decor, ELOPEMENT_INCLUDES.flowers, ELOPEMENT_INCLUDES.transport, ELOPEMENT_INCLUDES.welcomeDrinks],
     notes: [ELOPEMENT_NOTES.car, ELOPEMENT_NOTES.delivery, timeNote("5:30 – 6:00 PM")],
+    heroPosition: "center 58%", // where the 40vh header crop sits
     photos: ["assets/images/pages/019.webp", "assets/images/pages/029.webp", "assets/images/pages/030.webp"] // photos 019, 029, 030
   },
   "elopement-7": {
@@ -192,6 +197,7 @@ const PACKAGES_DATA = {
     priceNote: "for 2 pax",
     inclusions: [ELOPEMENT_INCLUDES.planner, elopementVenue("Suwat Waterfall"), ELOPEMENT_INCLUDES.photo, ELOPEMENT_INCLUDES.celebrant, ELOPEMENT_INCLUDES.certificate, ELOPEMENT_INCLUDES.decor, ELOPEMENT_INCLUDES.flowers, ELOPEMENT_INCLUDES.transport, ELOPEMENT_INCLUDES.toast],
     notes: [ELOPEMENT_NOTES.car, ELOPEMENT_NOTES.delivery, ELOPEMENT_NOTES.outdoorRain, ELOPEMENT_NOTES.publicVenue, timeNote("6:00 – 7:00 AM")],
+    heroPosition: "center 58%", // where the 40vh header crop sits
     photos: ["assets/images/pages/020.webp"] // photo 020
   },
   "elopement-8": {
@@ -204,6 +210,7 @@ const PACKAGES_DATA = {
     priceNote: "for 2 pax",
     inclusions: [ELOPEMENT_INCLUDES.planner, elopementVenue("Hotel Mercure Kuta"), ELOPEMENT_INCLUDES.photo, ELOPEMENT_INCLUDES.celebrant, ELOPEMENT_INCLUDES.certificate, ELOPEMENT_INCLUDES.decor, ELOPEMENT_INCLUDES.flowers, "<strong>Stay:</strong> 1-night stay in a Superior Room", ELOPEMENT_INCLUDES.dinnerWine, ELOPEMENT_INCLUDES.dinner],
     notes: [ELOPEMENT_NOTES.delivery, ELOPEMENT_NOTES.hotelRain, timeNote("5:00 – 5:30 PM")],
+    heroPosition: "center 53%", // where the 40vh header crop sits
     photos: ["assets/images/pages/021.webp", "assets/images/pages/031.webp", "assets/images/pages/032.webp", "assets/images/pages/033.webp"] // photos 021, 031, 032, 033
   },
   "elopement-9": {
@@ -223,6 +230,7 @@ const PACKAGES_DATA = {
       "<strong>Toast:</strong> 2 glasses of non-alcoholic drinks"
     ],
     notes: [ELOPEMENT_NOTES.car, ELOPEMENT_NOTES.delivery, ELOPEMENT_NOTES.hotelRain, timeNote("7:00 – 8:00 AM")],
+    heroPosition: "center 35%", // where the 40vh header crop sits
     photos: ["assets/images/pages/022.webp"] // photo 022
   },
 
@@ -236,6 +244,7 @@ const PACKAGES_DATA = {
     priceNote: "for 50 pax",
     inclusions: [villaStay(6), ...VILLA_INCLUDES],
     notes: VILLA_NOTES,
+    heroPosition: "center 73%", // where the 40vh header crop sits
     photos: ["assets/images/pages/045.webp", "assets/images/pages/046.webp", "assets/images/pages/047.webp"] // photos 045, 046, 047
   },
   "private-villa-2": {
@@ -248,6 +257,7 @@ const PACKAGES_DATA = {
     priceNote: "for 50 pax",
     inclusions: [villaStay(6), ...VILLA_INCLUDES],
     notes: VILLA_NOTES,
+    heroPosition: "center 62%", // where the 40vh header crop sits
     photos: ["assets/images/pages/048.webp", "assets/images/pages/049.webp", "assets/images/pages/050.webp"] // photos 048, 049, 050
   },
   "private-villa-3": {
@@ -260,6 +270,7 @@ const PACKAGES_DATA = {
     priceNote: "for 50 pax",
     inclusions: [villaStay(8), ...VILLA_INCLUDES],
     notes: VILLA_NOTES,
+    heroPosition: "center 58%", // where the 40vh header crop sits
     photos: ["assets/images/pages/051.webp", "assets/images/pages/052.webp", "assets/images/pages/053.webp"] // photos 051, 052, 053
   },
   "private-villa-4": {
@@ -272,6 +283,7 @@ const PACKAGES_DATA = {
     priceNote: "for 50 pax",
     inclusions: [villaStay(6), ...VILLA_INCLUDES],
     notes: VILLA_NOTES,
+    heroPosition: "center 68%", // where the 40vh header crop sits
     photos: ["assets/images/pages/054.webp", "assets/images/pages/055.webp", "assets/images/pages/056.webp"] // photos 054, 055, 056
   },
   "private-villa-5": {
@@ -284,6 +296,7 @@ const PACKAGES_DATA = {
     priceNote: "for 50 pax",
     inclusions: [villaStay(4), ...VILLA_INCLUDES],
     notes: VILLA_NOTES,
+    heroPosition: "center 42%", // where the 40vh header crop sits
     photos: ["assets/images/pages/057.webp", "assets/images/pages/058.webp", "assets/images/pages/059.webp"] // photos 057, 058, 059
   },
   "private-villa-6": {
@@ -296,6 +309,7 @@ const PACKAGES_DATA = {
     priceNote: "for 50 pax",
     inclusions: [villaStay(8), ...VILLA_INCLUDES],
     notes: VILLA_NOTES,
+    heroPosition: "center 50%", // where the 40vh header crop sits
     photos: ["assets/images/pages/060.webp", "assets/images/pages/061.webp", "assets/images/pages/062.webp"] // photos 060, 061, 062
   },
 
@@ -316,6 +330,7 @@ const PACKAGES_DATA = {
       "<strong>Private Transport:</strong> Return transfers (hotel – venue – hotel) in a private air-conditioned vehicle",
       "<strong>Digital Deliverables:</strong> 25–50 high-resolution edited photos and a 1-minute edited highlight video delivered via Google Drive (raw files available upon request; external hard drive required)"
     ],
+    heroPosition: "center 38%", // where the 40vh header crop sits
     photos: ["assets/images/pages/035.webp", "assets/images/pages/036.webp", "assets/images/pages/037.webp"] // photos 035, 036, 037
   },
   "pre-wedding-2": {
@@ -337,6 +352,7 @@ const PACKAGES_DATA = {
       "<strong>Private Transport:</strong> Full return transfers (hotel – fitting – venues – hotel)",
       "<strong>Digital Deliverables:</strong> 40–80 edited photos and a 3-minute highlight video delivered via Google Drive (raw files upon request; external drive required)"
     ],
+    heroPosition: "center 38%", // where the 40vh header crop sits
     photos: ["assets/images/pages/038.webp", "assets/images/pages/039.webp", "assets/images/pages/040.webp"] // photos 038, 039, 040
   },
   "pre-wedding-3": {
@@ -358,66 +374,13 @@ const PACKAGES_DATA = {
       "<strong>Private Transport:</strong> Full return transfers (hotel – fitting – venues – hotel)",
       "<strong>Digital Deliverables:</strong> 40–80 high-resolution edited photos and a 3-minute edited highlight video delivered via Google Drive (raw files upon request; external drive required)"
     ],
+    heroPosition: "center 65%", // where the 40vh header crop sits
     photos: ["assets/images/pages/041.webp", "assets/images/pages/042.webp", "assets/images/pages/043.webp"] // photos 041, 042, 043
   }
 };
 
 // ── 2.5 PORTFOLIO STORIES DATABASE (GALLERY-FIRST REAL CELEBRATIONS) ──
 const PORTFOLIO_DATA = {
-  "andi-eva": {
-    id: "andi-eva",
-    name: "Andi & Eva",
-    meta: "Seminyak Sanctuary • Private Villa Elopement",
-    description: "An effortless private villa elopement celebrated in complete couple intimacy. Surrounded by tropical frangipani trees and modern sanctuary architecture, Andi & Eva exchanged rings under a lush white floral arch before enjoying a private starlit dinner.",
-    heroImage: "assets/images/portfolio/andi-eva/7.webp",
-    reviewBg: "assets/images/portfolio/andi-eva/6.webp",
-    packageId: "elopement",
-    packageTitle: "Bali Elopement",
-    hasVideo: false,
-    videoUrl: null,
-    quote: "Bali Top Wedding transformed our elopement into a truly serene, stress-free dream. Every floral detail and the pacing of our day was simply flawless.",
-    quoteAuthor: "Andi & Eva • Jakarta, Indonesia",
-    photos: [
-      "assets/images/portfolio/andi-eva/7.webp",
-      "assets/images/portfolio/andi-eva/1.webp",
-      "assets/images/portfolio/andi-eva/2.webp",
-      "assets/images/portfolio/andi-eva/5.webp",
-      "assets/images/portfolio/andi-eva/6.webp",
-      "assets/images/portfolio/andi-eva/4.webp",
-      "assets/images/portfolio/andi-eva/8.webp",
-      "assets/images/portfolio/andi-eva/3.webp",
-      "assets/images/portfolio/andi-eva/9.webp",
-      "assets/images/portfolio/andi-eva/10.webp"
-    ]
-  },
-
-  "budi-ella": {
-    id: "budi-ella",
-    name: "Budi & Ella",
-    meta: "Sanur Beachfront • Sunset Blessing Ceremony",
-    description: "A soulful Christian blessing ceremony on the tranquil shores of Bali. With pastel blue hydrangeas, white ceremony umbrellas (tedung), and the sound of gentle waves, Budi & Ella promised forever at golden hour.",
-    heroImage: "assets/images/portfolio/budi-ella/8.webp",
-    reviewBg: "assets/images/portfolio/budi-ella/7.webp",
-    packageId: "elopement",
-    packageTitle: "Bali Elopement",
-    hasVideo: false,
-    videoUrl: null,
-    quote: "Standing together on the beach as the sun went down, listening to the pastor's blessing... it was the most emotional and meaningful moment of our lives.",
-    quoteAuthor: "Budi & Ella • Verified Couple",
-    photos: [
-      "assets/images/portfolio/budi-ella/8.webp",
-      "assets/images/portfolio/budi-ella/1.webp",
-      "assets/images/portfolio/budi-ella/7.webp",
-      "assets/images/portfolio/budi-ella/2.webp",
-      "assets/images/portfolio/budi-ella/3.webp",
-      "assets/images/portfolio/budi-ella/4.webp",
-      "assets/images/portfolio/budi-ella/5.webp",
-      "assets/images/portfolio/budi-ella/6.webp",
-      "assets/images/portfolio/budi-ella/9.webp",
-      "assets/images/portfolio/budi-ella/10.webp"
-    ]
-  },
-
   "erik-sekar": {
     id: "erik-sekar",
     name: "Erik & Sekar",
@@ -548,102 +511,6 @@ const PORTFOLIO_DATA = {
     ]
   },
 
-  "michel-angela": {
-    id: "michel-angela",
-    name: "Michel & Angela",
-    meta: "Uluwatu Cliffs • Intimate Sunset Elopement",
-    description: "An ethereal, distraction-free vows exchange perched 150 meters above the Indian Ocean. Surrounded only by the ocean breeze and breaking surf, Michel and Angela celebrated their sacred commitment in pure couple solitude, concluding with an intimate dinner under the starlit sky.",
-    heroImage: "assets/images/couples/michel-angela.webp",
-    reviewBg: "assets/images/elopement/elopement-02.webp",
-    packageId: "elopement",
-    packageTitle: "Bali Elopement",
-    hasVideo: true,
-    videoUrl: "assets/videos/michel-angela.mov",
-    quote: "I really wanna thank the Bali Top Wedding team for helping our wonderful wedding. It was a rush for us busy people, but having a team that is really fast response, reliable, and thoughtful made our day completely magical!",
-    quoteAuthor: "Michel & Angela • Singapore & Indonesia",
-    photos: [
-      "assets/images/couples/michel-angela.webp",
-      "assets/images/elopement/elopement-01.webp",
-      "assets/images/elopement/elopement-03.webp",
-      "assets/images/elopement/elopement-05.webp",
-      "assets/images/elopement/elopement-02.webp",
-      "assets/images/elopement/elopement-06.webp",
-      "assets/images/elopement/elopement-07.webp"
-    ]
-  },
-
-  "maria-ellias": {
-    id: "maria-ellias",
-    name: "Maria & Ellias",
-    meta: "Kintamani Highlands & Secret Beach • Pre-Wedding Editorial",
-    description: "A cinematic sunrise-to-sunset editorial journey through Bali's most dramatic landscapes. From mist-shrouded mountain pine forests at dawn to crashing ocean waves during golden hour, Maria and Ellias captured pure authentic connection across the island.",
-    heroImage: "assets/images/couples/maria-ellias.webp",
-    reviewBg: "assets/images/prewedding/prewed-02.webp",
-    packageId: "pre-wedding",
-    packageTitle: "Bali Pre-Wedding",
-    hasVideo: false,
-    videoUrl: null,
-    quote: "Flying to Bali for our pre-wedding photoshoot was the best decision we ever made. The team had our entire day planned to perfection: early morning coffee, touchups on the go, and absolute privacy. The photos look like a high-fashion editorial magazine spread!",
-    quoteAuthor: "Maria & Ellias • Germany",
-    photos: [
-      "assets/images/couples/maria-ellias.webp",
-      "assets/images/prewedding/prewed-01.webp",
-      "assets/images/prewedding/prewed-04.webp",
-      "assets/images/prewedding/prewed-03.webp",
-      "assets/images/prewedding/prewed-02.webp",
-      "assets/images/prewedding/prewed-05.webp",
-      "assets/images/prewedding/prewed-06.webp",
-      "assets/images/prewedding/prewed-07.webp"
-    ]
-  },
-
-  "claudia-dennis": {
-    id: "claudia-dennis",
-    name: "Claudia & Dennis",
-    meta: "Nusa Dua Luxury Estate • Villa Wedding",
-    description: "A bespoke sanctuary celebration for 25 cherished family members and friends. Set in an exclusive oceanfront cliffside villa, the ceremony featured a custom acrylic stage hovering over the infinity pool, followed by an al-fresco dinner under a canopy of fairy lights.",
-    heroImage: "assets/images/couples/claudia-dennis.webp",
-    reviewBg: "assets/images/villa/villa-03.webp",
-    packageId: "private-villa",
-    packageTitle: "Bali Villa Wedding",
-    hasVideo: true,
-    videoUrl: "assets/videos/claudia-dennis.mp4",
-    quote: "Thank you so much to our planner who accompanied us for more than two years and patiently answered all of our countless questions! Everything was so seamless, the food was spectacular, and our guests couldn't stop raving about the villa.",
-    quoteAuthor: "Claudia & Dennis • Australia",
-    photos: [
-      "assets/images/couples/claudia-dennis.webp",
-      "assets/images/villa/villa-01.webp",
-      "assets/images/villa/villa-02.webp",
-      "assets/images/hero/hero-villa.webp",
-      "assets/images/villa/villa-03.webp",
-      "assets/images/villa/villa-04.webp",
-      "assets/images/villa/villa-05.webp",
-      "assets/images/villa/villa-07.webp"
-    ]
-  },
-
-  "weisma-fadhil": {
-    id: "weisma-fadhil",
-    name: "Weisma & Fadhil",
-    meta: "Sacred Ayung River Sanctuary, Ubud • Intimate Forest Wedding",
-    description: "Surrounded by ancient tropical rainforest canopy and the gentle murmur of the Ayung River, Weisma and Fadhil embraced the slow-living essence of Bali. A peaceful, heartfelt celebration dedicated to genuine emotional presence with their closest inner circle.",
-    heroImage: "assets/images/couples/weisma-fadhil.webp",
-    reviewBg: "assets/images/elopement/elopement-04.webp",
-    packageId: "elopement",
-    packageTitle: "Bali Elopement",
-    quote: "Every single detail felt crafted with genuine love and intention. We were able to be fully present, cry happy tears, and laugh with our family without looking at the clock once.",
-    quoteAuthor: "Weisma & Fadhil • Verified Couple",
-    photos: [
-      "assets/images/couples/weisma-fadhil.webp",
-      "assets/images/elopement/elopement-04.webp",
-      "assets/images/elopement/elopement-03.webp",
-      "assets/images/elopement/elopement-05.webp",
-      "assets/images/blog/blog-spots.webp",
-      "assets/images/elopement/elopement-02.webp",
-      "assets/images/elopement/elopement-06.webp",
-      "assets/images/elopement/elopement-07.webp"
-    ]
-  },
   "astrella-mikhael": {
     id: "astrella-mikhael",
     name: "Astrella & Mikhael",
@@ -675,6 +542,7 @@ const PORTFOLIO_DATA = {
       "assets/images/portfolio/astrella-mikhael/17.webp"
     ]
   },
+
   "jay-lisa": {
     id: "jay-lisa",
     name: "Jay & Lisa",
@@ -706,263 +574,11 @@ const PORTFOLIO_DATA = {
       "assets/images/portfolio/jay-lisa/17.webp",
       "assets/images/portfolio/jay-lisa/18.webp"
     ]
-  },
-  "putri-victor": {
-    id: "putri-victor",
-    name: "Putri & Victor",
-    meta: "Tanah Lot • Ocean-View Wedding Celebration",
-    description: "An ocean-view celebration near Tanah Lot that blended Balinese heritage with soft pastel styling. Putri & Victor wore traditional Balinese attire for their portraits, and the evening reception featured a Balinese dance performance under chandeliers and string lights.",
-    heroImage: "assets/images/portfolio/putri-victor/1.webp",
-    reviewBg: "assets/images/portfolio/putri-victor/13.webp",
-    packageId: "private-villa",
-    packageTitle: "Bali Villa Wedding",
-    hasVideo: false,
-    videoUrl: null,
-    photos: [
-      "assets/images/portfolio/putri-victor/1.webp",
-      "assets/images/portfolio/putri-victor/2.webp",
-      "assets/images/portfolio/putri-victor/3.webp",
-      "assets/images/portfolio/putri-victor/4.webp",
-      "assets/images/portfolio/putri-victor/5.webp",
-      "assets/images/portfolio/putri-victor/6.webp",
-      "assets/images/portfolio/putri-victor/7.webp",
-      "assets/images/portfolio/putri-victor/8.webp",
-      "assets/images/portfolio/putri-victor/9.webp",
-      "assets/images/portfolio/putri-victor/10.webp",
-      "assets/images/portfolio/putri-victor/11.webp",
-      "assets/images/portfolio/putri-victor/12.webp",
-      "assets/images/portfolio/putri-victor/13.webp",
-      "assets/images/portfolio/putri-victor/14.webp",
-      "assets/images/portfolio/putri-victor/15.webp",
-      "assets/images/portfolio/putri-victor/16.webp",
-      "assets/images/portfolio/putri-victor/17.webp"
-    ]
-  },
-  "art-centre": {
-      "id": "art-centre",
-      "name": "Art Centre Denpasar",
-      "meta": "Denpasar Cultural Heritage • Balinese Traditional Architecture",
-      "description": "An enchanting cultural pre-wedding session set amidst the majestic carved stone gates, traditional Balinese pavilions, and lush banyan trees of Taman Werdhi Budaya Art Centre Denpasar.",
-      "heroImage": "assets/images/portfolio/art-centre/1.webp",
-      "reviewBg": "assets/images/portfolio/art-centre/3.webp",
-      "packageId": "pre-wedding",
-      "packageTitle": "Bali Pre-Wedding",
-      "quote": "Capturing our prewedding portraits at the Art Centre gave our love story such an authentic, timeless Balinese cultural soul. The architectural framing was breathtaking.",
-      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
-      "count": 8,
-      "photos": [
-          "assets/images/portfolio/art-centre/1.webp",
-          "assets/images/portfolio/art-centre/2.webp",
-          "assets/images/portfolio/art-centre/3.webp",
-          "assets/images/portfolio/art-centre/4.webp",
-          "assets/images/portfolio/art-centre/5.webp",
-          "assets/images/portfolio/art-centre/6.webp",
-          "assets/images/portfolio/art-centre/7.webp",
-          "assets/images/portfolio/art-centre/8.webp"
-      ]
-  },
-
-  "balangan-cliff": {
-      "id": "balangan-cliff",
-      "name": "Balangan Beach & Cliff",
-      "meta": "Bukit Peninsula Coast • Dramatic Sunset Cliffs",
-      "description": "Perched upon the iconic golden limestone cliffs of Balangan overlooking turquoise breaks and sea caves, followed by a barefoot sunset shoreline stroll.",
-      "heroImage": "assets/images/portfolio/balangan-cliff/1.webp",
-      "reviewBg": "assets/images/portfolio/balangan-cliff/5.webp",
-      "packageId": "pre-wedding",
-      "packageTitle": "Bali Pre-Wedding",
-      "quote": "Standing on the edge of Balangan cliff at golden hour with the ocean wind was pure poetry. The photographer captured every candid look and laugh effortlessly.",
-      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
-      "count": 11,
-      "photos": [
-          "assets/images/portfolio/balangan-cliff/1.webp",
-          "assets/images/portfolio/balangan-cliff/2.webp",
-          "assets/images/portfolio/balangan-cliff/3.webp",
-          "assets/images/portfolio/balangan-cliff/4.webp",
-          "assets/images/portfolio/balangan-cliff/5.webp",
-          "assets/images/portfolio/balangan-cliff/6.webp",
-          "assets/images/portfolio/balangan-cliff/7.webp",
-          "assets/images/portfolio/balangan-cliff/8.webp",
-          "assets/images/portfolio/balangan-cliff/9.webp",
-          "assets/images/portfolio/balangan-cliff/10.webp",
-          "assets/images/portfolio/balangan-cliff/11.webp"
-      ]
-  },
-
-  "ronny-melan": {
-    id: "ronny-melan",
-    name: "Ronny & Melan",
-    meta: "Kintamani • Black Lava Fields & Oculus",
-    description: "An editorial pre-wedding session in two looks: a flowing white gown across Mount Batur's black lava fields, then soft pink at Oculus Kintamani with sweeping views over the caldera and Lake Batur.",
-    heroImage: "assets/images/portfolio/ronny-melan/1.webp",
-    reviewBg: "assets/images/portfolio/ronny-melan/17.webp",
-    packageId: "pre-wedding",
-    packageTitle: "Bali Pre-Wedding",
-    hasVideo: false,
-    videoUrl: null,
-    quote: "The black lava fields created such a high-fashion, dramatic contrast with our formal attire. Easily the most unforgettable photoshoot we have ever experienced.",
-    quoteAuthor: "Ronny & Melan • Verified Session",
-    photos: [
-      "assets/images/portfolio/ronny-melan/1.webp",
-      "assets/images/portfolio/ronny-melan/2.webp",
-      "assets/images/portfolio/ronny-melan/3.webp",
-      "assets/images/portfolio/ronny-melan/4.webp",
-      "assets/images/portfolio/ronny-melan/5.webp",
-      "assets/images/portfolio/ronny-melan/6.webp",
-      "assets/images/portfolio/ronny-melan/7.webp",
-      "assets/images/portfolio/ronny-melan/8.webp",
-      "assets/images/portfolio/ronny-melan/9.webp",
-      "assets/images/portfolio/ronny-melan/10.webp",
-      "assets/images/portfolio/ronny-melan/11.webp",
-      "assets/images/portfolio/ronny-melan/12.webp",
-      "assets/images/portfolio/ronny-melan/13.webp",
-      "assets/images/portfolio/ronny-melan/14.webp",
-      "assets/images/portfolio/ronny-melan/15.webp",
-      "assets/images/portfolio/ronny-melan/16.webp",
-      "assets/images/portfolio/ronny-melan/17.webp"
-    ]
-  },
-
-  "blangsinga-waterfall": {
-      "id": "blangsinga-waterfall",
-      "name": "Blangsinga Waterfall",
-      "meta": "Gianyar Rainforest • Majestic Canyon Cascade",
-      "description": "An intimate tropical romance framed by the rushing cascades, river stones, and mist-drenched emerald jungle canyon of Blangsinga Waterfall.",
-      "heroImage": "assets/images/portfolio/blangsinga-waterfall/1.webp",
-      "reviewBg": "assets/images/portfolio/blangsinga-waterfall/3.webp",
-      "packageId": "pre-wedding",
-      "packageTitle": "Bali Pre-Wedding",
-      "quote": "Surrounded by cascading waterfalls and emerald moss in Gianyar, the atmosphere felt like a hidden paradise. The mist added pure magic to every frame.",
-      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
-      "count": 5,
-      "photos": [
-          "assets/images/portfolio/blangsinga-waterfall/1.webp",
-          "assets/images/portfolio/blangsinga-waterfall/2.webp",
-          "assets/images/portfolio/blangsinga-waterfall/3.webp",
-          "assets/images/portfolio/blangsinga-waterfall/4.webp",
-          "assets/images/portfolio/blangsinga-waterfall/5.webp"
-      ]
-  },
-
-  "steven-jessica": {
-    id: "steven-jessica",
-    name: "Steven & Jessica",
-    meta: "Bedugul Highlands • Pre-Wedding Session",
-    description: "A serene, ethereal pre-wedding journey through the towering banyans, ancient rainforest fern canopies, and cool highland breezes of Bali Botanic Garden Bedugul.",
-    heroImage: "assets/images/portfolio/steven-jessica/1.webp",
-    reviewBg: "assets/images/portfolio/steven-jessica/12.webp",
-    packageId: "pre-wedding",
-    packageTitle: "Bali Pre-Wedding",
-    hasVideo: false,
-    videoUrl: null,
-    quote: "The cool mountain air, morning fog rolling between the giant trees, and the peaceful forest trails made us feel like we stepped into a fairytale.",
-    quoteAuthor: "Steven & Jessica • Verified Session",
-    photos: [
-      "assets/images/portfolio/steven-jessica/1.webp",
-      "assets/images/portfolio/steven-jessica/2.webp",
-      "assets/images/portfolio/steven-jessica/3.webp",
-      "assets/images/portfolio/steven-jessica/4.webp",
-      "assets/images/portfolio/steven-jessica/5.webp",
-      "assets/images/portfolio/steven-jessica/6.webp",
-      "assets/images/portfolio/steven-jessica/7.webp",
-      "assets/images/portfolio/steven-jessica/8.webp",
-      "assets/images/portfolio/steven-jessica/9.webp",
-      "assets/images/portfolio/steven-jessica/10.webp",
-      "assets/images/portfolio/steven-jessica/11.webp",
-      "assets/images/portfolio/steven-jessica/12.webp",
-      "assets/images/portfolio/steven-jessica/13.webp",
-      "assets/images/portfolio/steven-jessica/14.webp",
-      "assets/images/portfolio/steven-jessica/15.webp",
-      "assets/images/portfolio/steven-jessica/16.webp",
-      "assets/images/portfolio/steven-jessica/17.webp"
-    ]
-  },
-
-  "melasti-beach": {
-      "id": "melasti-beach",
-      "name": "Melasti Beach & Cliff",
-      "meta": "Ungasan Coastline • Winding Limestone Corridors & Azure Shore",
-      "description": "From the monumental carved white limestone ravines to the tranquil turquoise shallows and coral reefs of Melasti Beach during the golden twilight hour.",
-      "heroImage": "assets/images/portfolio/melasti-beach/1.webp",
-      "reviewBg": "assets/images/portfolio/melasti-beach/7.webp",
-      "packageId": "pre-wedding",
-      "packageTitle": "Bali Pre-Wedding",
-      "quote": "The soaring cliff walls and crystal waters of Melasti offered the most versatile and grand scenery. Every single shot looks straight out of a luxury magazine.",
-      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
-      "count": 19,
-      "photos": [
-          "assets/images/portfolio/melasti-beach/1.webp",
-          "assets/images/portfolio/melasti-beach/2.webp",
-          "assets/images/portfolio/melasti-beach/3.webp",
-          "assets/images/portfolio/melasti-beach/4.webp",
-          "assets/images/portfolio/melasti-beach/5.webp",
-          "assets/images/portfolio/melasti-beach/6.webp",
-          "assets/images/portfolio/melasti-beach/7.webp",
-          "assets/images/portfolio/melasti-beach/8.webp",
-          "assets/images/portfolio/melasti-beach/9.webp",
-          "assets/images/portfolio/melasti-beach/10.webp",
-          "assets/images/portfolio/melasti-beach/11.webp",
-          "assets/images/portfolio/melasti-beach/12.webp",
-          "assets/images/portfolio/melasti-beach/13.webp",
-          "assets/images/portfolio/melasti-beach/14.webp",
-          "assets/images/portfolio/melasti-beach/15.webp",
-          "assets/images/portfolio/melasti-beach/16.webp",
-          "assets/images/portfolio/melasti-beach/17.webp",
-          "assets/images/portfolio/melasti-beach/18.webp",
-          "assets/images/portfolio/melasti-beach/19.webp"
-      ]
-  },
-
-
-  "pantai-nyanyi": {
-      "id": "pantai-nyanyi",
-      "name": "Pantai Nyanyi",
-      "meta": "Tabanan Coast • Glistening Black Sand Sunset & Tidal Mirror",
-      "description": "Dramatic coastal romance on the glistening black sands and surging surf of Pantai Nyanyi, capturing ethereal sunset silhouettes and mirrored tidal reflections.",
-      "heroImage": "assets/images/portfolio/pantai-nyanyi/1.webp",
-      "reviewBg": "assets/images/portfolio/pantai-nyanyi/6.webp",
-      "packageId": "pre-wedding",
-      "packageTitle": "Bali Pre-Wedding",
-      "quote": "The glistening wet black sand reflecting the fiery sunset sky was sheer poetry. Walking hand in hand along the shoreline felt like time stood completely still.",
-      "quoteAuthor": "Pre-Wedding Couple • Verified Session",
-      "count": 25,
-      "photos": [
-          "assets/images/portfolio/pantai-nyanyi/1.webp",
-          "assets/images/portfolio/pantai-nyanyi/2.webp",
-          "assets/images/portfolio/pantai-nyanyi/3.webp",
-          "assets/images/portfolio/pantai-nyanyi/4.webp",
-          "assets/images/portfolio/pantai-nyanyi/5.webp",
-          "assets/images/portfolio/pantai-nyanyi/6.webp",
-          "assets/images/portfolio/pantai-nyanyi/7.webp",
-          "assets/images/portfolio/pantai-nyanyi/8.webp",
-          "assets/images/portfolio/pantai-nyanyi/9.webp",
-          "assets/images/portfolio/pantai-nyanyi/10.webp",
-          "assets/images/portfolio/pantai-nyanyi/11.webp",
-          "assets/images/portfolio/pantai-nyanyi/12.webp",
-          "assets/images/portfolio/pantai-nyanyi/13.webp",
-          "assets/images/portfolio/pantai-nyanyi/14.webp",
-          "assets/images/portfolio/pantai-nyanyi/15.webp",
-          "assets/images/portfolio/pantai-nyanyi/16.webp",
-          "assets/images/portfolio/pantai-nyanyi/17.webp",
-          "assets/images/portfolio/pantai-nyanyi/18.webp",
-          "assets/images/portfolio/pantai-nyanyi/19.webp",
-          "assets/images/portfolio/pantai-nyanyi/20.webp",
-          "assets/images/portfolio/pantai-nyanyi/21.webp",
-          "assets/images/portfolio/pantai-nyanyi/22.webp",
-          "assets/images/portfolio/pantai-nyanyi/23.webp",
-          "assets/images/portfolio/pantai-nyanyi/24.webp",
-          "assets/images/portfolio/pantai-nyanyi/25.webp"
-      ]
-  },
-
+  }
 };
 
 // Old location-named pre-wedding links now open the couples' stories
-const PORTFOLIO_ALIASES = {
-  "kebun-raya-bedugul": "steven-jessica",
-  "black-lava-kintamani": "ronny-melan",
-  "oculus-kintamani": "ronny-melan"
-};
+const PORTFOLIO_ALIASES = {};
 
 // ── 2.6 WEDDING FILMS (YOUTUBE, LANDSCAPE) ──
 // Add one entry per film; the section on portfolio.html appears automatically.
@@ -1240,38 +856,12 @@ function populatePackageSelects() {
 }
 
 /**
- * Package hero: a single photo, or a cross-fading slideshow with dots when there are several
+ * Package hero: one still photo (the first photo of the package or service)
  */
-function renderPackageHero(photos, position) {
+function renderPackageHero(photo, position) {
   const heroEl = document.getElementById("pkg-hero");
-  if (!heroEl || !photos.length) return;
-
-  heroEl.innerHTML = photos.map((src, i) => `
-    <div class="pkg-hero-slide${i === 0 ? " is-active" : ""}" style="background-image: url('${src}'); background-position: ${position || "center 45%"};"></div>
-  `).join("") + (photos.length > 1 ? `
-    <div class="pkg-hero-dots">
-      ${photos.map((_, i) => `<button type="button" class="pkg-hero-dot${i === 0 ? " is-active" : ""}" aria-label="Show photo ${i + 1}"></button>`).join("")}
-    </div>
-  ` : "");
-  if (photos.length < 2) return;
-
-  const slides = heroEl.querySelectorAll(".pkg-hero-slide");
-  const dots = heroEl.querySelectorAll(".pkg-hero-dot");
-  let current = 0;
-  let timer;
-  const show = index => {
-    slides[current].classList.remove("is-active");
-    dots[current].classList.remove("is-active");
-    current = index;
-    slides[current].classList.add("is-active");
-    dots[current].classList.add("is-active");
-  };
-  const start = () => {
-    clearInterval(timer);
-    timer = setInterval(() => show((current + 1) % slides.length), 5000);
-  };
-  dots.forEach((dot, i) => dot.addEventListener("click", () => { show(i); start(); }));
-  start();
+  if (!heroEl || !photo) return;
+  heroEl.innerHTML = `<div class="pkg-hero-photo" style="background-image: url('${photo}'); background-position: ${position || "center 45%"};"></div>`;
 }
 
 function initPackageDetail() {
@@ -1301,7 +891,7 @@ function initPackageDetail() {
     if (summaryView) summaryView.style.display = "block";
     if (detailView) detailView.style.display = "none";
     document.title = `${service.title} — Bali Elopement Service`;
-    renderPackageHero([service.heroImage], service.heroPosition);
+    renderPackageHero(service.heroImage, service.heroPosition);
 
     if (breadcrumbNav) {
       breadcrumbNav.innerHTML = `${breadcrumbBase}<span style="color: var(--dark); font-weight: 500;">${service.title}</span>`;
@@ -1339,7 +929,7 @@ function initPackageDetail() {
   if (summaryView) summaryView.style.display = "none";
   if (detailView) detailView.style.display = "block";
   document.title = `${formatPackageTitle(pkgData)} — Bali Elopement Service`;
-  renderPackageHero(pkgData.photos, pkgData.heroPosition);
+  renderPackageHero(pkgData.photos[0], pkgData.heroPosition);
 
   if (breadcrumbNav) {
     breadcrumbNav.innerHTML = `${breadcrumbBase}<a href="package-detail.html?pkg=${serviceKey}">${service.title}</a><span>/</span><span style="color: var(--dark); font-weight: 500;">${formatPackageTitle(pkgData)}</span>`;
@@ -1361,8 +951,30 @@ function initPackageDetail() {
   setText("pkg-price-idr", pkgData.priceIDR);
   const priceNoteEl = setText("pkg-price-foreign", pkgData.priceNote);
   if (priceNoteEl) priceNoteEl.style.display = pkgData.priceNote ? "block" : "none";
-  const netNoteEl = document.getElementById("pkg-net-note");
-  if (netNoteEl) netNoteEl.style.display = pkgData.priceIDR.includes("net") ? "block" : "none";
+
+  // Package photos in a slider next to the explanation
+  const sliderEl = document.getElementById("pkg-slider");
+  if (sliderEl) {
+    const photos = pkgData.photos;
+    sliderEl.innerHTML = `
+      <div class="pkg-slider-track">
+        ${photos.map((src, i) => `
+          <div class="pkg-slide" data-lightbox-src="${src}">
+            <img src="${src}" alt="${formatPackageTitle(pkgData)} photo ${i + 1}"${i ? ' loading="lazy"' : ""}>
+          </div>
+        `).join("")}
+      </div>
+      ${photos.length > 1 ? `
+        <button type="button" class="pkg-slider-btn pkg-slider-prev" aria-label="Previous photo">&#8249;</button>
+        <button type="button" class="pkg-slider-btn pkg-slider-next" aria-label="Next photo">&#8250;</button>
+        <div class="pkg-slider-dots">
+          ${photos.map((_, i) => `<button type="button" class="pkg-slider-dot${i ? "" : " is-active"}" aria-label="Show photo ${i + 1}"></button>`).join("")}
+        </div>
+      ` : ""}
+    `;
+    initPackageSlider(sliderEl);
+  }
+
 
   const descEl = document.getElementById("pkg-description");
   if (descEl) {
@@ -1386,6 +998,36 @@ function initPackageDetail() {
   // Pre-select this package in the inquiry form
   const packageSelect = document.getElementById("inquiry-package");
   if (packageSelect) packageSelect.value = formatPackageTitle(pkgData);
+}
+
+/**
+ * Package photo slider: swipe or scroll, arrows, dots; a click on a photo enlarges it (initLightbox)
+ */
+function initPackageSlider(slider) {
+  const track = slider.querySelector(".pkg-slider-track");
+  const slides = slider.querySelectorAll(".pkg-slide");
+  const dots = slider.querySelectorAll(".pkg-slider-dot");
+  if (!track || slides.length < 2) return;
+
+  const current = () => Math.round(track.scrollLeft / track.clientWidth);
+  const go = index => {
+    const target = (index + slides.length) % slides.length;
+    track.scrollTo({ left: target * track.clientWidth });
+  };
+  slider.querySelector(".pkg-slider-prev").addEventListener("click", () => go(current() - 1));
+  slider.querySelector(".pkg-slider-next").addEventListener("click", () => go(current() + 1));
+  dots.forEach((dot, i) => dot.addEventListener("click", () => go(i)));
+
+  let ticking = false;
+  track.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const index = current();
+      dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+      ticking = false;
+    });
+  }, { passive: true });
 }
 
 /**

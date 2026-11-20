@@ -25,7 +25,7 @@ get_header();
     }
   </style>
   <!-- ── 3. HERO ── -->
-  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset('assets/images/hero/hero-main.webp'); ?>'); background-position: center 30%;">
+  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset('assets/images/hero/hero-contact.webp'); ?>'); background-position: center 60%;">
     <div class="hero-content">
       <h1>Start Your Bali Journey</h1>
       <p class="hero-subtitle">

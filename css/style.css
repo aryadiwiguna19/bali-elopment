@@ -2317,6 +2317,42 @@ textarea.form-control {
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS (MOBILE FIRST ADAPTATION)
    ========================================================================== */
+/* Five menu items: keep the brand on one line on small laptops */
+@media (max-width: 1240px) and (min-width: 921px) {
+  .brand-title {
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+  .nav-links {
+    gap: 18px;
+  }
+  .nav-link {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+  .btn-nav-inquire {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 1040px) and (min-width: 921px) {
+  .brand-title {
+    font-size: 15px;
+  }
+  .brand-subline {
+    font-size: 8px;
+  }
+  .nav-links {
+    gap: 14px;
+  }
+  .nav-link {
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+  }
+}
+
 @media (max-width: 1080px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);

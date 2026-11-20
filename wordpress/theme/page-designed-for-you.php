@@ -5,7 +5,7 @@
 get_header();
 ?>
   <!-- ── 3. HERO ── -->
-  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset('assets/images/hero/hero-main.webp'); ?>'); background-position: center 32%;">
+  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset('assets/images/hero/hero-services.webp'); ?>'); background-position: center 72%;">
     <div class="hero-content">
       <h1>Designed For You</h1>
       <p class="hero-subtitle">
@@ -21,7 +21,7 @@ get_header();
       <!-- SERVICE 1 ROW -->
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 80px; padding-bottom: 80px; border-bottom: 1px solid var(--border-subtle);">
         <div style="aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-strong);">
-          <img src="<?php echo btw_asset('assets/images/pages/002.webp'); ?>" alt="Bali Elopement Packages" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="<?php echo btw_asset('assets/images/pages/020.webp'); ?>" alt="Bali Elopement at Suwat Waterfall" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div>
           <span class="section-label">Category 01</span>
@@ -45,7 +45,7 @@ get_header();
       <!-- SERVICE 2 ROW -->
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 80px; padding-bottom: 80px; border-bottom: 1px solid var(--border-subtle);">
         <div style="order: 2; aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-strong);">
-          <img src="<?php echo btw_asset('assets/images/pages/004.webp'); ?>" alt="Bali Villa Wedding Packages" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="<?php echo btw_asset('assets/images/pages/045.webp'); ?>" alt="Bali Villa Wedding at Estuary Villa" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div style="order: 1;">
           <span class="section-label">Category 02</span>
@@ -69,7 +69,7 @@ get_header();
       <!-- SERVICE 3 ROW -->
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 40px;">
         <div style="aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-strong);">
-          <img src="<?php echo btw_asset('assets/images/pages/003.webp'); ?>" alt="Bali Pre Wedding Photography" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="<?php echo btw_asset('assets/images/pages/035.webp'); ?>" alt="Bali Pre Wedding Photography, Simply Us" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div>
           <span class="section-label">Category 03</span>

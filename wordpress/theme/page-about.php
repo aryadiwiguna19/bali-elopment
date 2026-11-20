@@ -5,7 +5,7 @@
 get_header();
 ?>
   <!-- ── 3. HERO ── -->
-  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset('assets/images/hero/hero-villa.webp'); ?>'); background-position: center 28%;">
+  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset('assets/images/hero/hero-about.webp'); ?>'); background-position: center 55%;">
     <div class="hero-content">
       <h1>Our Story &amp; Philosophy</h1>
       <p class="hero-subtitle">

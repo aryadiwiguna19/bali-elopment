@@ -30,16 +30,14 @@
     <ul class="nav-links">
       <li><a href="<?php echo btw_url('home'); ?>" class="nav-link<?php echo btw_active('home'); ?>">Home</a></li>
       <li><a href="<?php echo btw_url('elopement'); ?>" class="nav-link<?php echo btw_active('elopement'); ?>">Elopement</a></li>
+      <li><a href="<?php echo btw_url('private-villa'); ?>" class="nav-link<?php echo btw_active('private-villa'); ?>">Villa Wedding</a></li>
+      <li><a href="<?php echo btw_url('pre-wedding'); ?>" class="nav-link<?php echo btw_active('pre-wedding'); ?>">Pre-Wedding</a></li>
       <li class="nav-dropdown">
-        <button type="button" class="nav-link<?php echo btw_active(array('private-villa', 'pre-wedding', 'about', 'portfolio', 'blog', 'faq')); ?>" aria-haspopup="true">
+        <button type="button" class="nav-link<?php echo btw_active(array('about', 'portfolio', 'blog', 'faq')); ?>" aria-haspopup="true">
           More
           <svg class="dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="dropdown-menu">
-          <div class="dropdown-label">Other Services</div>
-          <a href="<?php echo btw_url('private-villa'); ?>" class="dropdown-item">Villa Wedding</a>
-          <a href="<?php echo btw_url('pre-wedding'); ?>" class="dropdown-item">Pre-Wedding</a>
-          <div class="dropdown-label">Discover</div>
           <a href="<?php echo btw_url('about'); ?>" class="dropdown-item">About Us</a>
           <a href="<?php echo btw_url('portfolio'); ?>" class="dropdown-item">Portfolio</a>
           <a href="<?php echo btw_url('blog'); ?>" class="dropdown-item">Wedding Journal</a>
@@ -84,16 +82,11 @@
     <ul class="mobile-nav-list">
       <li><a href="<?php echo btw_url('home'); ?>" class="mobile-nav-link<?php echo btw_active('home'); ?>">Home</a></li>
       <li><a href="<?php echo btw_url('elopement'); ?>" class="mobile-nav-link<?php echo btw_active('elopement'); ?>">Bali Elopement Packages</a></li>
+      <li><a href="<?php echo btw_url('private-villa'); ?>" class="mobile-nav-link<?php echo btw_active('private-villa'); ?>">Villa Weddings</a></li>
+      <li><a href="<?php echo btw_url('pre-wedding'); ?>" class="mobile-nav-link<?php echo btw_active('pre-wedding'); ?>">Pre Wedding Photography</a></li>
     </ul>
 
     <!-- Secondary Discovery Links -->
-    <div class="mobile-nav-divider"></div>
-    <span class="mobile-nav-label">Other Services</span>
-    <ul class="mobile-nav-secondary">
-      <li><a href="<?php echo btw_url('private-villa'); ?>" class="mobile-secondary-link">Villa Weddings</a></li>
-      <li><a href="<?php echo btw_url('pre-wedding'); ?>" class="mobile-secondary-link">Pre Wedding Photography</a></li>
-    </ul>
-
     <div class="mobile-nav-divider"></div>
     <span class="mobile-nav-label">Discover</span>
     <ul class="mobile-nav-secondary">

@@ -8,7 +8,7 @@ python wordpress/build.py
 ```
 Output (git-ignored):
 - `wordpress/dist/bali-elopement.zip` (~0.6 MB): the theme. It contains the code, `css/style.css`, the logo and the homepage hero, plus the package and portfolio data exported from `js/script.js`.
-- `wordpress/dist/media-upload/` (326 photos, ~97 MB): every other photo, renamed to a flat name, e.g. `assets/images/portfolio/andi-eva/1.webp` → `btw-portfolio-andi-eva-1.webp`. The theme finds them in the Media Library by these names.
+- `wordpress/dist/media-upload/` (326 photos, ~97 MB): every other photo, renamed to a flat name, e.g. `assets/images/portfolio/erik-sekar/1.webp` → `btw-portfolio-erik-sekar-1.webp`. The theme finds them in the Media Library by these names.
 
 `python wordpress/build.py --full` puts all photos inside the theme zip instead. Use it only where you can upload through cPanel or FTP.
 
@@ -33,6 +33,14 @@ To change packages or portfolio stories in phase 1, edit `js/script.js`, rebuild
 | Package | `/packages/<venue>/`, e.g. `/packages/tibumana-waterfall/` |
 | Portfolio story | `/portfolio/<story>/` |
 | Other pages | `/designed-for-you/`, `/about/`, `/contact/`, `/faq/`, `/testimonials/`, `/wedding-journal/` |
+
+## Inquiry forms
+The forms on the Contact page and the package pages work like this:
+- Every inquiry is saved in wp-admin under **Inquiries**. A counter next to the menu item shows how many arrived in the last 7 days.
+- **Send via Email** sends the form to WordPress, and the planner gets a notification at the email address in `js/script.js` (`SITE_CONFIG.email`). Reply to that notification to answer the couple, because Reply-To is set to their address.
+- **Send via WhatsApp** opens WhatsApp with the details filled in, and also saves a copy under Inquiries.
+- If the notification cannot be sent, the inquiry is still saved and is marked "notification not delivered". If you see that mark, install an SMTP plugin such as WP Mail SMTP.
+- Spam protection is a hidden honeypot field, a minimum fill time, and a limit of 5 inquiries per 10 minutes from each IP. There is no captcha.
 
 ## Editable in wp-admin
 - Journal articles (Posts). A sticky post shows as "Pinned"; the first 3 sticky posts appear at the top.

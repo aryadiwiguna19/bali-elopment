@@ -1,23 +1,13 @@
 <?php
 /**
- * Package hero (photo or slideshow), breadcrumb and service tabs.
- * Expects $args: photos, position, current_service, crumbs (array of [label, url|null]).
+ * Package hero (one still photo), breadcrumb and service tabs.
+ * Expects $args: photo, position, current_service, crumbs (array of [label, url|null]).
  */
 
-$photos   = $args['photos'];
 $position = $args['position'] ? $args['position'] : 'center 45%';
 ?>
 <header class="hero-inner" id="pkg-hero">
-  <?php foreach ( $photos as $i => $photo ) : ?>
-    <div class="pkg-hero-slide<?php echo 0 === $i ? ' is-active' : ''; ?>" style="background-image: url('<?php echo btw_asset( $photo ); ?>'); background-position: <?php echo esc_attr( $position ); ?>;"></div>
-  <?php endforeach; ?>
-  <?php if ( count( $photos ) > 1 ) : ?>
-    <div class="pkg-hero-dots">
-      <?php foreach ( $photos as $i => $photo ) : ?>
-        <button type="button" class="pkg-hero-dot<?php echo 0 === $i ? ' is-active' : ''; ?>" aria-label="Show photo <?php echo (int) $i + 1; ?>"></button>
-      <?php endforeach; ?>
-    </div>
-  <?php endif; ?>
+  <div class="pkg-hero-photo" style="background-image: url('<?php echo btw_asset( $args['photo'] ); ?>'); background-position: <?php echo esc_attr( $position ); ?>;"></div>
 </header>
 
 <main class="section" style="padding-top: 40px;" id="package-detail-container">

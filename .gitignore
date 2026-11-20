@@ -22,3 +22,6 @@ assets/images/FOTO FOR ALL PAGES/
 
 # WordPress theme build output (python wordpress/build.py)
 wordpress/dist/
+
+# Personal documents: never commit
+*.pdf

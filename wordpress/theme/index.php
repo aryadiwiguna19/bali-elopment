@@ -5,7 +5,7 @@
 
 get_header();
 ?>
-<header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset( 'assets/images/blog/blog-spots.webp' ); ?>'); background-position: center 25%;">
+<header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset( 'assets/images/hero/hero-journal.webp' ); ?>'); background-position: center 50%;">
   <div class="hero-content">
     <h1><?php echo esc_html( is_search() ? 'Search: ' . get_search_query() : wp_strip_all_tags( get_the_archive_title() ) ); ?></h1>
   </div>

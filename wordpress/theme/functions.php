@@ -14,4 +14,5 @@ require BTW_DIR . '/inc/data.php';
 require BTW_DIR . '/inc/routes.php';
 require BTW_DIR . '/inc/seo.php';
 require BTW_DIR . '/inc/setup.php';
+require BTW_DIR . '/inc/inquiry.php';
 require BTW_DIR . '/inc/seed.php';

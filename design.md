@@ -12,7 +12,7 @@
 ### 1.1 Brand Purpose & Mission
 **Bali Elopement Service** is a dedicated luxury celebration boutique designed specifically for discerning international couples seeking an intimate, profound, and stress-free wedding experience in Bali. Unlike traditional large-scale resort weddings, the brand focuses on authentic romance: elopements just for the couple (9 settings), villa weddings at 6 private estates (priced for 50 guests), and pre-wedding photography (3 packages). Package copy and prices come from `all pages teks updated.docx` (15 Nov 2026).
 
-**Service order** (use everywhere: cards, tabs, footer, forms): **Elopement → Villa Wedding → Pre-Wedding**. Elopement is the lead service and the only service in the top menu; the others live under **More**.
+**Service order** (use everywhere: cards, tabs, footer, forms): **Elopement → Villa Wedding → Pre-Wedding**. All three services are in the top menu (review of 17 Nov 2026); **More** holds only About Us, Portfolio, Wedding Journal and FAQ.
 
 ### 1.2 The "Quiet Luxury" Design Principle
 The aesthetic avoids flashy, neon, or overly ornate visual clutter. Instead, it embodies:
@@ -148,10 +148,8 @@ The aesthetic avoids flashy, neon, or overly ornate visual clutter. Instead, it 
   * Title: `Bali Elopement Service` (`font-size: 22px`, letter spacing `0.1em`, serif).
   * Subline: `Powered by Bali Top Wedding` with external link in Coastal Slate.
   * Mobile constraint: `white-space: nowrap; overflow: hidden; text-overflow: ellipsis;` to guarantee 1-line presentation on 360px–430px devices.
-* **Menu Items**: `Home` · `Elopement` · `More ▾`. Hover underline sweep animation (`transition: width 0.3s ease;`).
-* **More Dropdown** (`.nav-dropdown`): Opens on hover and on keyboard focus (`:focus-within`). Two labelled groups (`.dropdown-label`):
-  * **Other Services**: Villa Wedding, Pre-Wedding
-  * **Discover**: About Us, Portfolio, Wedding Journal, FAQ
+* **Menu Items**: `Home` · `Elopement` · `Villa Wedding` · `Pre-Wedding` · `More ▾`. Between 921px and 1240px the brand, gaps and link size shrink so the brand stays on one line. Hover underline sweep animation (`transition: width 0.3s ease;`).
+* **More Dropdown** (`.nav-dropdown`): Opens on hover and on keyboard focus (`:focus-within`). Items: About Us, Portfolio, Wedding Journal, FAQ.
   * Contact is deliberately not in More, because Inquire Now is always visible.
   * When the current page is inside the dropdown, the `More` trigger carries the active state.
 * **Desktop Action**: Inquire Now outlined pill button (`.btn-nav-inquire`).
@@ -163,9 +161,8 @@ The aesthetic avoids flashy, neon, or overly ornate visual clutter. Instead, it 
 * **Drawer Header**:
   * Dedicated top bar containing brand title and subline.
   * Explicit circular close button (`.mobile-drawer-close`) with 20×20 SVG cross (`✕`) that rotates 90° on hover.
-* **Primary Links**: Home and Bali Elopement Packages as large serif links (`19px`, Cormorant Garamond). Active state highlighted in Coastal Slate `#5A7A85` with a circular dot indicator.
+* **Primary Links**: Home, Bali Elopement Packages, Villa Weddings and Pre Wedding Photography as large serif links (`19px`, Cormorant Garamond). Active state highlighted in Coastal Slate `#5A7A85` with a circular dot indicator.
 * **Grouped Secondary Links** (`.mobile-nav-label` + `13px` Jost links):
-  * **Other Services**: Villa Weddings, Pre Wedding Photography
   * **Discover**: About Us, Portfolio, Wedding Journal, FAQ, Direct Inquiries Desk (contact stays here because the Inquire button is hidden on mobile)
 * **Drawer Footer**: Two-column grid with Email and WhatsApp pill buttons pinned to the bottom. `scrollbar-width: none`.
 
@@ -201,6 +198,13 @@ The "Why Couples Choose Us" section was removed from the homepage and the About 
   4. **Description**: One paragraph, two sentences at most.
   5. **CTA**: Full-width "View Details" button.
 
+### 5.5b Package Page
+* **Hero**: One still photo (the package's first photo), not a slider. Height `40vh` (min 300px, max 440px; `30vh` on mobile).
+* **Top section in two equal columns** (`.package-header-bar`, one column below 900px): left are badge, title, description and the price box (`.package-price-block`) below the text; right is a photo slider (`.pkg-slider`) with all package photos. No "No Hidden Service Charges" line.
+* **Photo slider**: 4:3 frame, swipe or scroll-snap on touch, arrows and dots when there are two or more photos, click a photo to enlarge it.
+* **Columns**: "What's In The Package" and the booking box share the width equally (`1fr 1fr`; one column below 1024px).
+* **Realistic photos**: Each package shows only its own venue, so the photo matches the price. The Services Comparison rows use the photo of the cheapest package of each service, the one the "From" price refers to (Suwat Waterfall 020, Estuary Villa 045, Simply Us 035).
+
 ### 5.6 Brick / Masonry Dynamic Gallery
 * **Grid**: 12-column responsive layout (`grid-template-columns: repeat(12, 1fr)`).
 * **Tile Asymmetry**:
@@ -210,7 +214,7 @@ The "Why Couples Choose Us" section was removed from the homepage and the About 
 * **Interaction**: Interactive cursor zoom with fullscreen lightbox trigger (`data-lightbox-src`).
 
 ### 5.7 Portfolio
-* **Category Tabs**: `Elopement` · `Villa Wedding` · `Pre-Wedding` (filter keys `elopement`, `villa`, `prewedding`; deep link with `?filter=`). Corporate events (GoTo, Pertamina, Scarlett) are not shown.
+* **Six selected stories, one grid, no tabs** (review of 17 Nov 2026): Erik & Sekar, Rubini & Czarlie, Sarah & Miha, Vany & Santi, Astrella & Mikhael, Jay & Lisa. All other stories (Andi & Eva, Budi & Ella, Claudia & Dennis, the pre-wedding stories, the corporate events) and their photos are removed.
 * **Story Page Gallery**: 5–10 photos per story (agreed ceiling for performance). Two columns on desktop, one on mobile, all images lazy-loaded.
 * **Wedding Films Section** (`#portfolio-films`): Below the story grid. Landscape 16:9 YouTube films in a `repeat(auto-fit, minmax(min(100%, 480px), 1fr))` grid. Each card shows the YouTube thumbnail with a play button. The YouTube player (`youtube-nocookie.com`) is only inserted when the card is clicked, so the page stays light. The section is hidden while there are no films.
 * **Legacy story video**: The 9:16 self-hosted player on story pages (`assets/videos/*.mov|mp4`, 176 MB and 48 MB) is being retired. These films move to YouTube, so do not upload them to hosting.
@@ -227,7 +231,7 @@ The "Why Couples Choose Us" section was removed from the homepage and the About 
 ### 5.10 Statement Footer
 * **Background**: Solid Coastal Slate (`#5A7A85`) with white and translucent white text (`rgba(255, 255, 255, 0.85)`).
 * **Columns (4-Column Desktop)**:
-  1. *Brand & Heritage*: Summary, Bali Top Wedding partnership box, and social icons (Instagram, Pinterest, YouTube, TikTok).
+  1. *Brand & Heritage*: Summary, Bali Top Wedding partnership box, and social icons (Instagram, YouTube, TikTok; there is no Pinterest account).
   2. *Designed For You*: Bali Elopement Packages, Villa Weddings, Pre Wedding Photography, Services Comparison. ("Our Services" was rejected as a heading.)
   3. *More*: About Us & Team Staff, Portfolio, Wedding Journal, FAQ.
   4. *Get in Touch*: Office address, email, phone, WhatsApp.
@@ -290,11 +294,11 @@ Keep as JavaScript: mobile drawer, scroll effect, lightbox, portfolio filter, fi
 wp-content/themes/bali-elopement/
 ├── style.css                   # Theme header
 ├── functions.php               # Setup, menus, CPTs, ACF, enqueue scripts
-├── header.php                  # Sticky nav (Home · Elopement · More) + mobile drawer
+├── header.php                  # Sticky nav (Home · Elopement · Villa Wedding · Pre-Wedding · More) + mobile drawer
 ├── footer.php                  # 4-column footer (5.10)
 ├── front-page.php              # Homepage sections in the order of 5.4
 ├── taxonomy-service.php        # Service overview: all packages of Elopement / Villa Wedding / Pre-Wedding
-├── single-package.php          # Package detail: hero slideshow, inclusions, Good to Know notes, inquiry form
+├── single-package.php          # Package detail: one still hero photo, photo gallery, inclusions, Good to Know notes, inquiry form
 ├── archive-portfolio.php       # Story grid + category tabs + Wedding Films
 ├── single-portfolio.php        # Story gallery (5–10 photos) + quote
 ├── page-about.php
@@ -377,7 +381,7 @@ If building visually instead of a custom theme:
 ## 8. Quality Checklist
 
 - [x] **Palette Consistency**: Crisp white with Coastal Slate `#5A7A85` (the team confirmed the blue).
-- [x] **Navigation**: Home · Elopement · More, menu centered, mobile drawer with the same groups.
+- [x] **Navigation**: Home · Elopement · Villa Wedding · Pre-Wedding · More, menu centered, mobile drawer with the same groups.
 - [x] **Approved Copy**: Homepage and package texts match `all pages teks updated.docx`. No "Why Couples Choose Us".
 - [x] **Single Email Action on Contact**: Form button only.
 - [x] **Dual Action CTAs**: Commercial pages offer WhatsApp and email inquiry.

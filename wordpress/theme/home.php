@@ -15,7 +15,7 @@ $pinned  = ( 1 === $paged && $sticky ) ? new WP_Query(
 
 get_header();
 ?>
-<header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset( 'assets/images/blog/blog-spots.webp' ); ?>'); background-position: center 25%;">
+<header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset( 'assets/images/hero/hero-journal.webp' ); ?>'); background-position: center 50%;">
   <div class="hero-content">
     <h1>Wedding Journal</h1>
     <p class="hero-subtitle">

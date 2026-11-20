@@ -17,7 +17,7 @@ get_template_part(
 	'parts/package-nav',
 	null,
 	array(
-		'photos'          => $pkg['photos'],
+		'photo'           => $pkg['photos'][0],
 		'position'        => $pkg['heroPosition'] ?? '',
 		'current_service' => $pkg['service'],
 		'crumbs'          => array(
@@ -42,19 +42,30 @@ get_template_part(
                 <p style="margin-bottom: 14px; font-size: 15.5px; line-height: 1.75; color: var(--dark);"><?php echo btw_kses( $para ); ?></p>
               <?php endforeach; ?>
             </div>
+            <div class="package-price-block">
+              <span class="pricing-label">Official Rate</span>
+              <div class="package-price-tag" id="pkg-price-idr"><?php echo esc_html( $pkg['priceIDR'] ); ?></div>
+              <?php if ( ! empty( $pkg['priceNote'] ) ) : ?>
+                <div class="package-price-sub" id="pkg-price-foreign"><?php echo esc_html( $pkg['priceNote'] ); ?></div>
+              <?php endif; ?>
+            </div>
           </div>
 
-          <div class="package-header-right">
-            <span class="pricing-label">Official Rate</span>
-            <div class="package-price-tag" id="pkg-price-idr"><?php echo esc_html( $pkg['priceIDR'] ); ?></div>
-            <?php if ( ! empty( $pkg['priceNote'] ) ) : ?>
-              <div class="package-price-sub" id="pkg-price-foreign"><?php echo esc_html( $pkg['priceNote'] ); ?></div>
-            <?php endif; ?>
-            <?php if ( false !== strpos( $pkg['priceIDR'], 'net' ) ) : ?>
-              <div style="margin-top: 14px;">
-                <span id="pkg-net-note" style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #2E7D32; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
-                  ✓ No Hidden Service Charges
-                </span>
+          <div class="pkg-slider" id="pkg-slider">
+            <div class="pkg-slider-track">
+              <?php foreach ( $pkg['photos'] as $i => $photo ) : ?>
+                <div class="pkg-slide" data-lightbox-src="<?php echo btw_asset( $photo ); ?>">
+                  <img src="<?php echo btw_asset( $photo ); ?>" alt="<?php echo esc_attr( $title . ' photo ' . ( $i + 1 ) ); ?>"<?php echo $i ? ' loading="lazy"' : ''; ?>>
+                </div>
+              <?php endforeach; ?>
+            </div>
+            <?php if ( count( $pkg['photos'] ) > 1 ) : ?>
+              <button type="button" class="pkg-slider-btn pkg-slider-prev" aria-label="Previous photo">&#8249;</button>
+              <button type="button" class="pkg-slider-btn pkg-slider-next" aria-label="Next photo">&#8250;</button>
+              <div class="pkg-slider-dots">
+                <?php foreach ( $pkg['photos'] as $i => $photo ) : ?>
+                  <button type="button" class="pkg-slider-dot<?php echo 0 === $i ? ' is-active' : ''; ?>" aria-label="Show photo <?php echo (int) $i + 1; ?>"></button>
+                <?php endforeach; ?>
               </div>
             <?php endif; ?>
           </div>

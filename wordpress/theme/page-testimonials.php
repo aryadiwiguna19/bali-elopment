@@ -5,7 +5,7 @@
 get_header();
 ?>
   <!-- ── 3. HERO ── -->
-  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset('assets/images/couples/michel-angela.webp'); ?>'); background-position: center 35%;">
+  <header class="hero-inner" style="background-image: linear-gradient(180deg, rgba(20, 16, 14, 0.48) 0%, rgba(20, 16, 14, 0.78) 100%), url('<?php echo btw_asset('assets/images/hero/hero-testimonials.webp'); ?>'); background-position: center 72%;">
     <div class="hero-content">
       <h1>Couple Testimonials &amp; Love Letters</h1>
       <p class="hero-subtitle">

@@ -29,8 +29,9 @@
   }
 
   #pkg-hero {
-    min-height: 500px;
-    height: 52vh;
+    min-height: 300px;
+    height: 40vh;
+    max-height: 440px;
     padding: 0;
     background-position: center 38%;
     background-size: cover;
@@ -38,8 +39,8 @@
   }
   @media (max-width: 768px) {
     #pkg-hero {
-      min-height: 320px;
-      height: 40vh;
+      min-height: 220px;
+      height: 30vh;
     }
   }
   
@@ -60,37 +61,127 @@
     color: var(--dark);
   }
 
-  /* Hero slideshow */
-  .pkg-hero-slide {
+  /* Hero photo */
+  .pkg-hero-photo {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1.2s ease;
   }
-  .pkg-hero-slide.is-active {
-    opacity: 1;
+
+  /* Explanation and price */
+  .package-header-left {
+    max-width: none;
+    width: 100%;
   }
-  .pkg-hero-dots {
+  .package-price-block {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 16px 22px;
+    background-color: var(--nude);
+    border-radius: 6px;
+  }
+  .package-price-block .package-price-tag {
+    font-size: clamp(28px, 3vw, 34px);
+  }
+
+  /* Explanation and booking box share the width equally */
+  .package-content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 1024px) {
+    .package-content-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Explanation and price left, photo slider right */
+  .package-header-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .package-header-bar {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+
+  /* Photo slider: swipe, arrows, dots, click to enlarge */
+  .pkg-slider {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--nude);
+  }
+  .pkg-slider-track {
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .pkg-slider-track::-webkit-scrollbar {
+    display: none;
+  }
+  .pkg-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    cursor: zoom-in;
+  }
+  .pkg-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .pkg-slider-btn {
     position: absolute;
-    bottom: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.88);
+    color: var(--dark);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s ease;
+  }
+  .pkg-slider-btn:hover {
+    background: #FFFFFF;
+  }
+  .pkg-slider-prev {
+    left: 14px;
+  }
+  .pkg-slider-next {
+    right: 14px;
+  }
+  .pkg-slider-dots {
+    position: absolute;
+    bottom: 14px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
-    z-index: 2;
+    gap: 8px;
   }
-  .pkg-hero-dot {
-    width: 10px;
-    height: 10px;
+  .pkg-slider-dot {
+    width: 9px;
+    height: 9px;
     padding: 0;
     border-radius: 50%;
     border: 1px solid #FFFFFF;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
   }
-  .pkg-hero-dot.is-active {
+  .pkg-slider-dot.is-active {
     background: #FFFFFF;
   }
 

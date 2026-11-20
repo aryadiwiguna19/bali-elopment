@@ -14,7 +14,7 @@ get_template_part(
 	'parts/package-nav',
 	null,
 	array(
-		'photos'          => array( $service['heroImage'] ),
+		'photo'           => $service['heroImage'],
 		'position'        => $service['heroPosition'] ?? '',
 		'current_service' => $service['key'],
 		'crumbs'          => array( array( $service['title'], null ) ),

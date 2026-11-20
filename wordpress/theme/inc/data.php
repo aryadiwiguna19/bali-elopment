@@ -71,7 +71,7 @@ function btw_asset( $path ) {
 /**
  * Asset URL (unescaped). Files shipped inside the theme are served from the theme.
  * The photos are uploaded separately to the Media Library under a flat name,
- * e.g. assets/images/portfolio/andi-eva/1.webp -> btw-portfolio-andi-eva-1.webp
+ * e.g. assets/images/portfolio/erik-sekar/1.webp -> btw-portfolio-erik-sekar-1.webp
  * (see wordpress/README.md), so the theme zip stays small.
  */
 function btw_asset_url( $path ) {

@@ -47,7 +47,8 @@ function btw_js_data() {
 			'parentUrl' => $config['parentUrl'],
 			'address'   => $config['address'],
 		),
-		'films'  => $films,
+		'films'   => $films,
+		'ajaxUrl' => admin_url( 'admin-ajax.php' ),
 	);
 }
 
@@ -70,6 +71,16 @@ a.article-thumb { display: block; }
 .journal-pagination { display: flex; justify-content: center; gap: 8px; margin-top: 48px; }
 .journal-pagination .page-numbers { padding: 8px 14px; border: 1px solid var(--border-strong); border-radius: 4px; color: var(--dark); }
 .journal-pagination .page-numbers.current { background: var(--coastal); border-color: var(--coastal); color: #fff; }
+/* Inquiry forms (inc/inquiry.php, js/main.js) */
+.form-trap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.form-group.has-error .form-control { border-color: #B3261E; box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.12); }
+.field-error { display: block; margin-top: 6px; font-size: 12.5px; color: #B3261E; }
+.btn.is-busy { opacity: .75; cursor: wait; transform: none; }
+.inquiry-modal-icon { width: 56px; height: 56px; border-radius: 50%; background: #FAF8F5; border: 1px solid #C4B09A; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.inquiry-modal-actions { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.inquiry-modal-actions .btn { min-width: 250px; }
+.inquiry-modal-dismiss { background: none; border: 0; padding: 6px 12px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); cursor: pointer; }
+.inquiry-modal-dismiss:hover { color: var(--dark); }
 ';
 }
 
